@@ -22,6 +22,7 @@ function Cards() {
     flex-flow: column;
     align-items: center;
     width: 90%;
+
     margin: 0 auto;
   `;
   const Container2 = styled.div`
@@ -31,7 +32,7 @@ function Cards() {
   const Ul = styled.div`
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 0;
     // margin-bottom: 0px;
     @media (max-width: 1040px) {
@@ -51,60 +52,46 @@ function Cards() {
           <Ul>
             <CardItem
               src={img1}
-              text="Explore MELIQ.101 music journey through t"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
+              text="E-commerce wine store application"
+              paragraph="Developed a fully functional e-commerce platform to enhance online sales and customer experience.React, Node.js, Express, MongoDB, Stripe API"
+              label="FULLSTACK"
               path="/artists"
             />
             <CardItem
               src={slide10}
-              text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
+              text="Social media web application"
+              paragraph="Created a social media application to connect users and enable content sharing. Tech us include: React, Redux-Toolkit, Node.js, Express, MongoDB"
+              label="FULLSTACK"
               path="/artists"
             />{" "}
             <CardItem
               src={slide10}
               text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
+              paragraph="Developed a feature-rich to-do list application to help users manage tasks and boost productivity.React, Redux, Node.js, Express, MongoDB"
+              label="FULLSTACK"
               path="/artists"
             />{" "}
             <CardItem
               src={slide10}
-              text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
+              text="Explore FULLSTACK music journey thr ujh"
+              paragraph="Developed an online banking with expense tracker application to help users manage and track their daily expenses.React, Redux, Node.js, Express, MongoDB"
+              label="FULLSTACK"
               path="/artists"
             />{" "}
             <CardItem
               src={slide10}
-              text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
+              text="Explore FULLSTACK music journey thr ujh"
+              paragraph="Created a note-taking application to enable users to create, organize, and manage their notes efficiently.React, Redux, Node.js, Express, MongoDB"
+              label="FULLSTACK"
               path="/artists"
             />{" "}
             <CardItem
               src={slide10}
-              text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
+              text="Explore FULLSTACK music journey thr ujh"
+              paragraph="Created a note-taking application to enable users to create, organize, and manage their notes efficiently.React, Redux, Node.js, Express, MongoDB"
+              label="FULLSTACK"
               path="/artists"
             />{" "}
-            <CardItem
-              src={slide10}
-              text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
-              path="/artists"
-            />{" "}
-            <CardItem
-              src={slide10}
-              text="Explore MELIQ.101 music journey thr ujh"
-              paragraph="Music is  life,’ says MELIQ.101. ‘I want every beat and lyric to resonate with my fans and connect on a deeper level."
-              label="MELIQ.101"
-              path="/artists"
-            />
           </Ul>
         </Container2>
       </Container>

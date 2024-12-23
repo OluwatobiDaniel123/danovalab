@@ -56,7 +56,12 @@ function Fade() {
     font-weight: bold;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(0deg, #4caf50, #ffdb58, #a3c651);
+    background: linear-gradient(
+      0deg,
+      rgb(0, 195, 255),
+      rgb(255, 0, 255),
+      rgb(0, 195, 255)
+    );
     -webkit-background-clip: text;
     color: transparent;
     animation: ${dropAnimation} 3s ease-in forwards;
@@ -81,7 +86,12 @@ function Fade() {
     margin: 110px 0 10px 0;
     text-align: center;
     font-family: sans-serif;
-    background: linear-gradient(90deg, #4caf50, #ffdb58, #a3c651);
+    background: linear-gradient(
+      90deg,
+      rgb(0, 195, 255),
+      rgb(255, 0, 255),
+      rgb(0, 195, 255)
+    );
     -webkit-background-clip: text;
     color: transparent;
     animation: ${fadeIn} 3s ease-in forwards;

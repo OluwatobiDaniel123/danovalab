@@ -21,7 +21,7 @@
 } */
 .testimonials {
   color: rgb(255, 0, 255);
-
+  /* font-family: monospace; */
   background: rgb(106, 106, 255);
   text-align: center;
   padding: 2rem;

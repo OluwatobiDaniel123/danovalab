@@ -62,16 +62,26 @@ const CardsItemInfo = styled.div`
 const CardsItemText = styled.h5`
   color: white;
   font-size: 16px;
-  background: linear-gradient(0deg, #4caf50, #ffdb58, #a3c651);
+  background: linear-gradient(
+    0deg,
+    rgb(0, 195, 255),
+    rgb(255, 0, 255),
+    rgb(0, 195, 255)
+  );
   -webkit-background-clip: text;
   color: transparent;
   &:hover {
-    color: #4caf50;
+    color: rgb(0, 195, 255);
   }
 `;
 
 const CardsItemParagraph = styled.p`
-  background: linear-gradient(90deg, #4caf50, #ffdb58, #a3c651);
+  background: linear-gradient(
+    90deg,
+    rgb(0, 195, 255),
+    rgb(255, 0, 255),
+    rgb(0, 195, 255)
+  );
   -webkit-background-clip: text;
   color: transparent;
   font-size: 13px;

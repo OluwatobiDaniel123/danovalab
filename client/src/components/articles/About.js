@@ -63,7 +63,12 @@ const About = () => {
   const H1 = styled.h1`
     padding: 30px 0 0;
     font-size: 50px;
-    background: linear-gradient(0deg, #4caf50, #ffdb58, #a3c651);
+    background: linear-gradient(
+      0deg,
+      rgb(0, 195, 255),
+      rgb(255, 0, 255),
+      rgb(0, 195, 255)
+    );
     -webkit-background-clip: text;
     color: transparent;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -72,7 +77,12 @@ const About = () => {
     font-size: 18px;
     padding: 2px;
     // text-align: center;
-    background: linear-gradient(90deg, #4caf50, #ffdb58, #a3c651);
+    background: linear-gradient(
+      90deg,
+      rgb(0, 195, 255),
+      rgb(255, 0, 255),
+      rgb(0, 195, 255)
+    );
     -webkit-background-clip: text;
     color: transparent;
   `;
