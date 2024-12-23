@@ -1,0 +1,66 @@
+/* body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.container {
+  perspective: 900px;
+  width: 200px;
+  height: 200px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 0.6;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+
+  background-image: url("../../assets/slide10.png");
+  background-size: cover;
+  background-position: center;
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  background-image: url("../../assets/slide10.png");
+  background-size: cover;
+  background-position: center;
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+  background-image: url("../../assets/slide10.png");
+  background-size: cover;
+  background-position: center;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background-image: url("../../assets/slide10.png");
+  background-size: cover;
+  background-position: center;
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  background-image: url("../../assets/slide10.png");
+  background-size: cover;
+  background-position: center;
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-image: url("../../assets/slide10.png");
+  background-size: cover;
+  background-position: center;
+}
