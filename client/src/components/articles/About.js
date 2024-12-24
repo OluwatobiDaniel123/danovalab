@@ -39,6 +39,7 @@ const About = () => {
     display: flex;
     justify-content: space-between;
     padding: 43px 0 43px 0;
+    box-shadow: 0 2px 3px 2px rgb(0, 195, 255);
 
     @media (max-width: 769px) {
       padding: 0 1px;
@@ -50,9 +51,8 @@ const About = () => {
   const MissionTextImgDiv = styled.div`
     width: 30%;
     height: 390px;
-    padding-top: 143px;s
+    padding-top: 143px;
     align-items: center;
-   
 
     @media (max-width: 769px) {
       width: 210px;
@@ -63,28 +63,29 @@ const About = () => {
   const H1 = styled.h1`
     padding: 30px 0 0;
     font-size: 50px;
-    background: linear-gradient(
-      0deg,
-      rgb(0, 195, 255),
-      rgb(255, 0, 255),
-      rgb(0, 195, 255)
-    );
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(
+    //   0deg,
+    //   rgb(0, 195, 255),
+    //   rgb(255, 0, 255),
+    //   rgb(0, 195, 255)
+    // );
+    // -webkit-background-clip: text;
+    // color: transparent;
+    color: rgb(0, 195, 255);
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   `;
-  const P = styled.p`
+  const P = styled.h6`
     font-size: 18px;
     padding: 2px;
     // text-align: center;
-    background: linear-gradient(
-      90deg,
-      rgb(0, 195, 255),
-      rgb(255, 0, 255),
-      rgb(0, 195, 255)
-    );
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(
+    //   90deg,
+    //   rgb(0, 195, 255),
+    //   rgb(255, 0, 255),
+    //   rgb(0, 195, 255)
+    // );
+    // -webkit-background-clip: text;
+    color: rgb(0, 195, 255);
   `;
   const Div3 = styled.div`
     width: 100%;
@@ -115,8 +116,8 @@ const About = () => {
   const Img = styled.img`
     width: 90%;
     height: 90%;
-    border-radius: 10px;
-    border: 2px solid purple;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 195, 255);
     transition: all 0.3s linear;
     &:hover {
       transform: scale(1.02);
@@ -127,18 +128,22 @@ const About = () => {
 
   return (
     <Div>
+      <H1>What We Do</H1>
+
       <MissionTextWrapper>
         <Div2>
-          <H1>Our Mission</H1>
           <P>
-            Dedicated and innovative Web Developer with experience in designing,
-            developing, and managing complex web applications and sites.
-            Proficient in front-end and back-end development, including HTML,
-            CSS, JavaScript, and modern frameworks such as React and Node. Adept
-            at creating responsive, user-friendly interfaces and optimizing web
-            performance. Skilled in collaborating with cross-functional teams to
-            deliver high-quality digital solutions that enhance user experience
-            and drive business growth.
+            <p style={{ color: "rgb(0, 195, 255)" }}>
+              WE'RE A SOFTWARE DEVELOPER{" "}
+            </p>
+            Dedicated and innovative Software Developer with experience in
+            designing, developing, and managing complex web applications and
+            sites. Proficient in front-end and back-end development, including
+            HTML, CSS, JavaScript, and modern frameworks such as React and
+            Node.js Adept at creating responsive, user-friendly interfaces and
+            optimizing web performance. Skilled in collaborating with
+            cross-functional teams to deliver high-quality digital solutions
+            that enhance user experience and drive business growth.
           </P>
         </Div2>
         <MissionTextImgDiv>

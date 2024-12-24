@@ -13,9 +13,10 @@ function Cards() {
   `;
   const H1 = styled.h1`
     text-align: center;
-    background: linear-gradient(0deg, #4caf50, #92781a, #a3c651);
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(0deg, #4caf50, #92781a, #a3c651);
+    // -webkit-background-clip: text;
+
+    color: rgb(0, 195, 255);
   `;
   const Container = styled.div`
     display: flex;

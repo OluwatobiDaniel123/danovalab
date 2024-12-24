@@ -6,9 +6,10 @@ const CardsLink = styled(Link)`
   display: flex;
   flex-flow: column;
   width: 250px;
-  box-shadow: 0.5px 1px 0.5px 2px #4caf50;
+  height: 320px;
+  box-shadow: 0.5px 1px 0.5px 2px rgb(0, 195, 255);
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   text-decoration: none;
   @media (max-width: 800px) {
@@ -62,12 +63,7 @@ const CardsItemInfo = styled.div`
 const CardsItemText = styled.h5`
   color: white;
   font-size: 16px;
-  background: linear-gradient(
-    0deg,
-    rgb(0, 195, 255),
-    rgb(255, 0, 255),
-    rgb(0, 195, 255)
-  );
+  background: rgb(0, 195, 255);
   -webkit-background-clip: text;
   color: transparent;
   &:hover {
@@ -76,12 +72,7 @@ const CardsItemText = styled.h5`
 `;
 
 const CardsItemParagraph = styled.p`
-  background: linear-gradient(
-    90deg,
-    rgb(0, 195, 255),
-    rgb(255, 0, 255),
-    rgb(0, 195, 255)
-  );
+  background: rgb(0, 195, 255);
   -webkit-background-clip: text;
   color: transparent;
   font-size: 13px;

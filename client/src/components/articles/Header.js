@@ -75,7 +75,7 @@ const SideNav = styled.div`
   position: fixed;
   top: 0;
   left: ${({ show }) => (show ? "0" : "-100%")};
-  width: 280px;
+  width: 300px;
   height: 100vh;
   background-color: #201f1f;
 
@@ -93,7 +93,8 @@ const SideNav = styled.div`
 `;
 
 const SideNavItem = styled(Link)`
-  color: ${(props) => (props.isActive ? "#4caf50" : "#92781a")};
+  color: ${(props) =>
+    props.isActive ? "rgb(0, 195, 255)" : "rgb(0, 195, 255)"};
   font-weight: ${(props) => (props.isActive ? "800" : "600")};
   text-decoration: none;
   font-size: 18px;
@@ -101,6 +102,8 @@ const SideNavItem = styled(Link)`
   border-bottom: 1px solid #444;
   transition: color 0.3s;
   transition: color 0.3s ease, transform 0.3s ease;
+  background-color: rgba(30, 844, 255, 0.1);
+
   &:hover {
     color: #4caf50;
     background-color: rgba(30, 844, 255, 0.1);
@@ -162,7 +165,12 @@ const Header = () => {
       {/* Side Nav for Mobile */}
       <SideNav show={showNav}>
         <IoClose
-          style={{ fontSize: 40, color: "grey", alignSelf: "flex-end" }}
+          style={{
+            fontSize: 40,
+            background: "rgba(30, 844, 255, 0.1)",
+            color: "rgb(0, 195, 255)",
+            alignSelf: "flex-end",
+          }}
           onClick={toggleNav}
         />
         <SideNavItem to="/" onClick={() => setShowNav(false)}>

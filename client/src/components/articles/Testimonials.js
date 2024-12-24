@@ -5,7 +5,7 @@ import Me3 from "../../assets/slide18.jpg";
 import Me4 from "../../assets/slide18.jpg";
 import Me5 from "../../assets/slide18.jpg";
 import styled from "styled-components";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -45,11 +45,17 @@ const data = [
 
 const H5 = styled.h5`
   // color: white;
-  font-size: 20px;
+  background: linear-gradient(0deg, rgb(0, 195, 255));
+  -webkit-background-clip: text;
+  color: rgb(0, 195, 255);
+  font-size: 30px;
 `;
 
 const H2 = styled.h2`
   // color: white;
+  background: linear-gradient(0deg, rgb(0, 195, 255));
+  -webkit-background-clip: text;
+  color: rgb(0, 195, 255);
   font-size: 20px;
 `;
 const Section = styled.div`
@@ -64,7 +70,7 @@ const Div_Img = styled.div`
   overflow: hidden;
   border-radius: 50%;
   margin: 0 auto 1rem;
-  border: 0.4rem solid white;
+  border: 0.4rem solid blue;
 `;
 const Review = styled.h5`
   // color: white;
@@ -80,23 +86,28 @@ const Review_2 = styled.small`
   width: 80%;
   margin: 0.8rem auto 0;
 `;
+
 const Testimonials = () => {
   return (
     <Section>
+      <H5>Review from Client </H5>
+      <H2>Testimonials</H2>
       <div>
-        <H5>Review from Client </H5>
-        <H2>Testimonials</H2>
-
         <Swiper
           style={{
             height: 300,
             padding: 20,
-            border: "2px solid purple",
+            // width: 600,
+            border: "2px solid rgb(0, 195, 255)",
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={40}
           slidesPerView={1}
           pagination={{ clickable: true }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
         >
           {data.map(({ avatar, name, review, i }) => {
             return (
