@@ -71,9 +71,7 @@ const CardsItemText = styled.h5`
 `;
 
 const CardsItemParagraph = styled.p`
-  background: rgb(0, 195, 255);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   font-size: 13px;
   padding: 4px 0;
   font-weight: 300;

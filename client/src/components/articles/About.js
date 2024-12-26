@@ -68,8 +68,7 @@ const About = () => {
   `;
   const P = styled.h6`
     font-size: 20px;
-    padding: 6px;
-    color: blacks;
+    // padding: 6px;
   `;
   const Div3 = styled.div`
     width: 100%;

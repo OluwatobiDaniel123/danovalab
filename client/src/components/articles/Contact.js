@@ -85,34 +85,20 @@ const ContactButton = styled.button`
 `;
 
 const Box = styled.div`
-  border-radius: 50%;
   padding: 1px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  // border: 2px solid #92781a;
-  // box-shadow: 0 150px 1000px 290px rgba(0, 0, 0, 0.1);
   transition: all 0.3s linear;
 
   &:hover {
-    transform: scale(1.1);
-    border: 2px solid #4caf50;
+    transform: scale(1.09);
   }
 `;
 
 const SocialDiv = styled.div`
-  // border-radius: 7px;
-  // padding: 8px;
-  // // height: 170px;
-  // display: grid;
-  // gap: 15px;
-  // grid-template-columns: repeat(2, 1fr);
-  // align-items: center;
-  // position: absolute;
-  //  width: 100%;
-  border: 2px solid black;
-  // top: 50%;
-  // left: 50%;
+  display: flex;
+  gap: 55px;
+  justify-content: center;
 `;
 
 const P = styled.p``;
@@ -142,90 +128,6 @@ const Contact = () => {
   };
 
   return (
-    // <ContactSection>
-    //   <ContactContainer>
-    //     <ContactForm ref={form} onSubmit={sendEmail}>
-    //       <h2>Contact Us</h2>
-    //       <input
-    //         type="text"
-    //         name="name"
-    //         placeholder="Your Full Name"
-    //         required
-    //       />
-    //       <input type="email" name="email" placeholder="Your Email" required />
-    //       <textarea
-    //         rows="7"
-    //         name="message"
-    //         placeholder="Your Message"
-    //         required
-    //       />
-    //       <ContactButton type="submit">Send Message</ContactButton>
-    //     </ContactForm>
-    //     <SocialDiv>
-    //       <Box>
-    //         <a target="_blank" href="mailto:danieloluwatobi765@gmail.com">
-    //           <MdOutlineMailOutline
-    //             style={{
-    //               color: "#4caf50",
-    //               width: 50,
-    //               fontSize: 50,
-    //               padding: 4,
-    //               margin: 4,
-    //             }}
-    //           />
-    //         </a>
-    //       </Box>
-    //       <Box>
-    //         <a
-    //           target="_blank"
-    //           href="https://api.whatsapp.com/send?phone=2348109830746"
-    //         >
-    //           <FaWhatsapp
-    //             style={{
-    //               color: "#4caf50",
-    //               width: 50,
-    //               fontSize: 50,
-    //               padding: 4,
-    //               margin: 4,
-    //             }}
-    //           />
-    //         </a>
-    //       </Box>
-    //       <Box>
-    //         <a
-    //           target="_blank"
-    //           href="https://api.whatsapp.com/send?phone=2348109830746"
-    //         >
-    //           <FaWhatsapp
-    //             style={{
-    //               color: "#4caf50",
-    //               width: 50,
-    //               fontSize: 50,
-    //               padding: 4,
-    //               margin: 4,
-    //             }}
-    //           />
-    //         </a>
-    //       </Box>
-    //       <Box>
-    //         <a
-    //           target="_blank"
-    //           href="https://api.whatsapp.com/send?phone=2348109830746"
-    //         >
-    //           <FaWhatsapp
-    //             style={{
-    //               color: "#4caf50",
-    //               width: 50,
-    //               fontSize: 50,
-    //               padding: 4,
-    //               margin: 4,
-    //             }}
-    //           />
-    //         </a>
-    //       </Box>
-    //     </SocialDiv>
-    //   </ContactContainer>
-    // </ContactSection>
     <ContactSection>
       <ContactContainer>
         <DotLottieReact
@@ -235,12 +137,8 @@ const Contact = () => {
           style={{
             width: "100%",
             height: "100%",
-
-            // margin: "0 auto",
           }}
         />
-        {/* <SocialDiv> */}
-        {/* <div className=" transform -translate-x-1/2 -translate-y-1/2 text-shadow"> */}
         <ContactForm ref={form} onSubmit={sendEmail}>
           <h2>Contact Us</h2>
           <input
@@ -258,8 +156,58 @@ const Contact = () => {
           />
           <ContactButton type="submit">Send Message</ContactButton>
         </ContactForm>
-        {/* </SocialDiv> */}
       </ContactContainer>
+      <SocialDiv>
+        <Box>
+          <a target="_blank" href="mailto:danieloluwatobi765@gmail.com">
+            <MdOutlineMailOutline
+              style={{
+                color: "lightblue",
+                fontSize: 50,
+              }}
+            />
+          </a>
+        </Box>
+        <Box>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=2348109830746"
+          >
+            <FaWhatsapp
+              style={{
+                color: "lightblue",
+                fontSize: 50,
+              }}
+            />
+          </a>
+        </Box>
+        <Box>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=2348109830746"
+          >
+            <FaWhatsapp
+              style={{
+                color: "lightblue",
+                fontSize: 50,
+              }}
+            />
+          </a>
+        </Box>
+        <Box>
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=2348109830746"
+          >
+            <FaWhatsapp
+              style={{
+                color: "lightblue",
+                fontSize: 50,
+              }}
+            />
+          </a>
+        </Box>
+      </SocialDiv>
     </ContactSection>
   );
 };
