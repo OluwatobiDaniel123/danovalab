@@ -109,7 +109,7 @@ const SocialDiv = styled.div`
   // grid-template-columns: repeat(2, 1fr);
   // align-items: center;
   // position: absolute;
-  // width: 100%;
+  //  width: 100%;
   border: 2px solid black;
   // top: 50%;
   // left: 50%;

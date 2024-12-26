@@ -67,8 +67,8 @@ const About = () => {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   `;
   const P = styled.h6`
-    font-size: 18px;
-    padding: 2px;
+    font-size: 20px;
+    padding: 6px;
     color: blacks;
   `;
   const Div3 = styled.div`
@@ -88,8 +88,8 @@ const About = () => {
     centerPadding: "-17px",
   };
   const Div4 = styled.div`
-    padding: 5px;
-    width: 50px;
+    // padding: 5px;
+    width: 500px;
     height: 500px;
     border-radius: 10px;
     @media (max-width: 769px) {
@@ -98,7 +98,7 @@ const About = () => {
     }
   `;
   const Img = styled.img`
-    width: 90%;
+    width: 95%;
     height: 90%;
     border-radius: 5px;
 

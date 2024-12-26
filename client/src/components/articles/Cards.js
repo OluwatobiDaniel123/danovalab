@@ -1,7 +1,7 @@
 import React from "react";
 import CardItem from "./CardItem";
-import img1 from "../../assets/slide18.jpg";
-import slide10 from "../../assets/slide10.png";
+import img1 from "../../assets/port1.png";
+import slide10 from "../../assets/port4.png";
 import styled from "styled-components";
 
 function Cards() {

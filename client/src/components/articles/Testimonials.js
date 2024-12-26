@@ -53,9 +53,10 @@ const H2 = styled.h2`
   font-size: 20px;
 `;
 const Section = styled.div`
+  // height: 100vh;
+  border: 2px solid rgb(0, 195, 255);
+  width: 700px;
   text-align: center;
-  padding: 50px;
-  align-items: center;
 `;
 const Div_Img = styled.div`
   background: blue;
@@ -67,14 +68,12 @@ const Div_Img = styled.div`
   border: 0.4rem solid blue;
 `;
 const Review = styled.h5`
-  // color: white;
   font-size: 300;
   display: block;
   width: 80%;
   margin: 0.8rem auto 0;
 `;
 const Review_2 = styled.small`
-  // color: white;
   font-size: 300;
   display: block;
   width: 80%;
@@ -90,9 +89,6 @@ const Testimonials = () => {
         <Swiper
           style={{
             height: 300,
-            padding: 20,
-            // width: 600,
-            border: "2px solid rgb(0, 195, 255)",
           }}
           modules={[Pagination, Autoplay]}
           spaceBetween={40}
