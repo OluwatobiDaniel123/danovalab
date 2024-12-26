@@ -112,6 +112,21 @@ const SideNavItem = styled(Link)`
     transform: translateY(-3px);
   }
 `;
+const QoutetButton = styled.button`
+  background: lightblue;
+  color: black;
+  padding: 10px;
+  width: 70%;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s linear;
+  &:hover {
+    transform: scale(1.01);
+    background: rgb(0, 195, 255);
+  }
+`;
 
 const Header = () => {
   const location = useLocation();
@@ -139,17 +154,18 @@ const Header = () => {
             <Link to="/">Home</Link>
           </NavItem>
           <NavItem isActive={activeNav === "/artists"}>
-            <Link to="/artists">Artists</Link>
+            <Link to="/service">Services</Link>
           </NavItem>
           <NavItem isActive={activeNav === "/events"}>
-            <Link to="/events">Portfolio</Link>
+            <Link to="/portfolio">Portfolio</Link>
           </NavItem>
           <NavItem isActive={activeNav === "/music"}>
-            <Link to="/music">About Us</Link>
+            <Link to="/about">About</Link>
           </NavItem>
           <NavItem isActive={activeNav === "/contact"}>
             <Link to="/contact">Contact</Link>
           </NavItem>
+          <QoutetButton>Make a Qoute</QoutetButton>
         </HeaderUl>
 
         {/* Mobile Nav Icon */}
@@ -188,6 +204,7 @@ const Header = () => {
         <SideNavItem to="/contact" onClick={() => setShowNav(false)}>
           Contact
         </SideNavItem>
+        <QoutetButton>Make a Qoute</QoutetButton>
       </SideNav>
     </HeaderContainer>
   );

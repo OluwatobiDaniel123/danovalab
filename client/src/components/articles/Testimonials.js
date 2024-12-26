@@ -57,6 +57,9 @@ const Section = styled.div`
   border: 2px solid rgb(0, 195, 255);
   width: 700px;
   text-align: center;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `;
 const Div_Img = styled.div`
   background: blue;
