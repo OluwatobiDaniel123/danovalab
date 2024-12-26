@@ -10,7 +10,6 @@ function Cards() {
   `;
   const H1 = styled.h1`
     text-align: center;
-
     color: black;
   `;
   const Container = styled.div`
@@ -18,7 +17,6 @@ function Cards() {
     flex-flow: column;
     align-items: center;
     width: 90%;
-
     margin: 0 auto;
   `;
   const Container2 = styled.div`
@@ -30,7 +28,6 @@ function Cards() {
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     padding: 0;
-    // margin-bottom: 0px;
     @media (max-width: 1040px) {
       grid-template-columns: repeat(3, 1fr);
     }

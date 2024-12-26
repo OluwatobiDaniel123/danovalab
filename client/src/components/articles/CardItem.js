@@ -5,14 +5,14 @@ import styled from "styled-components";
 const CardsLink = styled(Link)`
   display: flex;
   flex-flow: column;
-  width: 250px;
+  width: 100%;
   height: 320px;
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   border-radius: 5px;
   overflow: hidden;
   text-decoration: none;
-  @media (max-width: 800px) {
-    width: 330px;
+  @media (max-width: 700px) {
+    width: 100%;
   }
 `;
 
