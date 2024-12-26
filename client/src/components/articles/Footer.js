@@ -11,7 +11,7 @@ import { keyframes } from "styled-components";
 
 const Footer = () => {
   const Box = styled.div`
-    background: #201f1f;
+    // background: #201f1f;
     display: flex;
     justify-content: space-between;
     align-items: center;

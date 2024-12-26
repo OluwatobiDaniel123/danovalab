@@ -3,22 +3,31 @@ import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const ContactSection = styled.section`
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   align-items: center;
+  text-align: center;
+  // position: relative;
+
+  // justify-content: center;
   // background: #201f1f;
 `;
 
 const ContactContainer = styled.div`
-  width: 80%;
+  width: 100%;
+  // height: 100vh;
+  text-align: center;
+  // position: relative;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 30px;
-  margin: 20px;
-  gap: 20px;
+  // padding: 30px;
+  // margin: 20px;
+  // gap: 20px;
 
   @media (max-width: 769px) {
     flex-direction: column;
@@ -26,22 +35,17 @@ const ContactContainer = styled.div`
 `;
 
 const ContactForm = styled.form`
-  width: 300px;
+  width: 100%;
   border-radius: 7px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   align-items: center;
-  // box-shadow: 0 150px 1000px 290px rgba(0, 0, 0, 0.1);
-
   h2 {
     font-variant: small-caps;
     font-size: 40px;
-    background: linear-gradient(90deg, #4caf50, #ffdb58, #a3c651);
-
-    -webkit-background-clip: text;
-    color: transparent;
+    color: black;
   }
 
   input,
@@ -53,23 +57,19 @@ const ContactForm = styled.form`
     letter-spacing: 1.3px;
     border-radius: 0.5rem;
     background: transparent;
-    border: 2px solid #92781a;
+    border: 2px solid lightblue;
     resize: none;
-    background: linear-gradient(90deg, #4caf50, #ffdb58, #a3c651);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: black;
     &:hover {
-      border: 2px solid #4caf50;
-      transform: scale(1.04);
+      border: 2px solid rgb(0, 195, 255);
+      transform: scale(1.02);
     }
     transition: all 0.3s linear;
   }
 `;
 
 const ContactButton = styled.button`
-  background: linear-gradient(90deg, #4caf50, #92781a, #a3c651);
-  -webkit-background-clip: button;
-  color: transparent;
+  background: lightblue;
   color: black;
   padding: 10px;
   width: 70%;
@@ -79,8 +79,8 @@ const ContactButton = styled.button`
   border: none;
   transition: all 0.3s linear;
   &:hover {
-    transform: scale(1.1);
-    border: 2px solid #4caf50;
+    transform: scale(1.01);
+    background: rgb(0, 195, 255);
   }
 `;
 
@@ -101,13 +101,18 @@ const Box = styled.div`
 `;
 
 const SocialDiv = styled.div`
-  border-radius: 7px;
-  padding: 8px;
-  // height: 170px;
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  // border-radius: 7px;
+  // padding: 8px;
+  // // height: 170px;
+  // display: grid;
+  // gap: 15px;
+  // grid-template-columns: repeat(2, 1fr);
+  // align-items: center;
+  // position: absolute;
+  // width: 100%;
+  border: 2px solid black;
+  // top: 50%;
+  // left: 50%;
 `;
 
 const P = styled.p``;
@@ -137,8 +142,105 @@ const Contact = () => {
   };
 
   return (
+    // <ContactSection>
+    //   <ContactContainer>
+    //     <ContactForm ref={form} onSubmit={sendEmail}>
+    //       <h2>Contact Us</h2>
+    //       <input
+    //         type="text"
+    //         name="name"
+    //         placeholder="Your Full Name"
+    //         required
+    //       />
+    //       <input type="email" name="email" placeholder="Your Email" required />
+    //       <textarea
+    //         rows="7"
+    //         name="message"
+    //         placeholder="Your Message"
+    //         required
+    //       />
+    //       <ContactButton type="submit">Send Message</ContactButton>
+    //     </ContactForm>
+    //     <SocialDiv>
+    //       <Box>
+    //         <a target="_blank" href="mailto:danieloluwatobi765@gmail.com">
+    //           <MdOutlineMailOutline
+    //             style={{
+    //               color: "#4caf50",
+    //               width: 50,
+    //               fontSize: 50,
+    //               padding: 4,
+    //               margin: 4,
+    //             }}
+    //           />
+    //         </a>
+    //       </Box>
+    //       <Box>
+    //         <a
+    //           target="_blank"
+    //           href="https://api.whatsapp.com/send?phone=2348109830746"
+    //         >
+    //           <FaWhatsapp
+    //             style={{
+    //               color: "#4caf50",
+    //               width: 50,
+    //               fontSize: 50,
+    //               padding: 4,
+    //               margin: 4,
+    //             }}
+    //           />
+    //         </a>
+    //       </Box>
+    //       <Box>
+    //         <a
+    //           target="_blank"
+    //           href="https://api.whatsapp.com/send?phone=2348109830746"
+    //         >
+    //           <FaWhatsapp
+    //             style={{
+    //               color: "#4caf50",
+    //               width: 50,
+    //               fontSize: 50,
+    //               padding: 4,
+    //               margin: 4,
+    //             }}
+    //           />
+    //         </a>
+    //       </Box>
+    //       <Box>
+    //         <a
+    //           target="_blank"
+    //           href="https://api.whatsapp.com/send?phone=2348109830746"
+    //         >
+    //           <FaWhatsapp
+    //             style={{
+    //               color: "#4caf50",
+    //               width: 50,
+    //               fontSize: 50,
+    //               padding: 4,
+    //               margin: 4,
+    //             }}
+    //           />
+    //         </a>
+    //       </Box>
+    //     </SocialDiv>
+    //   </ContactContainer>
+    // </ContactSection>
     <ContactSection>
       <ContactContainer>
+        <DotLottieReact
+          src="https://lottie.host/113aa8aa-b464-41a9-be0f-906d7a2d63b8/SSzUfeyU3r.lottie"
+          loop
+          autoplay
+          style={{
+            width: "100%",
+            height: "100%",
+
+            // margin: "0 auto",
+          }}
+        />
+        {/* <SocialDiv> */}
+        {/* <div className=" transform -translate-x-1/2 -translate-y-1/2 text-shadow"> */}
         <ContactForm ref={form} onSubmit={sendEmail}>
           <h2>Contact Us</h2>
           <input
@@ -156,69 +258,7 @@ const Contact = () => {
           />
           <ContactButton type="submit">Send Message</ContactButton>
         </ContactForm>
-        <SocialDiv>
-          <Box>
-            <a target="_blank" href="mailto:danieloluwatobi765@gmail.com">
-              <MdOutlineMailOutline
-                style={{
-                  color: "#4caf50",
-                  width: 50,
-                  fontSize: 50,
-                  padding: 4,
-                  margin: 4,
-                }}
-              />
-            </a>
-          </Box>
-          <Box>
-            <a
-              target="_blank"
-              href="https://api.whatsapp.com/send?phone=2348109830746"
-            >
-              <FaWhatsapp
-                style={{
-                  color: "#4caf50",
-                  width: 50,
-                  fontSize: 50,
-                  padding: 4,
-                  margin: 4,
-                }}
-              />
-            </a>
-          </Box>
-          <Box>
-            <a
-              target="_blank"
-              href="https://api.whatsapp.com/send?phone=2348109830746"
-            >
-              <FaWhatsapp
-                style={{
-                  color: "#4caf50",
-                  width: 50,
-                  fontSize: 50,
-                  padding: 4,
-                  margin: 4,
-                }}
-              />
-            </a>
-          </Box>
-          <Box>
-            <a
-              target="_blank"
-              href="https://api.whatsapp.com/send?phone=2348109830746"
-            >
-              <FaWhatsapp
-                style={{
-                  color: "#4caf50",
-                  width: 50,
-                  fontSize: 50,
-                  padding: 4,
-                  margin: 4,
-                }}
-              />
-            </a>
-          </Box>
-        </SocialDiv>
+        {/* </SocialDiv> */}
       </ContactContainer>
     </ContactSection>
   );

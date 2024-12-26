@@ -7,7 +7,6 @@ const CardsLink = styled(Link)`
   flex-flow: column;
   width: 250px;
   height: 320px;
-  box-shadow: 0.5px 1px 0.5px 2px rgb(0, 195, 255);
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   border-radius: 5px;
   overflow: hidden;

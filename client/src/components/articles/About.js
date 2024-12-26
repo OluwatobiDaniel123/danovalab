@@ -63,29 +63,13 @@ const About = () => {
   const H1 = styled.h1`
     padding: 30px 0 0;
     font-size: 50px;
-    // background: linear-gradient(
-    //   0deg,
-    //   rgb(0, 195, 255),
-    //   rgb(255, 0, 255),
-    //   rgb(0, 195, 255)
-    // );
-    // -webkit-background-clip: text;
-    // color: transparent;
-    color: rgb(0, 195, 255);
+    color: black;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   `;
   const P = styled.h6`
     font-size: 18px;
     padding: 2px;
-    // text-align: center;
-    // background: linear-gradient(
-    //   90deg,
-    //   rgb(0, 195, 255),
-    //   rgb(255, 0, 255),
-    //   rgb(0, 195, 255)
-    // );
-    // -webkit-background-clip: text;
-    color: rgb(0, 195, 255);
+    color: blacks;
   `;
   const Div3 = styled.div`
     width: 100%;
@@ -117,7 +101,7 @@ const About = () => {
     width: 90%;
     height: 90%;
     border-radius: 5px;
-    border: 2px solid rgb(0, 195, 255);
+
     transition: all 0.3s linear;
     &:hover {
       transform: scale(1.02);

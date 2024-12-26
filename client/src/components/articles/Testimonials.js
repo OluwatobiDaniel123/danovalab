@@ -44,18 +44,12 @@ const data = [
 ];
 
 const H5 = styled.h5`
-  // color: white;
-  background: linear-gradient(0deg, rgb(0, 195, 255));
-  -webkit-background-clip: text;
-  color: rgb(0, 195, 255);
+  color: black;
   font-size: 30px;
 `;
 
 const H2 = styled.h2`
-  // color: white;
-  background: linear-gradient(0deg, rgb(0, 195, 255));
-  -webkit-background-clip: text;
-  color: rgb(0, 195, 255);
+  color: black;
   font-size: 20px;
 `;
 const Section = styled.div`

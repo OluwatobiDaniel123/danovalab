@@ -7,16 +7,11 @@ import styled from "styled-components";
 function Cards() {
   const Cards = styled.div`
     padding: 3rem 0;
-    // background-image: url(${slide10});
-    // background-size: cover;
-    // background-position: center;
   `;
   const H1 = styled.h1`
     text-align: center;
-    // background: linear-gradient(0deg, #4caf50, #92781a, #a3c651);
-    // -webkit-background-clip: text;
 
-    color: rgb(0, 195, 255);
+    color: black;
   `;
   const Container = styled.div`
     display: flex;
