@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { MdOutlineMailOutline } from "react-icons/md";
@@ -6,28 +6,24 @@ import { FaWhatsapp } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 const ContactSection = styled.section`
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  // position: relative;
-
-  // justify-content: center;
-  // background: #201f1f;
+  background: linear-gradient(
+    135deg,
+    rgb(46, 46, 240) 0%,
+    rgb(74, 140, 255) 100%
+  );
+  padding: 30px 15px;
 `;
 
 const ContactContainer = styled.div`
-  width: 100%;
-  // height: 100vh;
-  text-align: center;
-  // position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding: 30px;
-  // margin: 20px;
-  // gap: 20px;
+  width: 100%;
+  gap: 2rem;
 
   @media (max-width: 769px) {
     flex-direction: column;
@@ -36,59 +32,69 @@ const ContactContainer = styled.div`
 
 const ContactForm = styled.form`
   width: 100%;
+  max-width: 500px;
+  padding: 15px;
   border-radius: 7px;
-  padding: 10px;
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   align-items: center;
+
   h2 {
     font-variant: small-caps;
-    font-size: 40px;
+    font-size: 30px;
     color: black;
+    border-bottom: 2px solid rgb(0, 195, 255);
+    margin-bottom: 1rem;
   }
 
   input,
   textarea {
     width: 100%;
     padding: 1rem;
-    font-size: bold;
-    font-weight: 800;
+    font-size: 1rem;
+    font-weight: 500;
     letter-spacing: 1.3px;
     border-radius: 0.5rem;
-    background: transparent;
+    background: #f9f9f9;
     border: 2px solid lightblue;
     resize: none;
     color: black;
+
     &:hover {
-      border: 2px solid rgb(0, 195, 255);
-      transform: scale(1.02);
+      border-color: rgb(0, 195, 255);
     }
-    transition: all 0.3s linear;
+
+    transition: all 0.3s ease-in-out;
   }
 `;
 
 const ContactButton = styled.button`
-  background: lightblue;
-  color: black;
-  padding: 10px;
+  background: rgb(0, 195, 255);
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
   width: 70%;
   border-radius: 10px;
   outline: none;
   cursor: pointer;
   border: none;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease-in-out;
+
   &:hover {
-    transform: scale(1.01);
-    background: rgb(0, 195, 255);
+    transform: scale(1.03);
+    background: rgb(0, 170, 220);
+  }
+
+  &:disabled {
+    background: grey;
+    cursor: not-allowed;
   }
 `;
 
 const Box = styled.div`
-  padding: 1px;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.09);
@@ -97,34 +103,49 @@ const Box = styled.div`
 
 const SocialDiv = styled.div`
   display: flex;
-  gap: 55px;
+  gap: 40px;
   justify-content: center;
+  margin-top: 20px;
+
+  @media (max-width: 769px) {
+    gap: 20px;
+  }
 `;
 
-const P = styled.p``;
+const IconLink = styled.a`
+  color: ${(props) => props.color || "black"};
+  font-size: 50px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: ${(props) => props.hoverColor || "rgb(0, 195, 255)"};
+  }
+`;
 
 const Contact = () => {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .sendForm(
+    try {
+      const result = await emailjs.sendForm(
         "service_qh08omd",
         "template_icla7gq",
         form.current,
         "uDj1nlX9BVEqunnYs"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Message sent successfully...");
-        },
-        (error) => {
-          console.error(error.text);
-        }
       );
+      console.log(result.text);
+      alert("Message sent successfully!");
+      form.current.reset();
+    } catch (error) {
+      console.error(error.text);
+      alert("Failed to send the message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -136,7 +157,8 @@ const Contact = () => {
           autoplay
           style={{
             width: "100%",
-            height: "100%",
+            maxWidth: "400px",
+            height: "auto",
           }}
         />
         <ContactForm ref={form} onSubmit={sendEmail}>
@@ -154,58 +176,35 @@ const Contact = () => {
             placeholder="Your Message"
             required
           />
-          <ContactButton type="submit">Send Message</ContactButton>
+          <ContactButton type="submit" disabled={loading}>
+            {loading ? "Sending..." : "Send Message"}
+          </ContactButton>
         </ContactForm>
       </ContactContainer>
       <SocialDiv>
         <Box>
-          <a target="_blank" href="mailto:danieloluwatobi765@gmail.com">
-            <MdOutlineMailOutline
-              style={{
-                color: "lightblue",
-                fontSize: 50,
-              }}
-            />
-          </a>
+          <IconLink
+            href="mailto:danieloluwatobi765@gmail.com"
+            color="grey"
+            hoverColor="darkgrey"
+            aria-label="Email Us"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MdOutlineMailOutline />
+          </IconLink>
         </Box>
         <Box>
-          <a
-            target="_blank"
+          <IconLink
             href="https://api.whatsapp.com/send?phone=2348109830746"
-          >
-            <FaWhatsapp
-              style={{
-                color: "lightblue",
-                fontSize: 50,
-              }}
-            />
-          </a>
-        </Box>
-        <Box>
-          <a
+            color="green"
+            hoverColor="darkgreen"
+            aria-label="WhatsApp"
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=2348109830746"
+            rel="noopener noreferrer"
           >
-            <FaWhatsapp
-              style={{
-                color: "lightblue",
-                fontSize: 50,
-              }}
-            />
-          </a>
-        </Box>
-        <Box>
-          <a
-            target="_blank"
-            href="https://api.whatsapp.com/send?phone=2348109830746"
-          >
-            <FaWhatsapp
-              style={{
-                color: "lightblue",
-                fontSize: 50,
-              }}
-            />
-          </a>
+            <FaWhatsapp />
+          </IconLink>
         </Box>
       </SocialDiv>
     </ContactSection>

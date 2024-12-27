@@ -14,7 +14,11 @@ import About_framer from "./About_framer";
 
 const About = () => {
   const Div = styled.div`
-    // background: #201f1f;
+    background: linear-gradient(
+      135deg,
+      rgb(46, 46, 240) 0%,
+      rgb(74, 140, 255) 100%
+    );
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +35,6 @@ const About = () => {
 
     @media (max-width: 769px) {
       width: 100%;
-      text-align: center;
       padding: 20px;
     }
   `;
@@ -39,7 +42,7 @@ const About = () => {
     display: flex;
     justify-content: space-between;
     padding: 43px 0 43px 0;
-    box-shadow: 0 2px 3px 2px rgb(0, 195, 255);
+    border-top: 1px solid rgb(0, 195, 255);
 
     @media (max-width: 769px) {
       padding: 0 1px;
@@ -60,15 +63,22 @@ const About = () => {
     }
   `;
 
-  const H1 = styled.h1`
+  const H1 = styled.h2`
     padding: 30px 0 0;
-    font-size: 50px;
-    color: black;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-variant: small-caps;
+    font-size: 40px;
+    color: white;
   `;
+
   const P = styled.h6`
     font-size: 20px;
-    // padding: 6px;
+    font-variant: small-caps;
+    color: white;
+    @media (max-width: 769px) {
+      font-size: 18px;
+      width: 100%;
+      padding: 0 1px;
+    }
   `;
   const Div3 = styled.div`
     width: 100%;
@@ -116,14 +126,14 @@ const About = () => {
       <MissionTextWrapper>
         <Div2>
           <P>
-            <p style={{ color: "rgb(0, 195, 255)" }}>
-              WE'RE A SOFTWARE DEVELOPER{" "}
+            <p style={{ color: "rgb(0, 195, 255)", fontVariant: "small-caps" }}>
+              WE'RE A SOFTWARE DEVELOPER TEAM
             </p>
-            Dedicated and innovative Software Developer with experience in
-            designing, developing, and managing complex web applications and
-            sites. Proficient in front-end and back-end development, including
-            HTML, CSS, JavaScript, and modern frameworks such as React and
-            Node.js Adept at creating responsive, user-friendly interfaces and
+            Dedicated and innovative Software experience in designing,
+            developing, and managing complex web applications and sites.
+            Proficient in front-end and back-end development, including HTML,
+            CSS, JavaScript, and modern frameworks such as React and Node.js
+            Adept at creating responsive, user-friendly interfaces and
             optimizing web performance. Skilled in collaborating with
             cross-functional teams to deliver high-quality digital solutions
             that enhance user experience and drive business growth.

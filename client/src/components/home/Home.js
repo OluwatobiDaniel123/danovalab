@@ -5,12 +5,15 @@ import Banner from "../articles/Banner";
 import Contact from "../articles/Contact";
 
 import Testimonials from "../articles/Testimonials";
+import CompanyHighlights from "../articles/CountUp";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <About />
+      <CompanyHighlights />
+
       <Cards />
       <Testimonials />
       <Contact />

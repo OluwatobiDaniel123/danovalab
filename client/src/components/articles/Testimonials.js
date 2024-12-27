@@ -27,72 +27,103 @@ const data = [
     avatar: Me3,
     name: "Emily Davis, Marketing Manager at TechSolutions Inc.",
     review:
-      "Oluwatobi Daniel was instrumental in redesigning our corporate website. They provided valuable insights into improving the user experience and implemented a modern design that aligns with our brand. Communication was excellent, and any issues were promptly addressed. The only minor downside was a slight delay due to unforeseen challenges, but overall, we are very satisfied with the outcome.",
+      "Oluwatobi Daniel was instrumental in redesigning our corporate website. They provided valuable insights into improving the user experience and implemented a modern design that aligns with our brand. Communication was excellent, and any issues were promptly addressed.",
   },
   {
     avatar: Me4,
     name: "John Smith, Owner of Gourmet Bistro",
     review:
-      "We needed a reservation system for our restaurant, and Oluwatobi Daniel delivered a fantastic solution. The system is easy to use for both our staff and customers, and it has streamlined our operations significantly. The attention to detail and commitment to quality were evident throughout the project. We couldn't be happier with the service provided.",
+      "We needed a reservation system for our restaurant, and Oluwatobi Daniel delivered a fantastic solution. The system is easy to use for both our staff and customers, and it has streamlined our operations significantly. We couldn't be happier with the service provided.",
   },
   {
     avatar: Me5,
     name: "John Smith, CEO at Tech Innovations",
     review:
-      "Working with Oluwatobi Daniel was a fantastic experience. They delivered a top-notch e-commerce platform that exceeded our expectations. Their attention to detail, creativity, and technical expertise were evident throughout the project. The site is user-friendly, responsive, and has significantly boosted our online sales. I highly recommend Oluwatobi Daniel for any web development needs.",
+      "Working with Oluwatobi Daniel was a fantastic experience. They delivered a top-notch e-commerce platform that exceeded our expectations. The site is user-friendly, responsive, and has significantly boosted our online sales. Highly recommended!",
   },
 ];
 
-const H5 = styled.h5`
-  color: black;
-  font-size: 30px;
+const Section = styled.section`
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgb(46, 46, 240) 0%,
+    rgb(74, 140, 255) 100%
+  );
+  color: #fff;
 `;
 
-const H2 = styled.h2`
-  color: black;
-  font-size: 20px;
+const Title = styled.h5`
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-variant: small-caps;
+  font-weight: bold;
 `;
-const Section = styled.div`
-  // height: 100vh;
-  border: 2px solid rgb(0, 195, 255);
-  width: 700px;
-  text-align: center;
-  @media (max-width: 700px) {
-    width: 100%;
+
+const Subtitle = styled.h2`
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-variant: small-caps;
+`;
+
+const SwiperWrapper = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.8;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
   }
 `;
-const Div_Img = styled.div`
-  background: blue;
-  width: 4rem;
-  aspect-ratio: 1/1;
-  overflow: hidden;
+
+const Slide = styled(SwiperSlide)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const Avatar = styled.div`
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin: 0 auto 1rem;
-  border: 0.4rem solid blue;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
-const Review = styled.h5`
-  font-size: 300;
-  display: block;
-  width: 80%;
-  margin: 0.8rem auto 0;
+
+const Name = styled.h5`
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 `;
-const Review_2 = styled.small`
-  font-size: 300;
-  display: block;
-  width: 80%;
-  margin: 0.8rem auto 0;
+
+const Review = styled.p`
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 `;
 
 const Testimonials = () => {
   return (
     <Section>
-      <H5>Review from Client </H5>
-      <H2>Testimonials</H2>
-      <div>
+      <Title>Reviews from Clients</Title>
+      <Subtitle>Testimonials</Subtitle>
+      <SwiperWrapper>
         <Swiper
-          style={{
-            height: 300,
-          }}
           modules={[Pagination, Autoplay]}
           spaceBetween={40}
           slidesPerView={1}
@@ -102,19 +133,17 @@ const Testimonials = () => {
             disableOnInteraction: false,
           }}
         >
-          {data.map(({ avatar, name, review, i }) => {
-            return (
-              <SwiperSlide key={i}>
-                <Div_Img>
-                  <img src={avatar} alt="img" />
-                </Div_Img>
-                <Review>{name}</Review>
-                <Review_2>{review}</Review_2>
-              </SwiperSlide>
-            );
-          })}
+          {data.map(({ avatar, name, review }, index) => (
+            <Slide key={index}>
+              <Avatar>
+                <img src={avatar} alt={`Avatar of ${name}`} />
+              </Avatar>
+              <Name>{name}</Name>
+              <Review>{review}</Review>
+            </Slide>
+          ))}
         </Swiper>
-      </div>
+      </SwiperWrapper>
     </Section>
   );
 };

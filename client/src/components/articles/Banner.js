@@ -33,10 +33,15 @@ function Fade() {
   `;
 
   const TextContainer = styled.div`
-    padding: 75px;
+    padding: 125px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 769px) {
+      padding: 13rem 0 0 0;
+    }
   `;
 
   const dropAnimation = keyframes`
@@ -77,16 +82,17 @@ function Fade() {
     font-size: 18px;
     text-algn: center;
     font-weight: bold;
-    margin: 110px 0 10px 0;
+    margin: 110px 0 19px 0;
     text-align: center;
-    font-family: sans-serif;
+    font-variant: small-caps;
+
     background: linear-gradient(0deg, rgb(0, 195, 255));
     -webkit-background-clip: text;
     color: rgb(0, 195, 255);
     animation: ${fadeIn} 3s ease-in forwards;
     @media (max-width: 769px) {
-      font-size: 16px;
-      margin: 90px 0 10px 0;
+      font-size: 18px;
+      width: 90%;
     }
   `;
 

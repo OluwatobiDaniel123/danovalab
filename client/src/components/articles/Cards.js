@@ -8,9 +8,12 @@ function Cards() {
   const Cards = styled.div`
     padding: 3rem 0;
   `;
-  const H1 = styled.h1`
+  const H1 = styled.h2`
     text-align: center;
     color: black;
+    font-variant: small-caps;
+    font-size: 30px;
+    border-bottom: 1px solid rgb(0, 195, 255);
   `;
   const Container = styled.div`
     display: flex;

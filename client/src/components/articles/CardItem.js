@@ -56,22 +56,17 @@ const CardsItemImg = styled.img`
 
 const CardsItemInfo = styled.div`
   padding: 8px 9px 2px;
-  background: #201f1f;
+  background: rgb(74, 140, 255);
 `;
 
 const CardsItemText = styled.h5`
-  color: white;
+  color: rgb(46, 46, 240);
   font-size: 16px;
-  background: rgb(0, 195, 255);
-  -webkit-background-clip: text;
-  color: transparent;
-  &:hover {
-    color: rgb(0, 195, 255);
-  }
+  color: blue;
 `;
 
 const CardsItemParagraph = styled.p`
-  color: white;
+  color: rgb(46, 46, 240);
   font-size: 13px;
   padding: 4px 0;
   font-weight: 300;
