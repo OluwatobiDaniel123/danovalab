@@ -11,6 +11,8 @@ const CardsLink = styled(Link)`
   border-radius: 5px;
   overflow: hidden;
   text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   @media (max-width: 700px) {
     width: 100%;
   }
@@ -56,17 +58,16 @@ const CardsItemImg = styled.img`
 
 const CardsItemInfo = styled.div`
   padding: 8px 9px 2px;
-  background: rgb(74, 140, 255);
 `;
 
 const CardsItemText = styled.h5`
-  color: rgb(46, 46, 240);
+  color: #1f98f4;
+
   font-size: 16px;
-  color: blue;
 `;
 
 const CardsItemParagraph = styled.p`
-  color: rgb(46, 46, 240);
+  color: #1f98f4;
   font-size: 13px;
   padding: 4px 0;
   font-weight: 300;

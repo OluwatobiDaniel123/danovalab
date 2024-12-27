@@ -46,9 +46,10 @@ const NavItem = styled.li`
   a {
     text-decoration: none;
     color: ${(props) => (props.isActive ? "#007bff" : "#333")};
-    font-weight: ${(props) => (props.isActive ? "700" : "500")};
+    font-weight: ${(props) => (props.isActive ? "700" : "600")};
     padding: 8px 15px;
     border-radius: 5px;
+
     transition: all 0.3s ease;
 
     &:hover {

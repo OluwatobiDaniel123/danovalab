@@ -93,35 +93,6 @@ const ContactButton = styled.button`
   }
 `;
 
-const Box = styled.div`
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.09);
-  }
-`;
-
-const SocialDiv = styled.div`
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 20px;
-
-  @media (max-width: 769px) {
-    gap: 20px;
-  }
-`;
-
-const IconLink = styled.a`
-  color: ${(props) => props.color || "black"};
-  font-size: 50px;
-  transition: color 0.3s ease-in-out;
-
-  &:hover {
-    color: ${(props) => props.hoverColor || "rgb(0, 195, 255)"};
-  }
-`;
-
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
@@ -157,7 +128,7 @@ const Contact = () => {
           autoplay
           style={{
             width: "100%",
-            maxWidth: "400px",
+            maxWidth: "500px",
             height: "auto",
           }}
         />
@@ -181,32 +152,6 @@ const Contact = () => {
           </ContactButton>
         </ContactForm>
       </ContactContainer>
-      <SocialDiv>
-        <Box>
-          <IconLink
-            href="mailto:danieloluwatobi765@gmail.com"
-            color="grey"
-            hoverColor="darkgrey"
-            aria-label="Email Us"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MdOutlineMailOutline />
-          </IconLink>
-        </Box>
-        <Box>
-          <IconLink
-            href="https://api.whatsapp.com/send?phone=2348109830746"
-            color="green"
-            hoverColor="darkgreen"
-            aria-label="WhatsApp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp />
-          </IconLink>
-        </Box>
-      </SocialDiv>
     </ContactSection>
   );
 };
