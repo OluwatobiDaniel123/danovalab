@@ -4,7 +4,6 @@ import img1 from "../../../src/assets/slide6.jpg";
 import img2 from "../../../src/assets/slide5.jpg";
 import img3 from "../../../src/assets/slide11.png";
 import styled from "styled-components";
-import { keyframes } from "styled-components";
 
 function Fade() {
   const settings = {
@@ -33,7 +32,6 @@ function Fade() {
 
   const TextContainer = styled.div`
     padding: 125px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,55 +41,88 @@ function Fade() {
     }
   `;
 
-  const dropAnimation = keyframes`
-  0% {
-    transform: translateY(-100px); 
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1; 
-  }
-`;
-
   const Text = styled.h2`
-    position: absolute;
-    font-size: 70px;
+    position: relative;
+    font-size: 80px;
+    padding-bottom: 20px;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(0deg, rgb(0, 195, 255));
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #0055ff, #00b4ff, #0095ff, #001eff);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
-    color: rgb(0, 195, 255);
-    animation: ${dropAnimation} 3s ease-in forwards;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite, fadeIn 2.5s ease forwards;
+
     @media (max-width: 769px) {
-      font-size: 50px;
+      font-size: 60px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 40px;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   `;
 
-  const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
   const Small = styled.p`
+    position: relative;
     font-size: 18px;
-    text-algn: center;
     font-weight: bold;
-    margin: 110px 0 19px 0;
+    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
     text-align: center;
-    font-variant: small-caps;
-
-    background: linear-gradient(0deg, rgb(0, 195, 255));
+    letter-spacing: 4px;
+    background: linear-gradient(45deg, #0055ff, #00b4ff, #0095ff, #001eff);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
-    color: rgb(0, 195, 255);
-    animation: ${fadeIn} 3s ease-in forwards;
-    @media (max-width: 769px) {
-      font-size: 18px;
-      width: 90%;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 6s ease infinite, fadeIn 2.5s ease forwards;
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   `;
 

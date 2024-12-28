@@ -20,7 +20,7 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 10px;
 `;
 
 const LogoImage = styled.img`

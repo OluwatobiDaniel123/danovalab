@@ -62,7 +62,6 @@ const CardsItemInfo = styled.div`
 
 const CardsItemText = styled.h5`
   color: #1f98f4;
-
   font-size: 16px;
 `;
 
