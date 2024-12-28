@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import img1 from "../../../src/assets/slide6.jpg";
 import img2 from "../../../src/assets/slide5.jpg";
 import img3 from "../../../src/assets/slide11.png";
-import img4 from "../../../src/assets/slide7.jpg";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 
@@ -96,31 +95,6 @@ function Fade() {
     }
   `;
 
-  const Button = styled.button`
-    margin: 210px 0 10px 0;
-    position: fixed;
-    color: black;
-    font-family: sans-serif;
-    background: linear-gradient(90deg, #4caf50, #92781a, #a3c651);
-    padding: 1px;
-    width: 300px;
-    height: 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease,
-      box-shadow 0.2s ease;
-    animation: ${fadeIn} 3s ease-in forwards;
-
-    &:hover {
-      border: 3px solid #4caf50;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    }
-    @media (max-width: 769px) {
-      font-size: 18px;
-      margin: 290px 0 10px 0;
-    }
-  `;
-
   const text = [
     {
       text: "DANOVALAB 1",
@@ -143,21 +117,21 @@ function Fade() {
     <div className="slider-container">
       <Slider {...settings}>
         <Div>
-          <Image src={img1} />
+          <Image src={img1} alt="img" />
           <TextContainer>
             <Text> {text[0].text} </Text>
             <Small>{text[0].subtext}</Small>
           </TextContainer>
         </Div>
         <Div>
-          <Image src={img2} />
+          <Image src={img2} alt="img" />
           <TextContainer>
             <Text> {text[1].text1} </Text>
             <Small>{text[1].subtext1}</Small>
           </TextContainer>
         </Div>
         <Div>
-          <Image src={img3} />
+          <Image src={img3} alt="img" />
           <TextContainer>
             <Text>{text[2].text2}</Text>
             <Small>{text[2].subtext2}</Small>

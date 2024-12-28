@@ -77,7 +77,7 @@ function CardItem(props) {
   return (
     <CardsLink to={props.path}>
       <CardsItemPicWrap data-category={props.label}>
-        <CardsItemImg src={props.src} alt="Travel image" />
+        <CardsItemImg src={props.src} alt="Img" />
       </CardsItemPicWrap>
       <CardsItemInfo>
         <CardsItemText>{props.text}</CardsItemText>

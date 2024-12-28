@@ -137,7 +137,7 @@ const Header = () => {
     <HeaderContainer>
       <Box>
         <Link to="/">
-          <LogoImage src={logo} alt="Company Logo" />
+          <LogoImage src={logo} alt="Logo" />
         </Link>
 
         <HeaderUl>

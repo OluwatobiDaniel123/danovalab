@@ -146,7 +146,7 @@ function Artists() {
       <Container>
         <Container2>
           <CardsItemPicWrap data-category="MELIQ.101">
-            <CardsItemImg src={img1} alt="Travel image" />
+            <CardsItemImg src={img1} alt="Img" />
           </CardsItemPicWrap>
           <CardsItemInfo>
             <CardsItemText>
