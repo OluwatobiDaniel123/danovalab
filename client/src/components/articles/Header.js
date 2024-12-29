@@ -141,7 +141,7 @@ const Header = () => {
         </Link>
 
         <HeaderUl>
-          {["/", "/Service", "/Portfolio", "/About", "/Contact"].map(
+          {["/", "/Services", "/Portfolio", "/About", "/Contact"].map(
             (path, index) => (
               <NavItem key={index} isActive={activeNav === path}>
                 <Link to={path}>{path === "/" ? "Home" : path.slice(1)}</Link>
@@ -157,7 +157,7 @@ const Header = () => {
       </Box>
 
       <SideNav show={showNav}>
-        {["/", "/Service", "/Portfolio", "/About", "/Contact"].map(
+        {["/", "/Services", "/Portfolio", "/About", "/Contact"].map(
           (path, index) => (
             <SideNavItem
               key={index}

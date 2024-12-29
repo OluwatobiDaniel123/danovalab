@@ -13,6 +13,7 @@ import Header from "./components/articles/Header";
 import About from "./components/articles/About";
 import Cards from "./components/articles/Cards";
 import Artists from "./components/articles/Artists";
+import ServicePage from "./components/articles/Service";
 
 const Layout = () => {
   return (
@@ -29,7 +30,7 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/Services" element={<Artists />} />
+        <Route path="/Services" element={<ServicePage />} />
         <Route path="/About" element={<About />} />
         <Route path="/Portfolio" element={<Cards />} />
         <Route path="/Contact" element={<Contact />} />

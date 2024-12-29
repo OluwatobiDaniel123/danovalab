@@ -77,8 +77,8 @@ const Footer = () => {
         <FooterSection>
           <FooterHeader>United States</FooterHeader>
           <FooterText>
-            2300 Camp Creek Parkway, Ste 120 #1008 College Park, GA 30337,
-            United States
+            2300 Camp Oando nowway, Cof 143 #1008 dollins Park, GA 34537, United
+            States
           </FooterText>
           <FooterText>+1 (770) 369-1794</FooterText>
         </FooterSection>
@@ -90,12 +90,14 @@ const Footer = () => {
           <FooterLink href="#">Web Development</FooterLink>
           <FooterLink href="#">Maintainability</FooterLink>
         </FooterSection>
+
         <FooterSection>
           <FooterHeader>Inside Danovalab</FooterHeader>
           <FooterLink href="/About">About</FooterLink>
+          <FooterLink href="/Portfolio">Portfolio</FooterLink>
+          <FooterLink href="/Contact">Contact</FooterLink>
           <FooterLink href="#">Careers</FooterLink>
           <FooterLink href="#">Blog</FooterLink>
-          <FooterLink href="#">Offshore Developers</FooterLink>
         </FooterSection>
         <FooterSection>
           <FooterHeader>Legal</FooterHeader>

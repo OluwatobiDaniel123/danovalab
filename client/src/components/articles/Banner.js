@@ -34,8 +34,6 @@ function Fade() {
     padding: 125px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
     @media (max-width: 769px) {
       padding: 13rem 0 0 0;
     }
@@ -47,9 +45,7 @@ function Fade() {
     padding-bottom: 20px;
     font-weight: bold;
     font-family: "Arial", sans-serif;
-
     text-transform: uppercase;
-    text-align: center;
     letter-spacing: 4px;
     background: linear-gradient(45deg, #0055ff, #00b4ff, #0095ff, #001eff);
     background-size: 300% 300%;
@@ -94,8 +90,6 @@ function Fade() {
     font-size: 18px;
     font-weight: bold;
     font-family: "Arial", sans-serif;
-    // text-transform: uppercase;
-    text-align: center;
     letter-spacing: 4px;
     background: linear-gradient(45deg, #0055ff, #00b4ff, #0095ff, #001eff);
     background-size: 300% 300%;

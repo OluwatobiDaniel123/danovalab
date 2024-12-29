@@ -1,21 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import Img from "../../assets/ImgForSkill.jpg";
-
-// const PageContainer = styled.div`
-//   padding: 20px;
-//   font-family: "Arial", sans-serif;
-// `;
 
 const PageContainer = styled.div`
   padding: 20px;
   font-family: "Arial", sans-serif;
-  background-image: url(${Img}); // Add your image path here
-  background-size: cover; // Ensures the image covers the entire container
-  background-position: center; // Centers the image
-  object-fit: cover;
-  background-repeat: no-repeat; // Prevents the image from repeating
-  color: white; // Change text color for better contrast
+  background: linear-gradient(
+    135deg,
+    rgb(46, 46, 240) 0%,
+    rgb(74, 140, 255) 100%
+  );
+  color: white;
 `;
 
 const Section = styled.div`
