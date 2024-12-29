@@ -46,12 +46,9 @@ const data = [
 const Section = styled.section`
   padding: 50px 20px;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgb(46, 46, 240) 0%,
-    rgb(74, 140, 255) 100%
-  );
-  color: #fff;
+  background-color: #f9f9f9;
+
+  color: black;
 `;
 
 const Title = styled.h5`
@@ -59,6 +56,7 @@ const Title = styled.h5`
   margin-bottom: 10px;
   font-variant: small-caps;
   font-weight: bold;
+  border-bottom: 1px solid rgb(0, 195, 255);
 `;
 
 const Subtitle = styled.h2`
@@ -71,6 +69,12 @@ const Subtitle = styled.h2`
 const SwiperWrapper = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  padding: 20px 0 20px 0;
+  background: linear-gradient(
+    135deg,
+    rgb(46, 46, 240) 0%,
+    rgb(74, 140, 255) 100%
+  );
 
   .swiper-pagination-bullet {
     background-color: #fff;

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
+import { toast, ToastContainer } from "react-toastify";
+
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -71,7 +73,8 @@ const ContactForm = styled.form`
 `;
 
 const ContactButton = styled.button`
-  background: rgb(0, 195, 255);
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+
   color: white;
   font-weight: bold;
   padding: 10px 15px;
@@ -80,11 +83,11 @@ const ContactButton = styled.button`
   outline: none;
   cursor: pointer;
   border: none;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: scale(1.03);
-    background: rgb(0, 170, 220);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
   &:disabled {
@@ -109,11 +112,11 @@ const Contact = () => {
         "uDj1nlX9BVEqunnYs"
       );
       console.log(result.text);
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
       form.current.reset();
     } catch (error) {
       console.error(error.text);
-      alert("Failed to send the message. Please try again.");
+      toast.error("Failed to send the message. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -147,6 +150,7 @@ const Contact = () => {
             placeholder="Your Message"
             required
           />
+
           <ContactButton type="submit" disabled={loading}>
             {loading ? "Sending..." : "Send Message"}
           </ContactButton>

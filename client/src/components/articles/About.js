@@ -4,9 +4,9 @@ import styled from "styled-components";
 import slide1 from "../../../src/assets/slide8.jpg";
 import slide2 from "../../../src/assets/slide2.jpg";
 import slide16 from "../../../src/assets/slide16.png";
-import slide15 from "../../../src/assets/slide15.png";
-import slide14 from "../../../src/assets/slide14.png";
-import slide13 from "../../../src/assets/slide13.png";
+import slide15 from "../../../src/assets/about3.jpg";
+import slide14 from "../../../src/assets/about2.jpg";
+import slide13 from "../../../src/assets/about1.jpg";
 import slide7 from "../../../src/assets/slide7.jpg";
 
 import { Link } from "react-router-dom";
@@ -72,7 +72,9 @@ const About = () => {
 
   const P = styled.h6`
     font-size: 20px;
-    font-variant: small-caps;
+    // font-variant: small-caps;
+    font-family: "Arial", sans-serif;
+    font-weight: 400px;
     color: white;
     @media (max-width: 769px) {
       font-size: 18px;

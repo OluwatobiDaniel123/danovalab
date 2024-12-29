@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/images/logo.jpg";
+import logo from "../../assets/logo.jpg";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { IoClose, IoMenuOutline } from "react-icons/io5";

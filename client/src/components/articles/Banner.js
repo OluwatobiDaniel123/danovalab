@@ -46,7 +46,8 @@ function Fade() {
     font-size: 80px;
     padding-bottom: 20px;
     font-weight: bold;
-    font-family: "Playfair Display", serif;
+    font-family: "Arial", sans-serif;
+
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 4px;
@@ -92,8 +93,8 @@ function Fade() {
     position: relative;
     font-size: 18px;
     font-weight: bold;
-    font-family: "Playfair Display", serif;
-    text-transform: uppercase;
+    font-family: "Arial", sans-serif;
+    // text-transform: uppercase;
     text-align: center;
     letter-spacing: 4px;
     background: linear-gradient(45deg, #0055ff, #00b4ff, #0095ff, #001eff);
@@ -130,17 +131,17 @@ function Fade() {
     {
       text: "DANOVALAB 1",
       subtext:
-        "Whether you’re a rising star or an established performer, XTiiM is here to amplify your voice and help your music reach audiences far and wide. Together, let’s turn dreams into unforgettable soundtracks.",
+        " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
     },
     {
       text1: "DANOVALAB 2",
       subtext1:
-        "Whether you’re a rising star or an established performer, XTiiM is here to amplify your voice and help your music reach audiences far and wide. Together, let’s turn dreams into unforgettable soundtracks.",
+        " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
     },
     {
       text2: "DANOVALAB 3",
       subtext2:
-        "Whether you’re a rising star or an established performer, XTiiM is here to amplify your voice and help your music reach audiences far and wide. Together, let’s turn dreams into unforgettable soundtracks.",
+        " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
     },
   ];
 

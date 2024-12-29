@@ -16,6 +16,7 @@ const Title = styled.h1`
   font-size: 30px;
   width: 100%;
   font-variant: small-caps;
+  border-bottom: 1px solid rgb(0, 195, 255);
 
   color: #333;
   margin-bottom: 10px;

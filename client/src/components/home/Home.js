@@ -6,12 +6,17 @@ import Contact from "../articles/Contact";
 
 import Testimonials from "../articles/Testimonials";
 import CompanyHighlights from "../articles/CountUp";
+import Skills from "../articles/Skills";
+import OurSkillsPage from "../articles/OurSkillsPage";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <About />
+      <Skills />
+      <OurSkillsPage />
+
       <CompanyHighlights />
       <Testimonials />
 

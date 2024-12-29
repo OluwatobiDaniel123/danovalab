@@ -1,67 +1,142 @@
 import React from "react";
 import styled from "styled-components";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const FooterContainer = styled.footer`
-  background: rgb(46, 46, 240);
-  text-align: center;
+  background: #000;
+  color: #fff;
   padding: 40px 20px;
-  border-top: 1px solid rgb(0, 195, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const FooterContent = styled.div`
-  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+`;
+
+const FooterSection = styled.div`
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+`;
+
+const FooterHeader = styled.h3`
+  margin-bottom: 10px;
 `;
 
 const FooterText = styled.p`
-  color: white;
-  margin: 0;
-  font-size: 14px;
+  margin: 5px 0;
+  padding: 6px;
 `;
 
 const FooterLink = styled.a`
-  color: ${(props) => props.color || "grey"};
-  font-size: 24px;
-  transition: color 0.3s ease;
+  width: 200px;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+  display: block;
+  outline: none;
+  padding: 1px;
 
   &:hover {
-    color: ${(props) => props.hoverColor || "lightgray"};
+    color: lightblue;
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  margin-top: 10px;
+
+  a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+
+    &:hover {
+      color: lightblue;
+    }
   }
 `;
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <FooterText>
-        &copy; 2024 Danovalab Profile. All Rights Reserved. Powered by
-        Danovalab.
-      </FooterText>
       <FooterContent>
-        <FooterLink
-          href="mailto:danieloluwatobi765@gmail.com"
-          color="grey"
-          hoverColor="darkgrey"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Send Email"
-        >
-          <MdOutlineMailOutline />
-        </FooterLink>
-        <FooterLink
-          href="https://api.whatsapp.com/send?phone=2348109830746"
-          color="green"
-          hoverColor="darkgreen"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="WhatsApp"
-        >
-          <FaWhatsapp />
-        </FooterLink>
+        <FooterSection>
+          <FooterHeader>Danovalab</FooterHeader>
+          <FooterText>Lagos</FooterText>
+          <FooterText>Odonla. Odogunyan, Ikorodu, Lagos</FooterText>
+          <FooterText>+234 (0)810 9830 746</FooterText>
+        </FooterSection>
+        <FooterSection>
+          <FooterHeader>United States</FooterHeader>
+          <FooterText>
+            2300 Camp Creek Parkway, Ste 120 #1008 College Park, GA 30337,
+            United States
+          </FooterText>
+          <FooterText>+1 (770) 369-1794</FooterText>
+        </FooterSection>
+        <FooterSection>
+          <FooterHeader>Services</FooterHeader>
+          <FooterLink href="#">Software Development</FooterLink>
+          <FooterLink href="#">Front-End Development</FooterLink>
+          <FooterLink href="#">Back-End Development</FooterLink>
+          <FooterLink href="#">Web Development</FooterLink>
+          <FooterLink href="#">Maintainability</FooterLink>
+        </FooterSection>
+        <FooterSection>
+          <FooterHeader>Inside Danovalab</FooterHeader>
+          <FooterLink href="/About">About</FooterLink>
+          <FooterLink href="#">Careers</FooterLink>
+          <FooterLink href="#">Blog</FooterLink>
+          <FooterLink href="#">Offshore Developers</FooterLink>
+        </FooterSection>
+        <FooterSection>
+          <FooterHeader>Legal</FooterHeader>
+          <FooterLink href="#">Terms Of Use</FooterLink>
+          <FooterLink href="#">Privacy Policy</FooterLink>
+          <FooterLink href="#">Cookie Policy</FooterLink>
+        </FooterSection>
       </FooterContent>
+      <SocialIcons>
+        <FooterLink
+          style={{ width: "auto" }}
+          href="https://www.facebook.com"
+          aria-label="Facebook"
+        >
+          <FaFacebook />
+        </FooterLink>
+        <FooterLink
+          style={{ width: "auto" }}
+          href="https://www.twitter.com"
+          aria-label="Twitter"
+        >
+          <FaTwitter />
+        </FooterLink>
+        <FooterLink
+          style={{ width: "auto" }}
+          href="https://www.linkedin.com"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </FooterLink>
+        <FooterLink
+          style={{ width: "auto" }}
+          href="https://www.instagram.com"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </FooterLink>
+      </SocialIcons>
+      <FooterText style={{ marginTop: "20px" }}>
+        &copy; {new Date().getFullYear()} Danovalab. All rights reserved.
+      </FooterText>
     </FooterContainer>
   );
 };
