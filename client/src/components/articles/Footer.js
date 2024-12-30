@@ -146,9 +146,18 @@ const Footer = () => {
           <FaInstagram />
         </FooterLink>
       </SocialIcons>
-      <FooterText style={{ marginTop: "20px" }}>
-        &copy; {new Date().getFullYear()} Danovalab. All rights reserved.
-      </FooterText>
+
+      <div
+        style={{
+          borderTop: "1px solid rgb(0, 195, 255)",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <FooterText style={{ marginTop: "20px" }}>
+          &copy; {new Date().getFullYear()} Danovalab. All rights reserved.
+        </FooterText>
+      </div>
     </FooterContainer>
   );
 };

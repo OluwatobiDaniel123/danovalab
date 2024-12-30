@@ -1,8 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import img1 from "../../../src/assets/slide6.jpg";
-import img2 from "../../../src/assets/slide5.jpg";
-import img3 from "../../../src/assets/slide11.png";
+import img1 from "../../../src/assets/banner1.jpg";
+import img2 from "../../../src/assets/banner2.jpg";
+import img3 from "../../../src/assets/banner3.jpg";
 import styled from "styled-components";
 
 function Fade() {
@@ -23,6 +23,9 @@ function Fade() {
     width: 100%;
     height: 100%;
     position: absolute;
+    @media (max-width: 769px) {
+      object-fit: cover;
+    }
   `;
 
   const Div = styled.div`

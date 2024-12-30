@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import services from "./Service";
 
 const ServiceContainer = styled.div`
   padding: 40px;

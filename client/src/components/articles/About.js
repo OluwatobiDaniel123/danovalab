@@ -1,13 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-import slide1 from "../../../src/assets/slide8.jpg";
-import slide2 from "../../../src/assets/slide2.jpg";
-import slide16 from "../../../src/assets/slide16.png";
+import slide1 from "../../../src/assets/about6.jpg";
+import slide2 from "../../../src/assets/about5.jpg";
+import slide16 from "../../../src/assets/about4.jpg";
 import slide15 from "../../../src/assets/about3.jpg";
 import slide14 from "../../../src/assets/about2.jpg";
 import slide13 from "../../../src/assets/about1.jpg";
-import slide7 from "../../../src/assets/slide7.jpg";
 
 import { Link } from "react-router-dom";
 import About_framer from "./About_framer";
