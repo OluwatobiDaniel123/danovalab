@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-
+import Img from "../../assets/logo.png";
 const FooterContainer = styled.footer`
   background: #000;
   color: #fff;
@@ -28,6 +28,8 @@ const FooterSection = styled.div`
 
 const FooterHeader = styled.h3`
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 `;
 
 const FooterText = styled.p`
@@ -63,13 +65,21 @@ const SocialIcons = styled.div`
     }
   }
 `;
+const LogoImage = styled.img`
+  height: 60px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px lightblue;
+`;
 
 const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
         <FooterSection>
-          <FooterHeader>Danovalab</FooterHeader>
+          <FooterHeader>
+            <LogoImage src={Img} alt="LogoImg" />
+          </FooterHeader>
           <FooterText>Lagos</FooterText>
           <FooterText>Odonla. Odogunyan, Ikorodu, Lagos</FooterText>
           <FooterText>+234 (0)810 9830 746</FooterText>

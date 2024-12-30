@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
@@ -25,6 +25,9 @@ const Box = styled.div`
 
 const LogoImage = styled.img`
   height: 60px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5px lightblue;
 `;
 
 const HeaderUl = styled.ul`
@@ -49,6 +52,8 @@ const NavItem = styled.li`
     font-weight: ${(props) => (props.isActive ? "700" : "600")};
     padding: 8px 15px;
     border-radius: 5px;
+    border-bottom: ${(props) =>
+      props.isActive ? "2px solid rgb(0, 195, 255)" : "#333"};
 
     transition: all 0.3s ease;
 
@@ -92,6 +97,8 @@ const SideNav = styled.div`
 const SideNavItem = styled(Link)`
   color: ${(props) => (props.isActive ? "#007bff" : "white")};
   font-weight: ${(props) => (props.isActive ? "700" : "500")};
+  border-bottom: ${(props) =>
+    props.isActive ? "1px solid rgb(0, 195, 255)" : "#333"};
   text-decoration: none;
   font-size: 18px;
   padding: 10px 15px;
