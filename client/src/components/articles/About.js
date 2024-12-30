@@ -53,11 +53,12 @@ const About = () => {
   const MissionTextImgDiv = styled.div`
     width: 30%;
     height: 390px;
-    padding-top: 143px;
+    padding-top: 133px;
     align-items: center;
 
     @media (max-width: 769px) {
       width: 210px;
+
       padding-top: 130px;
     }
   `;

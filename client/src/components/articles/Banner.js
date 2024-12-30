@@ -126,17 +126,17 @@ function Fade() {
 
   const text = [
     {
-      text: "DANOVALAB 1",
+      text: "DANOVALAB",
       subtext:
         " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
     },
     {
-      text1: "DANOVALAB 2",
+      text1: "DANOVALAB",
       subtext1:
         " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
     },
     {
-      text2: "DANOVALAB 3",
+      text2: "DANOVALAB",
       subtext2:
         " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
     },
