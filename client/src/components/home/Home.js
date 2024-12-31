@@ -8,6 +8,7 @@ import Testimonials from "../articles/Testimonials";
 import CompanyHighlights from "../articles/CountUp";
 import Skills from "../articles/Skills";
 import OurSkillsPage from "../articles/OurSkillsPage";
+// import Chatbox from "../articles/Chatbox";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
 
       <CompanyHighlights />
       <Testimonials />
-
+      {/* <Chatbox /> */}
       <Cards />
       <Contact />
     </div>
