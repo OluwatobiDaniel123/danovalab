@@ -1,9 +1,14 @@
-// RequestQuote.js
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Modal } from "antd";
 
 const Container = styled.div`
-  max-width: 600px;
+  padding: 40px;
+  background: #f4f4f4;
+`;
+
+const Form = styled.form`
+  max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -13,6 +18,10 @@ const Container = styled.div`
 
 const Title = styled.h2`
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  border-bottom: 2px solid rgb(0, 195, 255);
 `;
 
 const Input = styled.input`
@@ -45,16 +54,20 @@ const BudgetContainer = styled.div`
 `;
 
 const Button = styled.button`
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
   color: white;
+  width: 100%;
+
+  padding: 10px 20px;
+  border-radius: 6px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background-color: #0056b3;
+    transform: scale(1.04);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -71,6 +84,30 @@ const RequestQuote = () => {
     referral: "",
   });
 
+  // State for Modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [modalText, setModalText] = useState("Content of the modal");
+
+  // Modal functions
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setModalText("The modal will be closed after two seconds");
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  // Form handling
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
@@ -88,13 +125,14 @@ const RequestQuote = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // Handle form submission (e.g., send to API)
+    // Show the modal upon form submission
+    showModal();
   };
 
   return (
     <Container>
       <Title>Request a Quote</Title>
-      <form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Input
           type="text"
           name="fullName"
@@ -116,20 +154,6 @@ const RequestQuote = () => {
           name="whatsapp"
           placeholder="WhatsApp Number"
           value={formData.whatsapp}
-          onChange={handleChange}
-        />
-        <Input
-          type="text"
-          name="businessName"
-          placeholder="Business Name"
-          value={formData.businessName}
-          onChange={handleChange}
-        />
-        <Input
-          type="url"
-          name="websiteUrl"
-          placeholder="Website URL (if any)"
-          value={formData.websiteUrl}
           onChange={handleChange}
         />
 
@@ -203,7 +227,17 @@ const RequestQuote = () => {
         />
 
         <Button type="submit">GET FREE QUOTE</Button>
-      </form>
+      </Form>
+
+      <Modal
+        title="Title"
+        open={isModalOpen}
+        onOk={handleOk}
+        confirmLoading={confirmLoading}
+        onCancel={handleCancel}
+      >
+        <p>{modalText}</p>
+      </Modal>
     </Container>
   );
 };

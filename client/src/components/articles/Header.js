@@ -155,7 +155,9 @@ const Header = () => {
               </NavItem>
             )
           )}
-          <QuoteButton>Get a Quote</QuoteButton>
+          <Link to="/request_quote">
+            <QuoteButton>Get a Quote</QuoteButton>
+          </Link>
         </HeaderUl>
 
         <NavIcon onClick={toggleNav}>
@@ -176,7 +178,9 @@ const Header = () => {
             </SideNavItem>
           )
         )}
-        <QuoteButton>Get a Quote</QuoteButton>
+        <Link to="/request_quote">
+          <QuoteButton>Get a Quote</QuoteButton>
+        </Link>
       </SideNav>
     </HeaderContainer>
   );
