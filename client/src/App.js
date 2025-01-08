@@ -12,7 +12,6 @@ import Contact from "./components/articles/Contact";
 import Header from "./components/articles/Header";
 import About from "./components/articles/About";
 import Cards from "./components/articles/Cards";
-import Artists from "./components/articles/Artists";
 import ServicePage from "./components/articles/Service";
 import RequestQuote from "./components/articles/RequestQoute";
 
@@ -31,10 +30,8 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-
         <Route path="/Services" element={<ServicePage />} />
         <Route path="/request_quote" element={<RequestQuote />} />
-
         <Route path="/About" element={<About />} />
         <Route path="/Portfolio" element={<Cards />} />
         <Route path="/Contact" element={<Contact />} />
