@@ -141,7 +141,7 @@ const Testimonials = () => {
           {data.map(({ avatar, name, review }, index) => (
             <Slide key={index}>
               <Avatar>
-                <img src={avatar} alt={`Avatar of ${name}`} />
+                <img src={avatar} loading="lazy" alt={`Avatar of ${name}`} />
               </Avatar>
               <Name>{name}</Name>
               <Review>{review}</Review>

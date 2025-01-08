@@ -146,21 +146,21 @@ function Fade() {
     <div className="slider-container">
       <Slider {...settings}>
         <Div>
-          <Image src={img1} alt="img" />
+          <Image src={img1} loading="lazy" alt="img" />
           <TextContainer>
             <Text> {text[0].text} </Text>
             <Small>{text[0].subtext}</Small>
           </TextContainer>
         </Div>
         <Div>
-          <Image src={img2} alt="img" />
+          <Image src={img2} loading="lazy" alt="img" />
           <TextContainer>
             <Text> {text[1].text1} </Text>
             <Small>{text[1].subtext1}</Small>
           </TextContainer>
         </Div>
         <Div>
-          <Image src={img3} alt="img" />
+          <Image src={img3} loading="lazy" alt="img" />
           <TextContainer>
             <Text>{text[2].text2}</Text>
             <Small>{text[2].subtext2}</Small>

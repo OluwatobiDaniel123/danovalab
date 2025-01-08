@@ -150,32 +150,32 @@ const About = () => {
         <Slider {...settings}>
           <Div4>
             <Link to="/artists">
-              <Img src={slide1} alt="img" />
+              <Img src={slide1} loading="lazy" alt="img" />
             </Link>
           </Div4>
           <Div4>
             <Link to="/artists">
-              <Img src={slide2} alt="img" />
+              <Img src={slide2} loading="lazy" alt="img" />
             </Link>
           </Div4>
           <Div4>
             <Link to="/artists">
-              <Img src={slide16} alt="img" />
+              <Img src={slide16} loading="lazy" alt="img" />
             </Link>
           </Div4>
           <Div4>
             <Link to="/artists">
-              <Img src={slide15} alt="img" />
+              <Img src={slide15} loading="lazy" alt="img" />
             </Link>
           </Div4>{" "}
           <Div4>
             <Link to="/artists">
-              <Img src={slide14} alt="img" />
+              <Img src={slide14} loading="lazy" alt="img" />
             </Link>
           </Div4>{" "}
           <Div4>
             <Link to="/artists">
-              <Img src={slide13} alt="img" />
+              <Img src={slide13} loading="lazy" alt="img" />
             </Link>
           </Div4>
         </Slider>

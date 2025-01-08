@@ -146,7 +146,7 @@ function Artists() {
       <Container>
         <Container2>
           <CardsItemPicWrap data-category="MELIQ.101">
-            <CardsItemImg src={img1} alt="Img" />
+            <CardsItemImg src={img1} loading="lazy" alt="Img" />
           </CardsItemPicWrap>
           <CardsItemInfo>
             <CardsItemText>
@@ -173,6 +173,7 @@ function Artists() {
                       allow="autoplay; encrypted-media"
                       allowFullScreen
                       title={video.title}
+                      loading="lazy"
                     ></iframe>
                     <CardsItemParagraph>{video.title}</CardsItemParagraph>
                   </Video>

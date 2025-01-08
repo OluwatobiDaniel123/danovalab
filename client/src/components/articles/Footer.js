@@ -78,7 +78,7 @@ const Footer = () => {
       <FooterContent>
         <FooterSection>
           <FooterHeader>
-            <LogoImage src={Img} alt="LogoImg" />
+            <LogoImage src={Img} loading="lazy" alt="LogoImg" />
           </FooterHeader>
           <FooterText>Lagos</FooterText>
           <FooterText>Odonla. Odogunyan, Ikorodu, Lagos</FooterText>

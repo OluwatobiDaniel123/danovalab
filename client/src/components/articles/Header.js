@@ -144,7 +144,7 @@ const Header = () => {
     <HeaderContainer>
       <Box>
         <Link to="/">
-          <LogoImage src={logo} alt="Logo" />
+          <LogoImage src={logo} loading="lazy" alt="Logo" />
         </Link>
 
         <HeaderUl>
