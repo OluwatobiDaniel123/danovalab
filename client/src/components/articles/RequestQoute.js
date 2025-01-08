@@ -124,7 +124,26 @@ const RequestQuote = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    if (
+      !formData.fullName ||
+      !formData.email ||
+      formData.helpWith.length === 0 ||
+      !formData.budget
+    ) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    setModalText(
+      `Thank you, ${
+        formData.fullName
+      }! We have received your request for ${formData.helpWith.join(", ")}. 
+    We will contact you at ${formData.email} or via WhatsApp: ${
+        formData.whatsapp
+      }.`
+    );
+
     // Show the modal upon form submission
     showModal();
   };
@@ -230,9 +249,23 @@ const RequestQuote = () => {
       </Form>
 
       <Modal
-        title="Title"
+        title="Quote Request Received!"
         open={isModalOpen}
-        onOk={handleOk}
+        onOk={() => {
+          handleOk();
+          // Reset the form
+          setFormData({
+            fullName: "",
+            email: "",
+            whatsapp: "",
+            businessName: "",
+            websiteUrl: "",
+            helpWith: [],
+            comments: "",
+            budget: "",
+            referral: "",
+          });
+        }}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
       >

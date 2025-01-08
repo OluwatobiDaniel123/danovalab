@@ -8,7 +8,7 @@ import Testimonials from "../articles/Testimonials";
 import CompanyHighlights from "../articles/CountUp";
 import Skills from "../articles/Skills";
 import OurSkillsPage from "../articles/OurSkillsPage";
-import Chatbot from "../articles/Chatbot";
+import Chatbot from "../articles/Chatbox/Chatbot";
 
 const Home = () => {
   return (
