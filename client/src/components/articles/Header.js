@@ -71,7 +71,7 @@ const NavIcon = styled.div`
   }
 
   svg {
-    font-size: 28px;
+    font-size: 43px;
     color: #333;
     cursor: pointer;
   }

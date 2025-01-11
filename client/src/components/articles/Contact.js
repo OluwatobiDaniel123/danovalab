@@ -1,11 +1,8 @@
 import React, { useRef, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import emailjs from "emailjs-com";
-import { toast, ToastContainer } from "react-toastify";
-
-import { MdOutlineMailOutline } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 const ContactSection = styled.section`
   display: flex;
@@ -96,10 +93,65 @@ const ContactButton = styled.button`
   }
 `;
 
+const slideIn = keyframes`
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideOut = keyframes`
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+`;
+
+const StyledAlert = styled.div`
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: ${(props) =>
+    props.type === "success" ? "#d4edda" : "#f8d7da"};
+  color: ${(props) => (props.type === "success" ? "#155724" : "#721c24")};
+  border: 1px solid
+    ${(props) => (props.type === "success" ? "#c3e6cb" : "#f5c6cb")};
+  border-radius: 5px;
+  padding: 0.6rem 0.6rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: ${(props) => (props.animateOut ? slideOut : slideIn)} 0.5s ease;
+  z-index: 1000;
+
+  svg {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: ${(props) => (props.type === "success" ? "#155724" : "#721c24")};
+    font-size: 1.9rem;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+`;
+
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
-
+  const [alertMessage, setAlertMessage] = useState(null);
+  const [animateOut, setAnimateOut] = useState(false);
   const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -112,13 +164,23 @@ const Contact = () => {
         "uDj1nlX9BVEqunnYs"
       );
       console.log(result.text);
-      toast.success("Message sent successfully!");
+
+      setAlertMessage({
+        type: "success",
+        message: "Message sent successfully!",
+      });
       form.current.reset();
     } catch (error) {
       console.error(error.text);
-      toast.error("Failed to send the message. Please try again.");
+      setLoading(false);
+      setAlertMessage({ type: "error", message: "Failed to send message" });
     } finally {
       setLoading(false);
+
+      setTimeout(() => {
+        // setAnimateOut(true);
+        setTimeout(() => setAlertMessage(null), 300);
+      }, 3000);
     }
   };
 
@@ -155,6 +217,17 @@ const Contact = () => {
             {loading ? "Sending..." : "Send Message"}
           </ContactButton>
         </ContactForm>
+        {alertMessage && (
+          <StyledAlert type={alertMessage.type} animateOut={animateOut}>
+            {alertMessage.type === "success" ? (
+              <FaCheckCircle />
+            ) : (
+              <FaTimesCircle />
+            )}
+            {alertMessage.message}
+            <button onClick={() => setAlertMessage(null)}>&times;</button>
+          </StyledAlert>
+        )}
       </ContactContainer>
     </ContactSection>
   );

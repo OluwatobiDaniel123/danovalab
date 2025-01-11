@@ -62,14 +62,15 @@ const CardsItemInfo = styled.div`
 
 const CardsItemText = styled.h5`
   color: #1f98f4;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 800;
 `;
 
 const CardsItemParagraph = styled.p`
   color: #1f98f4;
-  font-size: 13px;
+  font-size: 16px;
   padding: 4px 0;
-  font-weight: 300;
+  font-weight: 600;
 `;
 
 function CardItem(props) {

@@ -119,6 +119,7 @@ const Name = styled.h5`
 
 const Review = styled.p`
   font-size: 0.9rem;
+  padding: 10px;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;

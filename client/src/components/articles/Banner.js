@@ -127,18 +127,21 @@ function Fade() {
   const text = [
     {
       text: "DANOVALAB",
-      subtext:
-        " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
+      subtext: " Welcome to DANOVALAB — A Hub of Software Ingenuity! ",
+      lowertext:
+        "At DANOVALAB, we don’t just develop software; we craft experiences that stand out. Each line of code, every design, and all interactions are a testament to our passion for innovation. We thrive on turning bold ideas into exceptional, user-focused web applications that redefine boundaries and set new standards.",
     },
     {
       text1: "DANOVALAB",
-      subtext1:
-        " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
+      subtext1: " Welcome to DANOVALAB — A Hub of Software Ingenuity! ",
+      lowertext1:
+        "At DANOVALAB, we don’t just develop software; we craft experiences that stand out. Each line of code, every design, and all interactions are a testament to our passion for innovation. We thrive on turning bold ideas into exceptional, user-focused web applications that redefine boundaries and set new standards.",
     },
     {
       text2: "DANOVALAB",
-      subtext2:
-        " Welcome to DANOVALAB, the collective showcase of our software development team. We are a group of passionate developers dedicated to creating innovative and user-friendly web applications. ",
+      subtext2: " Welcome to DANOVALAB — A Hub of Software Ingenuity! ",
+      lowertext2:
+        "At DANOVALAB, we don’t just develop software; we craft experiences that stand out. Each line of code, every design, and all interactions are a testament to our passion for innovation. We thrive on turning bold ideas into exceptional, user-focused web applications that redefine boundaries and set new standards.",
     },
   ];
 
@@ -150,6 +153,7 @@ function Fade() {
           <TextContainer>
             <Text> {text[0].text} </Text>
             <Small>{text[0].subtext}</Small>
+            <Small>{text[0].lowertext}</Small>
           </TextContainer>
         </Div>
         <Div>
@@ -157,6 +161,7 @@ function Fade() {
           <TextContainer>
             <Text> {text[1].text1} </Text>
             <Small>{text[1].subtext1}</Small>
+            <Small>{text[1].lowertext1}</Small>
           </TextContainer>
         </Div>
         <Div>
@@ -164,6 +169,7 @@ function Fade() {
           <TextContainer>
             <Text>{text[2].text2}</Text>
             <Small>{text[2].subtext2}</Small>
+            <Small>{text[2].lowertext2}</Small>
           </TextContainer>
         </Div>
       </Slider>

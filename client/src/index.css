@@ -15,9 +15,9 @@
   ); */
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 ::-webkit-scrollbar {
   display: none;
   color: #92781a;
