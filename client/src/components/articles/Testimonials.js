@@ -71,6 +71,8 @@ const SwiperWrapper = styled.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px 0 20px 0;
+  border-radius: 5%;
+
   background: linear-gradient(
     135deg,
     rgb(46, 46, 240) 0%,
