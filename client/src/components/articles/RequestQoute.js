@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Modal } from "antd";
+import React, { useRef, useState } from "react";
+import styled, { keyframes } from "styled-components";
+import emailjs from "emailjs-com";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 
 const Container = styled.div`
   padding: 40px;
@@ -71,6 +72,96 @@ const Button = styled.button`
   }
 `;
 
+const slideIn = keyframes`
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const slideOut = keyframes`
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+`;
+
+// const StyledAlert = styled.div`
+//   position: fixed;
+//   top: 20px;
+//   right: 20px;
+//   background-color: ${(props) =>
+//     props.type === "success" ? "#d4edda" : "#f8d7da"};
+//   color: ${(props) => (props.type === "success" ? "#155724" : "#721c24")};
+//   border: 1px solid
+//     ${(props) => (props.type === "success" ? "#c3e6cb" : "#f5c6cb")};
+//   border-radius: 5px;
+//   padding: 0.6rem 0.6rem;
+//   display: flex;
+//   align-items: center;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   animation: ${(props) => (props.animateOut ? slideOut : slideIn)} 0.5s ease;
+//   z-index: 1000;
+
+//   svg {
+//     margin-right: 10px;
+//     font-size: 1.5rem;
+//   }
+
+//   button {
+//     background: none;
+//     border: none;
+//     color: ${(props) => (props.type === "success" ? "#155724" : "#721c24")};
+//     font-size: 1.9rem;
+//     margin-left: 15px;
+//     cursor: pointer;
+//   }
+// `;
+const StyledAlert = styled.div`
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: ${(props) =>
+    props.type === "success" ? "#e3fcec" : "#ffe8e8"};
+  color: ${(props) => (props.type === "success" ? "#2e7d32" : "#d32f2f")};
+  border: 1px solid
+    ${(props) => (props.type === "success" ? "#a5d6a7" : "#ef9a9a")};
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: ${(props) => (props.animateOut ? slideOut : slideIn)} 0.5s ease;
+  z-index: 1000;
+
+  svg {
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: ${(props) => (props.type === "success" ? "#2e7d32" : "#d32f2f")};
+    font-size: 1.5rem;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
+
 const RequestQuote = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -84,30 +175,12 @@ const RequestQuote = () => {
     referral: "",
   });
 
-  // State for Modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState("Content of the modal");
+  const form = useRef();
+  const [loading, setLoading] = useState(false);
 
-  // Modal functions
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
+  const [alertMessage, setAlertMessage] = useState(null);
+  const [animateOut, setAnimateOut] = useState(false);
 
-  const handleOk = () => {
-    setModalText("The modal will be closed after two seconds");
-    setConfirmLoading(true);
-    setTimeout(() => {
-      setIsModalOpen(false);
-      setConfirmLoading(false);
-    }, 2000);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
-  // Form handling
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     if (type === "checkbox") {
@@ -122,36 +195,38 @@ const RequestQuote = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (
-      !formData.fullName ||
-      !formData.email ||
-      formData.helpWith.length === 0 ||
-      !formData.budget
-    ) {
-      alert("Please fill all required fields.");
-      return;
+    setLoading(true);
+    try {
+      const result = await emailjs.sendForm(
+        "service_qh08omd",
+        "template_icla7gq",
+        form.current,
+        "uDj1nlX9BVEqunnYs"
+      );
+      console.log(result.text);
+      setAlertMessage({
+        type: "success",
+        message: "Quote sent successfully!",
+      });
+      form.current.reset();
+    } catch (error) {
+      console.error(error.text);
+      setAlertMessage({ type: "error", message: "Failed to send Quote" });
+    } finally {
+      setLoading(false);
+      setTimeout(() => {
+        // setAnimateOut(true);
+        setTimeout(() => setAlertMessage(null), 300);
+      }, 3000);
     }
-
-    setModalText(
-      `Thank you, ${
-        formData.fullName
-      }! We have received your request for ${formData.helpWith.join(", ")}. 
-    We will contact you at ${formData.email} or via WhatsApp: ${
-        formData.whatsapp
-      }.`
-    );
-
-    // Show the modal upon form submission
-    showModal();
   };
 
   return (
     <Container>
       <Title>Request a Quote</Title>
-      <Form onSubmit={handleSubmit}>
+      <Form ref={form} onSubmit={handleSubmit}>
         <Input
           type="text"
           name="fullName"
@@ -245,32 +320,22 @@ const RequestQuote = () => {
           onChange={handleChange}
         />
 
-        <Button type="submit">GET FREE QUOTE</Button>
+        <Button type="submit" disabled={loading}>
+          {loading ? "Sending..." : " GET FREE QUOTE"}
+        </Button>
       </Form>
 
-      <Modal
-        title="Quote Request Received!"
-        open={isModalOpen}
-        onOk={() => {
-          handleOk();
-          // Reset the form
-          setFormData({
-            fullName: "",
-            email: "",
-            whatsapp: "",
-            businessName: "",
-            websiteUrl: "",
-            helpWith: [],
-            comments: "",
-            budget: "",
-            referral: "",
-          });
-        }}
-        confirmLoading={confirmLoading}
-        onCancel={handleCancel}
-      >
-        <p>{modalText}</p>
-      </Modal>
+      {alertMessage && (
+        <StyledAlert type={alertMessage.type} animateOut={animateOut}>
+          {alertMessage.type === "success" ? (
+            <FaCheckCircle />
+          ) : (
+            <FaTimesCircle />
+          )}
+          {alertMessage.message}
+          <button onClick={() => setAlertMessage(null)}>&times;</button>
+        </StyledAlert>
+      )}
     </Container>
   );
 };

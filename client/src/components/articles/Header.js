@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
@@ -104,7 +103,6 @@ const SideNavItem = styled(Link)`
   padding: 10px 15px;
   border-radius: 5px;
   transition: all 0.3s ease;
-
   &:hover {
     background-color: #007bff;
     color: white;
@@ -120,7 +118,6 @@ const QuoteButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -144,7 +141,11 @@ const Header = () => {
     <HeaderContainer>
       <Box>
         <Link to="/">
-          <LogoImage src={logo} loading="lazy" alt="Logo" />
+          <LogoImage
+            src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662183/logo_vuude4.png"
+            loading="lazy"
+            alt="Logo"
+          />
         </Link>
 
         <HeaderUl>

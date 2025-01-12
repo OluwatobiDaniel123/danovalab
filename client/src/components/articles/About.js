@@ -1,13 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-import slide1 from "../../../src/assets/about6.jpg";
-import slide2 from "../../../src/assets/about5.jpg";
-import slide16 from "../../../src/assets/about4.jpg";
-import slide15 from "../../../src/assets/about3.jpg";
-import slide14 from "../../../src/assets/about2.jpg";
-import slide13 from "../../../src/assets/about1.jpg";
-
 import { Link } from "react-router-dom";
 import About_framer from "./About_framer";
 
@@ -150,32 +143,56 @@ const About = () => {
         <Slider {...settings}>
           <Div4>
             <Link to="/artists">
-              <Img src={slide1} loading="lazy" alt="img" />
+              <Img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662184/about4_ovhkr0.jpg"
+                loading="lazy"
+                alt="img"
+              />
             </Link>
           </Div4>
           <Div4>
             <Link to="/artists">
-              <Img src={slide2} loading="lazy" alt="img" />
+              <Img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/about6_t7sqcl.jpg"
+                loading="lazy"
+                alt="img"
+              />
             </Link>
           </Div4>
           <Div4>
             <Link to="/artists">
-              <Img src={slide16} loading="lazy" alt="img" />
+              <Img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/about1_du5jbv.jpg"
+                loading="lazy"
+                alt="img"
+              />
             </Link>
           </Div4>
           <Div4>
             <Link to="/artists">
-              <Img src={slide15} loading="lazy" alt="img" />
+              <Img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662180/about2_sshzqd.jpg"
+                loading="lazy"
+                alt="img"
+              />
             </Link>
           </Div4>{" "}
           <Div4>
             <Link to="/artists">
-              <Img src={slide14} loading="lazy" alt="img" />
+              <Img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662179/about3_fxzk82.jpg"
+                loading="lazy"
+                alt="img"
+              />
             </Link>
           </Div4>{" "}
           <Div4>
             <Link to="/artists">
-              <Img src={slide13} loading="lazy" alt="img" />
+              <Img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/about5_xsajo9.jpg"
+                loading="lazy"
+                alt="img"
+              />
             </Link>
           </Div4>
         </Slider>

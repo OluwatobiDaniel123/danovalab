@@ -16,7 +16,6 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  /* opacity: 0.9; */
 }
 
 .front {
@@ -25,12 +24,10 @@
 }
 .right {
   transform: rotateY(90deg) translateZ(100px);
-
   background-color: blue;
 }
 .back {
   transform: rotateY(180deg) translateZ(100px);
-
   background-color: blue;
 }
 .left {
@@ -39,11 +36,9 @@
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
-
   background-color: blue;
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
-
   background-color: blue;
 }

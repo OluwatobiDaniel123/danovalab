@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import Img from "../../assets/logo.png";
 const FooterContainer = styled.footer`
   background: #000;
   color: #fff;
@@ -78,7 +77,11 @@ const Footer = () => {
       <FooterContent>
         <FooterSection>
           <FooterHeader>
-            <LogoImage src={Img} loading="lazy" alt="LogoImg" />
+            <LogoImage
+              src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662183/logo_vuude4.png"
+              loading="lazy"
+              alt="LogoImg"
+            />
           </FooterHeader>
           <FooterText>Lagos</FooterText>
           <FooterText>Odonla. Odogunyan, Ikorodu, Lagos</FooterText>
