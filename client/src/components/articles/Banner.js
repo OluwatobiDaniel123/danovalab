@@ -149,8 +149,10 @@ function Fade() {
         <Div>
           <Image
             src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/banner2_cb9sxf.jpg"
-            loading="lazy"
+            loading="eager"
             alt="img"
+            // srcset="banner2-400w.webp 400w, banner2-800w.webp 800w, banner2-1600w.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
           <TextContainer>
             <Text> {text[0].text} </Text>
@@ -161,9 +163,12 @@ function Fade() {
         <Div>
           <Image
             src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/banner1_mysasc.jpg"
-            loading="lazy"
+            loading="eager"
             alt="img"
+            // srcset="banner2-400w.webp 400w, banner2-800w.webp 800w, banner2-1600w.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
+
           <TextContainer>
             <Text> {text[1].text1} </Text>
             <Small>{text[1].subtext1}</Small>
@@ -173,8 +178,10 @@ function Fade() {
         <Div>
           <Image
             src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg"
-            loading="lazy"
+            loading="eager"
             alt="img"
+            // srcset="banner2-400w.webp 400w, banner2-800w.webp 800w, banner2-1600w.webp 1600w"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
           <TextContainer>
             <Text>{text[2].text2}</Text>

@@ -145,7 +145,7 @@ const About = () => {
             <Link to="/artists">
               <Img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662184/about4_ovhkr0.jpg"
-                loading="lazy"
+                loading="eager"
                 alt="img"
               />
             </Link>
@@ -154,7 +154,7 @@ const About = () => {
             <Link to="/artists">
               <Img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/about6_t7sqcl.jpg"
-                loading="lazy"
+                loading="eager"
                 alt="img"
               />
             </Link>
@@ -163,7 +163,7 @@ const About = () => {
             <Link to="/artists">
               <Img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/about1_du5jbv.jpg"
-                loading="lazy"
+                loading="eager"
                 alt="img"
               />
             </Link>
@@ -172,7 +172,7 @@ const About = () => {
             <Link to="/artists">
               <Img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662180/about2_sshzqd.jpg"
-                loading="lazy"
+                loading="eager"
                 alt="img"
               />
             </Link>
@@ -181,7 +181,7 @@ const About = () => {
             <Link to="/artists">
               <Img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662179/about3_fxzk82.jpg"
-                loading="lazy"
+                loading="eager"
                 alt="img"
               />
             </Link>
@@ -190,7 +190,7 @@ const About = () => {
             <Link to="/artists">
               <Img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/about5_xsajo9.jpg"
-                loading="lazy"
+                loading="eager"
                 alt="img"
               />
             </Link>
