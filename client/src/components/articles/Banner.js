@@ -32,6 +32,7 @@ const Hero = () => {
       <ServiceCards />
       <FloatingSpheres />
       <ScrollIndicator />
+      {/* <ScrollIndicator /> */}
     </HeroSection>
   );
 };
@@ -85,6 +86,10 @@ const HeroContent = styled.div`
   opacity: 0;
   animation: fadeIn 2s ease-out forwards;
 
+  @media (max-width: 768px) {
+    padding: 13rem 0 0 0;
+    max-width: 450px;
+  }
   @keyframes fadeIn {
     to {
       transform: translateY(0);
@@ -141,7 +146,9 @@ const HeroTitle = styled.h1`
   border-right: 4px solid rgba(255, 255, 255, 0.75);
   width: 0;
   animation: typing 4s steps(30) forwards; /* Increased duration and steps */
-
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
   @keyframes typing {
     100% {
       width: 100%;
@@ -155,10 +162,10 @@ const HeroTitle = styled.h1`
 `;
 
 const HeroDescription = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
   font-family: "Arial", sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.85);
   max-width: 500px;
   margin-left: auto;
@@ -171,7 +178,8 @@ const HeroDescription = styled.p`
   }
 
   @media (max-width: 768px) {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
   }
 `;
 
@@ -248,23 +256,24 @@ const TechIllustration = styled.div`
     no-repeat;
   border-radius: 50%;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-  animation: float 4s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
 
   @media (max-width: 768px) {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 380px;
+    height: 380px;
+    right: -120px;
   }
 
   @keyframes float {
     0% {
-      transform: translateY(0px);
+      transform: translateY(10px);
     }
     50% {
       transform: translateY(-20px);
     }
     100% {
-      transform: translateY(0px);
+      transform: translateY(10px);
     }
   }
 `;
@@ -272,12 +281,12 @@ const TechIllustration = styled.div`
 // Floating Particles Effect
 const Particles = styled.div`
   position: absolute;
-  top: 0;
+  top: 30px;
   left: 0;
   width: 100%;
   height: 100%;
   background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
-  opacity: 0.1;
+  opacity: 1;
   pointer-events: none;
   animation: floatParticles 10s infinite linear;
 
@@ -358,13 +367,20 @@ const ServiceCard = styled.div`
 const FloatingSpheres = styled.div`
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 52%;
   width: 200px;
   height: 200px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
   animation: floatingSpheres 4s ease-in-out infinite;
+
+  @media (max-width: 768px) {
+    top: 25%;
+    left: 32%;
+    width: 300px;
+    height: 300px;
+  }
 
   @keyframes floatingSpheres {
     0% {
@@ -381,15 +397,19 @@ const FloatingSpheres = styled.div`
 
 const ScrollIndicator = styled.div`
   position: absolute;
-  bottom: 50px;
-  left: 50%;
+  bottom: 10px;
+  left: 15%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 80px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   background: linear-gradient(135deg, #00c6ff, #0072ff);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  animation: bounce 1s infinite;
+  animation: bounce 2s infinite;
+
+  @media (max-width: 768px) {
+    top: 45%;
+  }
 
   @keyframes bounce {
     0%,
