@@ -151,7 +151,6 @@ function Fade() {
             src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/banner2_cb9sxf.jpg"
             loading="eager"
             alt="img"
-            srcset="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/banner2_cb9sxf.jpg 480w, https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/banner2_cb9sxf.jpg 768w, https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/banner2_cb9sxf.jpg 1200w"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <TextContainer>
@@ -165,7 +164,6 @@ function Fade() {
             src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/banner1_mysasc.jpg"
             loading="eager"
             alt="img"
-            srcset="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/banner1_mysasc.jpg 480w, https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/banner1_mysasc.jpg 768w, https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662181/banner1_mysasc.jpg 1200w"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
 
@@ -180,7 +178,6 @@ function Fade() {
             src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg"
             loading="eager"
             alt="img"
-            srcset="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg 480w, https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg 768w, https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg 1200w"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           <TextContainer>
