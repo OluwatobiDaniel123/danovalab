@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-// Hero Component
 const Hero = () => {
   const [progress, setProgress] = useState(0);
 
@@ -22,7 +22,7 @@ const Hero = () => {
           Welcome to DANOVALAB — A Hub of Software Ingenuity! Bringing
           futuristic tech solutions to streamline your business growth.
         </HeroDescription>
-        <CallToAction href="#contact">Get in Touch</CallToAction>
+        <CallToAction to="/Contact">Get in Touch</CallToAction>
         <ProgressBar>
           <Progress width={progress} />
         </ProgressBar>
@@ -32,14 +32,11 @@ const Hero = () => {
       <ServiceCards />
       <FloatingSpheres />
       <ScrollIndicator />
-      {/* <ScrollIndicator /> */}
     </HeroSection>
   );
 };
 
 export default Hero;
-
-// Styled Components with Additional Features
 
 const HeroSection = styled.section`
   display: flex;
@@ -59,13 +56,16 @@ const HeroSection = styled.section`
 
   @keyframes gradientAnimation {
     0% {
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      // background: linear-gradient(135deg, #00c6ff, #0072ff);
+      background: linear-gradient(135deg, #135d71, #01326e);
     }
     50% {
-      background: linear-gradient(135deg, #ff4b5c, #00c6ff);
+      // background: linear-gradient(135deg, #ff4b5c, #00c6ff);
+      background: linear-gradient(135deg, #491f23, #1289aa);
     }
     100% {
-      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      // background: linear-gradient(135deg, #0072ff, #00c6ff);
+      background: linear-gradient(135deg, #024ca7, #016784);
     }
   }
 
@@ -98,38 +98,6 @@ const HeroContent = styled.div`
   }
 `;
 
-// const HeroTitle = styled.h1`
-//   font-size: 4rem;
-//   font-family: "Poppins", sans-serif;
-//   font-weight: 700;
-//   letter-spacing: 4px;
-//   margin-bottom: 20px;
-//   text-transform: uppercase;
-//   line-height: 1.2;
-//   color: white;
-//   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-//   transition: transform 0.3s ease, color 0.3s ease;
-//   white-space: nowrap;
-//   overflow: hidden;
-//   border-right: 4px solid rgba(255, 255, 255, 0.75);
-//   width: 0;
-//   animation: typing 4s steps(30) forwards;
-
-//   @keyframes typing {
-//     100% {
-//       width: 100%;
-//     }
-//   }
-
-//   &:hover {
-//     transform: scale(1.05);
-//     color: #ff4b5c;
-//   }
-
-//   @media (max-width: 768px) {
-//     font-size: 2.8rem;
-//   }
-// `;
 const HeroTitle = styled.h1`
   font-size: 4rem;
   font-family: "Poppins", sans-serif;
@@ -157,7 +125,8 @@ const HeroTitle = styled.h1`
 
   &:hover {
     transform: scale(1.05);
-    color: #ff4b5c;
+    // color: #ff4b5c;
+    color: #58a6ff;
   }
 `;
 
@@ -174,7 +143,8 @@ const HeroDescription = styled.p`
 
   &:hover {
     transform: scale(1.03);
-    color: #ff4b5c;
+    // color: #ff4b5c;
+    color: #58a6ff;
   }
 
   @media (max-width: 768px) {
@@ -183,10 +153,10 @@ const HeroDescription = styled.p`
   }
 `;
 
-const CallToAction = styled.a`
+const CallToAction = styled(Link)`
   display: inline-block;
   padding: 15px 30px;
-  background-color: #ff4b5c;
+  background: linear-gradient(135deg, #024ca7, #016784);
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
@@ -194,7 +164,7 @@ const CallToAction = styled.a`
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 2px solid #ff4b5c;
+  border: 2px solid rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
@@ -241,14 +211,15 @@ const ProgressBar = styled.div`
 const Progress = styled.div`
   height: 100%;
   width: ${({ width }) => width}%;
-  background-color: #ff4b5c;
+  // background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #024ca7, #016784);
   border-radius: 10px;
   transition: width 0.5s ease;
 `;
 
 const TechIllustration = styled.div`
   position: absolute;
-  right: -50px;
+  right: -25px;
   top: 30px;
   width: 300px;
   height: 300px;
@@ -259,10 +230,11 @@ const TechIllustration = styled.div`
   animation: float 2s ease-in-out infinite;
 
   @media (max-width: 768px) {
-    position: relative;
+    // position: relative;
     width: 380px;
     height: 380px;
     right: -120px;
+    top: 230px;
   }
 
   @keyframes float {
@@ -300,19 +272,6 @@ const Particles = styled.div`
   }
 `;
 
-// Service Cards (Interactive Hover Effect)
-// const ServiceCards = styled.div`
-//   position: absolute;
-//   bottom: 20px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   display: flex;
-//   gap: 20px;
-
-//   @media (max-width: 768px) {
-//     bottom: 10px;
-//   }
-// `;
 const ServiceCards = styled.div`
   position: absolute;
   bottom: 20px;
@@ -367,7 +326,7 @@ const ServiceCard = styled.div`
 const FloatingSpheres = styled.div`
   position: absolute;
   top: 50%;
-  left: 52%;
+  left: 54%;
   width: 200px;
   height: 200px;
   background-color: rgba(255, 255, 255, 0.3);
@@ -398,12 +357,12 @@ const FloatingSpheres = styled.div`
 const ScrollIndicator = styled.div`
   position: absolute;
   bottom: 10px;
-  left: 15%;
+  left: 6%;
   transform: translateX(-50%);
-  width: 190px;
-  height: 190px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  // background: linear-gradient(135deg, #00c6ff, #0072ff);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   animation: bounce 2s infinite;
 

@@ -10,10 +10,10 @@ import {
 import Footer from "./components/articles/Footer";
 import Contact from "./components/articles/Contact";
 import Header from "./components/articles/Header";
-import About from "./components/articles/About";
-import Cards from "./components/articles/Cards";
 import ServicePage from "./components/articles/Service";
 import RequestQuote from "./components/articles/RequestQoute";
+import About_Page from "./components/articles/About_Page";
+import Portfolio from "./components/articles/Portfolio";
 
 const Layout = () => {
   return (
@@ -32,8 +32,8 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="/Services" element={<ServicePage />} />
         <Route path="/request_quote" element={<RequestQuote />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Portfolio" element={<Cards />} />
+        <Route path="/About" element={<About_Page />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/Contact" element={<Contact />} />
       </Route>
     </Route>

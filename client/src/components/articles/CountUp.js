@@ -7,6 +7,7 @@ const HighlightsSection = styled.section`
   text-align: center;
   padding: 50px;
   background-color: #f9f9f9;
+
   @media (max-width: 769px) {
     padding: 20px;
   }
@@ -17,7 +18,6 @@ const Title = styled.h1`
   width: 100%;
   font-variant: small-caps;
   border-bottom: 1px solid rgb(0, 195, 255);
-
   color: #333;
   margin-bottom: 10px;
 `;

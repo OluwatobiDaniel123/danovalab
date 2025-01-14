@@ -1,19 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import CountUp from "react-countup";
-import {
-  FaCode,
-  FaReact,
-  FaLaptopCode,
-  FaGlobe,
-  FaNode,
-  FaCalendarAlt,
-} from "react-icons/fa";
+import { FaCode, FaReact, FaNode } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 const HighlightsSection = styled.section`
   text-align: center;
   padding: 50px;
   background-color: #f9f9f9;
+  margin-bottom: 90px;
+
   @media (max-width: 769px) {
     padding: 20px;
   }
@@ -32,9 +26,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   font-size: 20px;
   width: 100%;
-
   font-variant: small-caps;
-
   color: #666;
   margin-bottom: 40px;
 `;
@@ -91,13 +83,9 @@ const Skills = () => {
       <HighlightsGrid>
         <HighlightCard>
           <IconWrapper>
-            {/* <FaCalendarAlt /> */}
             <SiMongodb />
           </IconWrapper>
-          <Number>
-            {/* <CountUp end={8} />+ */}
-            MongoDB
-          </Number>
+          <Number>MongoDB</Number>
           <Label>
             {" "}
             Proficient in using MongoDB for database management, allowing us to
@@ -106,10 +94,9 @@ const Skills = () => {
         </HighlightCard>
         <HighlightCard>
           <IconWrapper>
-            {/* <FaLaptopCode /> */}
             <FaCode />
           </IconWrapper>
-          <Number>{/* <CountUp end={200} />+ */}Express.js</Number>
+          <Number>Express.js</Number>
           <Label>
             Experienced in building robust server-side applications using
             Express.js, enabling us to create RESTful APIs that serve our
@@ -118,10 +105,9 @@ const Skills = () => {
         </HighlightCard>
         <HighlightCard>
           <IconWrapper>
-            {/* <FaCode /> */}
             <FaReact />
           </IconWrapper>
-          <Number>{/* <CountUp end={50} />+ */}React</Number>
+          <Number>React</Number>
           <Label>
             Skilled in developing dynamic and responsive user interfaces with
             React, leveraging component-based architecture for maintainability
@@ -132,7 +118,7 @@ const Skills = () => {
           <IconWrapper>
             <FaNode />
           </IconWrapper>
-          <Number>{/* <CountUp end={20} />+ */}Node.js</Number>
+          <Number>Node.js</Number>
           <Label>
             Knowledgeable in using Node.js for server-side development, allowing
             us to build fast and scalable network applications.

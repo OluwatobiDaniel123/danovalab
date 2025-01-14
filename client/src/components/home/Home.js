@@ -1,23 +1,21 @@
 import React from "react";
-import About from "../articles/About";
-import Cards from "../articles/Cards";
-import Banner from "../articles/Banner";
+import About_Page from "../articles/About_Page";
+import Hero_Page from "../articles/Hero_Page";
 import Contact from "../articles/Contact";
 import Testimonials from "../articles/Testimonials";
-import CompanyHighlights from "../articles/CountUp";
+import CountUp from "../articles/CountUp";
 import Skills from "../articles/Skills";
-import OurSkillsPage from "../articles/OurSkillsPage";
+import Portfolio from "../articles/Portfolio";
 
 const Home = () => {
   return (
     <div>
-      <Banner />
-      <About />
+      <Hero_Page />
+      <About_Page />
       <Skills />
-      <OurSkillsPage />
-      <CompanyHighlights />
+      <CountUp />
       <Testimonials />
-      <Cards />
+      <Portfolio />
       <Contact />
     </div>
   );

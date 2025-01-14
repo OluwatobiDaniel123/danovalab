@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 const FooterContainer = styled.footer`
-  background: #000;
+  // background: #000;
+  background: linear-gradient(120deg, #0d1117, #161b22);
+
   color: #fff;
   padding: 40px 20px;
   display: flex;
@@ -29,6 +31,7 @@ const FooterHeader = styled.h3`
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  color: #58a6ff;
 `;
 
 const FooterText = styled.p`

@@ -7,14 +7,10 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
+  padding: 30px 15px;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgb(46, 46, 240) 0%,
-    rgb(74, 140, 255) 100%
-  );
-  padding: 30px 15px;
+  background: linear-gradient(115deg, #135d71, #01326e);s
 `;
 
 const ContactContainer = styled.div`

@@ -19,7 +19,7 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 10px;
+  padding: 6px 6px;
 `;
 
 const LogoImage = styled.img`
@@ -70,7 +70,7 @@ const NavIcon = styled.div`
   }
 
   svg {
-    font-size: 43px;
+    font-size: 40px;
     color: #333;
     cursor: pointer;
   }
@@ -167,6 +167,13 @@ const Header = () => {
       </Box>
 
       <SideNav show={showNav}>
+        <Link to="/">
+          <LogoImage
+            src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662183/logo_vuude4.png"
+            loading="lazy"
+            alt="Logo"
+          />
+        </Link>
         {["/", "/Services", "/Portfolio", "/About", "/Contact"].map(
           (path, index) => (
             <SideNavItem
