@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 const ServiceContainer = styled.section`
-  padding: 40px 20px;
+  padding: 40px 5px 20px 5px;
   background: linear-gradient(135deg, #f7f9fc, #eef2f7);
   text-align: center;
 `;

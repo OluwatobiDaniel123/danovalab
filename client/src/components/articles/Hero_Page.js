@@ -22,7 +22,7 @@ const Hero = () => {
           Welcome to DANOVALAB — A Hub of Software Ingenuity! Bringing
           futuristic tech solutions to streamline your business growth.
         </HeroDescription>
-        <CallToAction to="/Contact">Get in Touch</CallToAction>
+        <CallToAction to="/request_quote">Get A QUOTE</CallToAction>
         <ProgressBar>
           <Progress width={progress} />
         </ProgressBar>
