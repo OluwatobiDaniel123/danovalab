@@ -29,7 +29,8 @@ const SectionHeader = styled.h2`
   //   height: 4px;
   //   background: #00c3ff;
   //   margin: 12px auto 0;
-  // }  font-size: 30px;
+  // }
+  font-size: 30px;
   width: 100%;
   font-variant: small-caps;
   border-bottom: 1px solid rgb(0, 195, 255);
@@ -38,23 +39,14 @@ const SectionHeader = styled.h2`
   margin-bottom: 10px;
 `;
 
-// const Title = styled.h1`
-//   font-size: 30px;
-//   width: 100%;
-//   font-variant: small-caps;
-//   border-bottom: 1px solid rgb(0, 195, 255);
-
-//   color: #333;
-//   margin-bottom: 10px;
-// `;
-
 const TestimonialCard = styled.div`
   background: white;
+  height: 300px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   padding: 40px;
   text-align: center;
   transition: transform 0.3s;
+  box-shadow: 8px 6px 8px 0 rgba (0, 0, 0, 0.1);
 
   &:hover {
     transform: translateY(-10px);
@@ -102,6 +94,20 @@ const testimonials = [
     image:
       "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
   },
+  {
+    name: "Jane Doe",
+    feedback:
+      "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
+    image:
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+  },
+  {
+    name: "Jane Doe",
+    feedback:
+      "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
+    image:
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+  },
 ];
 
 const TestimonialPage = () => {
@@ -113,8 +119,8 @@ const TestimonialPage = () => {
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        spaceBetween={30}
-        slidesPerView={1}
+        spaceBetween={20}
+        slidesPerView={3}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -122,7 +128,7 @@ const TestimonialPage = () => {
         }}
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide style={{ height: "320px" }} key={index}>
             <TestimonialCard>
               <img src={testimonial.image} alt={testimonial.name} />
               <h3>{testimonial.name}</h3>

@@ -46,7 +46,8 @@ const CheckboxContainer = styled.div`
 `;
 
 const CheckboxLabel = styled.label`
-  display: block;
+  display: flex;
+  gap: 10px;
   margin: 5px 0;
 `;
 
@@ -172,7 +173,6 @@ const RequestQuote = () => {
     helpWith: [],
     comments: "",
     budget: "",
-    referral: "",
   });
 
   const form = useRef();
@@ -264,9 +264,7 @@ const RequestQuote = () => {
             "Affiliate Marketing System",
             "Inventory Software",
             "Investment Website",
-            "Social & Digital Marketing",
             "I need help with Website Maintenance and Hosting",
-            "Mobile & Web Apps",
             "Other (Specify below)",
           ].map((item) => (
             <CheckboxLabel key={item}>
@@ -311,14 +309,6 @@ const RequestQuote = () => {
             </CheckboxLabel>
           ))}
         </BudgetContainer>
-
-        <Input
-          type="text"
-          name="referral"
-          placeholder="How did you hear from us?"
-          value={formData.referral}
-          onChange={handleChange}
-        />
 
         <Button type="submit" disabled={loading}>
           {loading ? "Sending..." : " GET FREE QUOTE"}

@@ -10,7 +10,7 @@ const Hero = () => {
       if (progress < 100) {
         setProgress(progress + 1);
       }
-    }, 30);
+    }, 40);
     return () => clearInterval(interval);
   }, [progress]);
 
@@ -56,16 +56,15 @@ const HeroSection = styled.section`
 
   @keyframes gradientAnimation {
     0% {
-      // background: linear-gradient(135deg, #00c6ff, #0072ff);
       background: linear-gradient(135deg, #135d71, #01326e);
     }
     50% {
-      // background: linear-gradient(135deg, #ff4b5c, #00c6ff);
       background: linear-gradient(135deg, #491f23, #1289aa);
     }
     100% {
-      // background: linear-gradient(135deg, #0072ff, #00c6ff);
-      background: linear-gradient(135deg, #024ca7, #016784);
+      background: linear-gradient(135deg, #023778, #03647f);
+
+      // background: linear-gradient(135deg, #024ca7, #016784);
     }
   }
 
@@ -204,17 +203,16 @@ const ProgressBar = styled.div`
   width: 100%;
   height: 8px;
   background-color: #f1f1f1;
-  border-radius: 10px;
+  border-radius: 50px;
   margin-top: 30px;
 `;
 
 const Progress = styled.div`
   height: 100%;
   width: ${({ width }) => width}%;
-  // background-color: rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #024ca7, #016784);
-  border-radius: 10px;
-  transition: width 0.5s ease;
+  background: linear-gradient(155deg, #024ca7, #016784);
+  border-radius: 50px;
+  transition: width 0.4s ease;
 `;
 
 const TechIllustration = styled.div`
@@ -250,22 +248,24 @@ const TechIllustration = styled.div`
   }
 `;
 
-// Floating Particles Effect
 const Particles = styled.div`
   position: absolute;
-  top: 30px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+  // background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+  background: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+
   opacity: 1;
   pointer-events: none;
-  animation: floatParticles 10s infinite linear;
+  animation: floatParticles 8s infinite linear;
 
   @keyframes floatParticles {
     0% {
       transform: translateY(0);
     }
+
     100% {
       transform: translateY(100%);
     }

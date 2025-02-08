@@ -9,6 +9,8 @@ import {
   FaTools,
 } from "react-icons/fa";
 
+import "./Portfolio.css";
+
 const ServiceContainer = styled.section`
   padding: 40px 5px 20px 5px;
   background: linear-gradient(135deg, #f7f9fc, #eef2f7);
@@ -145,6 +147,60 @@ const ServicePage = () => {
         We offer a range of professional services to help your business thrive
         in the digital age.
       </Subheader>
+      <div className="duke-family-section">
+        <div className="particles">
+          {[...Array(80)].map((_, i) => (
+            <div
+              key={i}
+              className="particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+              }}
+            />
+          ))}
+        </div>
+        <div className="circle-container">
+          <div className="member-circle center">
+            <span>Duke</span>
+            <span>Family</span>
+          </div>
+          <div className="member-circle pos-1">
+            <span className="member-name">Helianne</span>
+            <span className="member-surname">Duke</span>
+          </div>
+
+          <div className="member-circle pos-2">
+            <span className="member-name">Clive</span>
+            <span className="member-surname">Duke</span>
+          </div>
+          <div className="member-circle pos-3">
+            <span className="member-name">David</span>
+            <span className="member-surname">Duke</span>
+          </div>
+          <div className="member-circle pos-4">
+            <span className="member-name">Elijah</span>
+            <span className="member-surname">Duke</span>
+          </div>
+          <div className="member-circle pos-5">
+            <span className="member-name">Anna</span>
+            <span className="member-surname">Duke</span>
+          </div>
+          <div className="member-circle pos-6">
+            <span className="member-name">Joshua</span>
+            <span className="member-surname">Duke</span>
+          </div>
+          <div className="member-circle pos-7">
+            <span className="member-name">Rachel</span>
+            <span className="member-surname">Duke</span>
+          </div>
+          <div className="member-circle pos-8">
+            <span className="member-name">Jediah</span>
+            <span className="member-surname">Duke</span>
+          </div>
+        </div>
+      </div>
       <ServiceList>
         {Services.map((service, index) => (
           <ServiceItem key={index}>

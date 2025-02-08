@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import emailjs from "emailjs-com";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaMailBulk } from "react-icons/fa";
 
 const ContactSection = styled.section`
   display: flex;
@@ -19,6 +20,7 @@ const ContactContainer = styled.div`
   align-items: center;
   width: 100%;
   gap: 2rem;
+  padding: 10px 0 10px 0;
 
   @media (max-width: 769px) {
     flex-direction: column;
@@ -143,6 +145,31 @@ const StyledAlert = styled.div`
   }
 `;
 
+const SocialIcons = styled.div`
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  color: #fff;
+
+  a {
+    color: #fff;
+    margin: 5px 20px 0;
+    font-size: 20px;
+
+    &:hover {
+      color: lightblue;
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+  }
+`;
+
+const Map = styled.iframe`
+  border-radius: 5px;
+  width: 100%;
+  height: 450px;
+`;
+
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
@@ -193,6 +220,7 @@ const Contact = () => {
             height: "auto",
           }}
         />
+
         <ContactForm ref={form} onSubmit={sendEmail}>
           <h2>Contact Us</h2>
           <input
@@ -225,6 +253,28 @@ const Contact = () => {
           </StyledAlert>
         )}
       </ContactContainer>
+
+      <Map
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.05067748396!2d-74.3091773393739!3d40.69719333811824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sng!4v1738830453821!5m2!1sen!2sng"
+        allowfullscreen
+        loading="eager"
+        referrerpolicy="no-referrer-when-downgrade"
+      />
+      <SocialIcons>
+        <p>Reach Us On :</p>
+        <a href="https://www.facebook.com" aria-label="Facebook">
+          <FaFacebook />
+        </a>
+        <a href="https://www.twitter.com" aria-label="Twitter">
+          <FaTwitter />
+        </a>
+        <a href="https://www.linkedin.com" aria-label="LinkedIn">
+          <FaLinkedin />
+        </a>
+        <a href="https://www.instagram.com" aria-label="Instagram">
+          <FaMailBulk />
+        </a>
+      </SocialIcons>
     </ContactSection>
   );
 };

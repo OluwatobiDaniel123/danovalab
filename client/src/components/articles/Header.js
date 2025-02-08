@@ -124,6 +124,8 @@ const QuoteButton = styled.button`
   }
 `;
 
+
+
 const Header = () => {
   const location = useLocation();
   const [activeNav, setActiveNav] = useState(location.pathname);

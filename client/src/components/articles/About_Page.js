@@ -242,7 +242,7 @@ const SecondaryCTA = styled(Link)`
 const ProgressBar = styled.div`
   margin-top: 30px;
   width: 100%;
-  height: 10px;
+  height: 13px;
   background: #30363d;
   border-radius: 5px;
   overflow: hidden;
