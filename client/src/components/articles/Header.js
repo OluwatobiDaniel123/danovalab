@@ -80,12 +80,12 @@ const SideNav = styled.div`
   position: fixed;
   top: 0;
   left: ${({ show }) => (show ? "0" : "-100%")};
-  width: 70%;
+  width: 80%;
   height: 100vh;
   background-color: #333;
   color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  padding: 13px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -123,8 +123,6 @@ const QuoteButton = styled.button`
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 `;
-
-
 
 const Header = () => {
   const location = useLocation();

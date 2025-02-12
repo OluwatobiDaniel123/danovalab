@@ -8,10 +8,9 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaMailBulk } from "react-icons/fa";
 const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 30px 15px;
+  // padding: 30px 15px;
   align-items: center;
   text-align: center;
-  background: linear-gradient(115deg, #135d71, #01326e);s
 `;
 
 const ContactContainer = styled.div`
@@ -21,6 +20,7 @@ const ContactContainer = styled.div`
   width: 100%;
   gap: 2rem;
   padding: 10px 0 10px 0;
+  background: linear-gradient(120deg, #0d1117, #161b22);
 
   @media (max-width: 769px) {
     flex-direction: column;
@@ -255,12 +255,12 @@ const Contact = () => {
       </ContactContainer>
 
       <Map
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.05067748396!2d-74.3091773393739!3d40.69719333811824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sng!4v1738830453821!5m2!1sen!2sng"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.74982246983!2d3.4779139339393024!3d6.672074093347397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be9403cda5b97%3A0x49c84a59cfa99d31!2sOdogunyan%2C%20Lagos!5e0!3m2!1sen!2sng!4v1739369697809!5m2!1sen!2sng"
         allowfullscreen
         loading="eager"
         referrerpolicy="no-referrer-when-downgrade"
       />
-      <SocialIcons>
+      {/* <SocialIcons>
         <p>Reach Us On :</p>
         <a href="https://www.facebook.com" aria-label="Facebook">
           <FaFacebook />
@@ -274,7 +274,7 @@ const Contact = () => {
         <a href="https://www.instagram.com" aria-label="Instagram">
           <FaMailBulk />
         </a>
-      </SocialIcons>
+      </SocialIcons> */}
     </ContactSection>
   );
 };

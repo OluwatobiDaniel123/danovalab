@@ -67,7 +67,7 @@ const IconWrapper = styled.div`
 `;
 
 const ServiceName = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #007bff;
   margin-bottom: 15px;
   font-weight: bold;
@@ -139,6 +139,14 @@ const Services = [
   },
 ];
 
+const Span = styled.span`
+  font-size: 12px;
+
+  @media (max-width: 768px) {
+    font-size: 9px;
+  }
+`;
+
 const ServicePage = () => {
   return (
     <ServiceContainer>
@@ -163,41 +171,41 @@ const ServicePage = () => {
         </div>
         <div className="circle-container">
           <div className="member-circle center">
-            <span>Duke</span>
-            <span>Family</span>
+            <span>Danovalab</span>
+            <Span>A Hub of Software Ingenuity! </Span>
           </div>
           <div className="member-circle pos-1">
-            <span className="member-name">Helianne</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Web</span>
+            <span className="member-surname">Maintenance</span>
           </div>
 
           <div className="member-circle pos-2">
-            <span className="member-name">Clive</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Frontend</span>
+            <span className="member-surname">Dev</span>
           </div>
           <div className="member-circle pos-3">
-            <span className="member-name">David</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Backend</span>
+            <span className="member-surname">Dev</span>
           </div>
           <div className="member-circle pos-4">
-            <span className="member-name">Elijah</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Redesign</span>
+            <span className="member-surname">Web</span>
           </div>
           <div className="member-circle pos-5">
-            <span className="member-name">Anna</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Inventory</span>
+            <span className="member-surname">Dev</span>
           </div>
           <div className="member-circle pos-6">
-            <span className="member-name">Joshua</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Investment</span>
+            <span className="member-surname">Dev</span>
           </div>
           <div className="member-circle pos-7">
-            <span className="member-name">Rachel</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Websites</span>
+            <span className="member-surname">SEO</span>
           </div>
           <div className="member-circle pos-8">
-            <span className="member-name">Jediah</span>
-            <span className="member-surname">Duke</span>
+            <span className="member-name">Software</span>
+            <span className="member-surname">Dev</span>
           </div>
         </div>
       </div>

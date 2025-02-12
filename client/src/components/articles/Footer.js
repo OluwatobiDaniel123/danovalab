@@ -6,10 +6,14 @@ const FooterContainer = styled.footer`
   background: linear-gradient(120deg, #0d1117, #161b22);
 
   color: #fff;
-  padding: 40px 20px;
+  padding: 30px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 10px 5px;
+  }
 `;
 
 const FooterContent = styled.div`
@@ -59,11 +63,13 @@ const SocialIcons = styled.div`
 
   a {
     color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
+    margin: 0 13px;
+    font-size: 22px;
+    transition: 0.3s ease;
 
     &:hover {
       color: lightblue;
+      transform: translateY(-3px);
     }
   }
 `;

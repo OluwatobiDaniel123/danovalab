@@ -9,7 +9,7 @@ import styled from "styled-components";
 
 const TestimonialContainer = styled.div`
   text-align: center;
-  padding: 80px 20px;
+  padding: 40px 10px;
   background: linear-gradient(145deg, #f9f9f9, #ffffff);
   font-family: "Roboto", sans-serif;
 `;
@@ -43,13 +43,14 @@ const TestimonialCard = styled.div`
   background: white;
   height: 300px;
   border-radius: 12px;
-  padding: 40px;
+  padding: 30px;
+  margin: 10px;
   text-align: center;
   transition: transform 0.3s;
-  box-shadow: 8px 6px 8px 0 rgba (0, 0, 0, 0.1);
+  box-shadow: 0 0 0 3px lightblue;
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 
   img {
@@ -58,6 +59,11 @@ const TestimonialCard = styled.div`
     height: 100px;
     object-fit: cover;
     margin-bottom: 20px;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   h3 {
@@ -119,8 +125,8 @@ const TestimonialPage = () => {
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
-        spaceBetween={20}
-        slidesPerView={3}
+        spaceBetween={5}
+        slidesPerView={1}
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -128,7 +134,7 @@ const TestimonialPage = () => {
         }}
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide style={{ height: "320px" }} key={index}>
+          <SwiperSlide style={{ height: "340px" }} key={index}>
             <TestimonialCard>
               <img src={testimonial.image} alt={testimonial.name} />
               <h3>{testimonial.name}</h3>
