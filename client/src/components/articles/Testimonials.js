@@ -15,21 +15,6 @@ const TestimonialContainer = styled.div`
 `;
 
 const SectionHeader = styled.h2`
-  // font-size: 42px;
-  // text-align: center;
-  // margin-bottom: 50px;
-  // color: #007bff;
-  // position: relative;
-  // display: inline-block;
-
-  // &::after {
-  //   content: "";
-  //   display: block;
-  //   width: 80px;
-  //   height: 4px;
-  //   background: #00c3ff;
-  //   margin: 12px auto 0;
-  // }
   font-size: 30px;
   width: 100%;
   font-variant: small-caps;
@@ -47,7 +32,7 @@ const TestimonialCard = styled.div`
   margin: 10px;
   text-align: center;
   transition: transform 0.3s;
-  box-shadow: 0 0 0 3px lightblue;
+  box-shadow: 0 0 0 2px lightblue;
 
   &:hover {
     transform: translateY(-5px);

@@ -168,8 +168,6 @@ const RequestQuote = () => {
     fullName: "",
     email: "",
     whatsapp: "",
-    businessName: "",
-    websiteUrl: "",
     helpWith: [],
     comments: "",
     budget: "",
@@ -195,31 +193,71 @@ const RequestQuote = () => {
     }
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   try {
+  //     const result = await emailjs.sendForm(
+  //       "service_qh08omd",
+  //       "template_icla7gq",
+  //       form.current,
+  //       "uDj1nlX9BVEqunnYs"
+  //     );
+  //     console.log(result.text);
+  //     setAlertMessage({
+  //       type: "success",
+  //       message: "Quote sent successfully!",
+  //     });
+  //     form.current.reset();
+  //   } catch (error) {
+  //     console.error(error.text);
+  //     setAlertMessage({ type: "error", message: "Failed to send Quote" });
+  //   } finally {
+  //     setLoading(false);
+  //     setTimeout(() => {
+  //       // setAnimateOut(true);
+  //       setTimeout(() => setAlertMessage(null), 300);
+  //     }, 3000);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    const templateParams = {
+      fullName: formData.fullName,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      helpWith: formData.helpWith.join(", "), // Convert array to string
+      comments: formData.comments,
+      budget: formData.budget,
+    };
+
     try {
-      const result = await emailjs.sendForm(
-        "service_qh08omd",
-        "template_icla7gq",
-        form.current,
-        "uDj1nlX9BVEqunnYs"
+      const result = await emailjs.send(
+        "service_mtbnx3x", // Your EmailJS service ID
+        "template_knnul8n", // Your EmailJS template ID
+        templateParams,
+        "uDj1nlX9BVEqunnYs" // Your EmailJS public key
       );
-      console.log(result.text);
-      setAlertMessage({
-        type: "success",
-        message: "Quote sent successfully!",
-      });
-      form.current.reset();
+      console.log("Success:", result.text);
+
+      setAlertMessage({ type: "success", message: "Quote sent successfully!" });
+      setFormData({
+        fullName: "",
+        email: "",
+        whatsapp: "",
+        helpWith: [],
+        comments: "",
+        budget: "",
+      }); // Clear form
     } catch (error) {
-      console.error(error.text);
+      console.error("Error:", error.text);
       setAlertMessage({ type: "error", message: "Failed to send Quote" });
     } finally {
       setLoading(false);
-      setTimeout(() => {
-        // setAnimateOut(true);
-        setTimeout(() => setAlertMessage(null), 300);
-      }, 3000);
+      setTimeout(() => setAlertMessage(null), 3000);
     }
   };
 
