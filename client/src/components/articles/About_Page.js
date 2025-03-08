@@ -76,7 +76,7 @@ const About_Page = () => {
             </TeamMember>
             <TeamMember>
               <img
-                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/about1_du5jbv.jpg"
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png"
                 alt="Team Member"
               />
               <h4>John Smith</h4>
@@ -84,7 +84,7 @@ const About_Page = () => {
             </TeamMember>
             <TeamMember>
               <img
-                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662182/about1_du5jbv.jpg"
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png"
                 alt="Team Member"
               />
               <h4>Emily Brown</h4>
@@ -103,8 +103,6 @@ const TeamSection = styled.div`
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  // border: 2px solid pink;
-
   margin-top: 40px;
 `;
 
@@ -112,7 +110,9 @@ const TeamMember = styled.div`
   text-align: center;
   max-width: 200px;
   padding: 20px;
-  // border: 2px solid pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   img {
     border-radius: 50%;
@@ -289,6 +289,10 @@ const ServiceCard = styled.div`
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
 
   &:hover {
     transform: translateY(-10px);

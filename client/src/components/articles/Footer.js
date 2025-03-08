@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const FooterContainer = styled.footer`
   // background: #000;
   background: linear-gradient(120deg, #0d1117, #161b22);
@@ -106,20 +107,40 @@ const Footer = () => {
         </FooterSection>
         <FooterSection>
           <FooterHeader>Services</FooterHeader>
-          <FooterLink href="#">Software Development</FooterLink>
-          <FooterLink href="#">Front-End Development</FooterLink>
-          <FooterLink href="#">Back-End Development</FooterLink>
-          <FooterLink href="#">Web Development</FooterLink>
-          <FooterLink href="#">Maintainability</FooterLink>
+          <Link to="request_quote">
+            <FooterLink>Software Development</FooterLink>
+          </Link>
+          <Link to="request_quote">
+            <FooterLink>Front-End Development</FooterLink>
+          </Link>
+          <Link to="request_quote">
+            <FooterLink>Back-End Development</FooterLink>
+          </Link>
+          <Link to="request_quote">
+            <FooterLink>Web Development</FooterLink>
+          </Link>
+          <Link to="request_quote">
+            <FooterLink>Maintainability</FooterLink>
+          </Link>
         </FooterSection>
 
         <FooterSection>
           <FooterHeader>Inside Danovalab</FooterHeader>
-          <FooterLink href="/About">About</FooterLink>
-          <FooterLink href="/Portfolio">Portfolio</FooterLink>
-          <FooterLink href="/Contact">Contact</FooterLink>
-          <FooterLink href="#">Careers</FooterLink>
-          <FooterLink href="#">Blog</FooterLink>
+          <Link to="/About">
+            <FooterLink>About</FooterLink>
+          </Link>
+          <Link to="/Portfolio">
+            <FooterLink>Portfolio</FooterLink>
+          </Link>
+          <Link to="/Contact">
+            <FooterLink>Contact</FooterLink>
+          </Link>
+          <Link to="/Careers">
+            <FooterLink>Careers</FooterLink>
+          </Link>
+          <Link to="/Blogs">
+            <FooterLink>Blogs</FooterLink>
+          </Link>
         </FooterSection>
         <FooterSection>
           <FooterHeader>Legal</FooterHeader>

@@ -8,9 +8,10 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaMailBulk } from "react-icons/fa";
 const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
-  // padding: 30px 15px;
+  padding: 10px 0;
   align-items: center;
   text-align: center;
+  background: linear-gradient(120deg, #0d1117, #161b22);
 `;
 
 const ContactContainer = styled.div`
@@ -20,7 +21,6 @@ const ContactContainer = styled.div`
   width: 100%;
   gap: 2rem;
   padding: 10px 0 10px 0;
-  background: linear-gradient(120deg, #0d1117, #161b22);
 
   @media (max-width: 769px) {
     flex-direction: column;
@@ -145,25 +145,6 @@ const StyledAlert = styled.div`
   }
 `;
 
-const SocialIcons = styled.div`
-  display: flex;
-  margin-top: 10px;
-  align-items: center;
-  color: #fff;
-
-  a {
-    color: #fff;
-    margin: 5px 20px 0;
-    font-size: 20px;
-
-    &:hover {
-      color: lightblue;
-      transform: scale(1.2);
-      transition: transform 0.3s ease;
-    }
-  }
-`;
-
 const Map = styled.iframe`
   border-radius: 5px;
   width: 100%;
@@ -260,23 +241,106 @@ const Contact = () => {
         loading="eager"
         referrerpolicy="no-referrer-when-downgrade"
       />
-      {/* <SocialIcons>
-        <p>Reach Us On :</p>
-        <a href="https://www.facebook.com" aria-label="Facebook">
-          <FaFacebook />
-        </a>
-        <a href="https://www.twitter.com" aria-label="Twitter">
-          <FaTwitter />
-        </a>
-        <a href="https://www.linkedin.com" aria-label="LinkedIn">
-          <FaLinkedin />
-        </a>
-        <a href="https://www.instagram.com" aria-label="Instagram">
-          <FaMailBulk />
-        </a>
-      </SocialIcons> */}
     </ContactSection>
   );
 };
 
 export default Contact;
+// import React from "react";
+// import { Card, CardContent } from "@/components/ui/card";
+// import { Button } from "@/components/ui/button";
+// import { Mail, Phone, MapPin } from "lucide-react";
+// import { motion } from "framer-motion";
+
+// const ContactPage = () => {
+//   return (
+//     <div className="min-h-screen bg-gray-100 py-10 px-4">
+//       <motion.h1
+//         className="text-4xl font-bold text-center mb-10 text-gray-800"
+//         initial={{ opacity: 0, y: -50 }}
+//         animate={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.6 }}
+//       >
+//         Get in Touch with DanovaLab
+//       </motion.h1>
+//       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+//         {/* Contact Info */}
+//         <Card className="shadow-lg">
+//           <CardContent className="space-y-6 p-8">
+//             <h2 className="text-2xl font-semibold text-gray-700">
+//               Contact Information
+//             </h2>
+//             <div className="flex items-center gap-4">
+//               <Mail className="text-blue-500" />
+//               <p>contact@danovalab.com</p>
+//             </div>
+//             <div className="flex items-center gap-4">
+//               <Phone className="text-green-500" />
+//               <p>+234 123 456 7890</p>
+//             </div>
+//             <div className="flex items-center gap-4">
+//               <MapPin className="text-red-500" />
+//               <p>Lagos, Nigeria</p>
+//             </div>
+//           </CardContent>
+//         </Card>
+
+//         {/* Contact Form */}
+//         <Card className="shadow-lg">
+//           <CardContent className="p-8">
+//             <form className="space-y-4">
+//               <div>
+//                 <label className="block text-sm font-medium text-gray-700">
+//                   Name
+//                 </label>
+//                 <input
+//                   type="text"
+//                   className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+//                   placeholder="Your Name"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-medium text-gray-700">
+//                   Email
+//                 </label>
+//                 <input
+//                   type="email"
+//                   className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+//                   placeholder="Your Email"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-medium text-gray-700">
+//                   Subject
+//                 </label>
+//                 <input
+//                   type="text"
+//                   className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+//                   placeholder="Subject"
+//                 />
+//               </div>
+//               <div>
+//                 <label className="block text-sm font-medium text-gray-700">
+//                   Message
+//                 </label>
+//                 <textarea
+//                   rows="4"
+//                   className="w-full mt-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+//                   placeholder="Your Message"
+//                 ></textarea>
+//               </div>
+//               <Button
+//                 type="submit"
+//                 className="w-full bg-blue-600 text-white hover:bg-blue-700"
+//               >
+//                 Send Message
+//               </Button>
+//             </form>
+//           </CardContent>
+//         </Card>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ContactPage;

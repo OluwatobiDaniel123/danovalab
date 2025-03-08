@@ -6,6 +6,10 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 const Container = styled.div`
   padding: 40px;
   background: #f4f4f4;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 
 const Form = styled.form`

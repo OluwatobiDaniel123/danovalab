@@ -9,7 +9,7 @@ import {
   FaTools,
 } from "react-icons/fa";
 
-import "./Portfolio.css";
+import "./Service.css";
 
 const ServiceContainer = styled.section`
   padding: 40px 5px 20px 5px;
@@ -44,6 +44,9 @@ const ServiceList = styled.div`
 `;
 
 const ServiceItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: white;
   border: 2px solid #ddd;
   border-radius: 12px;

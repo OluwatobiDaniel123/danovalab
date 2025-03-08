@@ -69,35 +69,35 @@ const testimonials = [
     feedback:
       "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
     image:
-      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
   },
   {
     name: "John Smith",
     feedback:
       "The team at DANOVALAB delivered a top-notch product that transformed our business.",
     image:
-      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
   },
   {
     name: "Emily Brown",
     feedback:
       "Fantastic experience! The team was highly responsive and delivered beyond what we imagined.",
     image:
-      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
   },
   {
     name: "Jane Doe",
     feedback:
       "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
     image:
-      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
   },
   {
     name: "Jane Doe",
     feedback:
       "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
     image:
-      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg",
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
   },
 ];
 
@@ -121,9 +121,17 @@ const TestimonialPage = () => {
         {testimonials.map((testimonial, index) => (
           <SwiperSlide style={{ height: "340px" }} key={index}>
             <TestimonialCard>
-              <img src={testimonial.image} alt={testimonial.name} />
-              <h3>{testimonial.name}</h3>
-              <p>{testimonial.feedback}</p>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <img src={testimonial.image} alt={testimonial.name} />
+                <h3>{testimonial.name}</h3>
+                <p>{testimonial.feedback}</p>
+              </div>
             </TestimonialCard>
           </SwiperSlide>
         ))}

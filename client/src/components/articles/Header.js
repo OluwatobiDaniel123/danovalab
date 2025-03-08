@@ -19,11 +19,11 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 6px;
+  padding: 1px 6px;
 `;
 
 const LogoImage = styled.img`
-  height: 60px;
+  height: 50px;
   background: #f9f9f9;
   border-radius: 50%;
   box-shadow: 0 0 0 0.5px lightblue;
