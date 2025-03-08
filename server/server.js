@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.json({ greetings: "Hello from charity home" });
+  res.json({ greetings: "Hello from danovalab" });
 });
 
 const __filename = fileURLToPath(import.meta.url);
