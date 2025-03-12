@@ -79,11 +79,11 @@ const testimonials = [
       "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
   },
   {
-    name: "Emily Brown",
+    name: "Helianne Duke",
     feedback:
       "Fantastic experience! The team was highly responsive and delivered beyond what we imagined.",
     image:
-      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
+      "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741725412/IMG-20250311-WA0037_ffpae3.jpg",
   },
   {
     name: "Jane Doe",

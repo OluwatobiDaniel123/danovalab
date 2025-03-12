@@ -1,5 +1,6 @@
 import React from "react";
 import "./Portfolio.css";
+import styled from "styled-components";
 
 const Committee = () => {
   const otherMembers = [
@@ -9,6 +10,8 @@ const Committee = () => {
       contribution: "Educational Programs",
       contact: "dexter.e@tobagoreads.org",
       link: "https://tobagoreads.com",
+      Image:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741716312/IMG-20250311-WA0026_v1stcn.jpg",
     },
     {
       name: "Charity Home Webapp",
@@ -62,6 +65,17 @@ const Committee = () => {
     },
   ];
 
+  const Img = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 70px;
+    }
+  `;
+
   return (
     <div className="committee-container">
       <div className="other-members-section">
@@ -70,6 +84,7 @@ const Committee = () => {
           {otherMembers.map((member, index) => (
             <div key={index} className="member-card">
               <div className="member-card-front">
+                <Img src={member.Image} alt={member.name} />
                 <div className="member-name">{member.name}</div>
                 <div className="member-role">{member.role}</div>
               </div>

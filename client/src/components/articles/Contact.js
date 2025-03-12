@@ -24,6 +24,7 @@ const ContactContainer = styled.div`
 
   @media (max-width: 769px) {
     flex-direction: column;
+    padding: 0;
   }
 `;
 
@@ -37,6 +38,7 @@ const ContactForm = styled.form`
   flex-direction: column;
   gap: 1.2rem;
   align-items: center;
+  border: 1.5px solid rgb(0, 195, 255);
 
   h2 {
     font-variant: small-caps;
@@ -64,6 +66,10 @@ const ContactForm = styled.form`
     }
 
     transition: all 0.3s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 0;
   }
 `;
 
@@ -149,6 +155,10 @@ const Map = styled.iframe`
   border-radius: 5px;
   width: 100%;
   height: 450px;
+
+  @media (max-width: 768px) {
+    border-radius: 0;
+  }
 `;
 
 const Contact = () => {

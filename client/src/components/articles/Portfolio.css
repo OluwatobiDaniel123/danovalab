@@ -96,8 +96,8 @@
 
 .member-card-front {
   /* background: linear-gradient(145deg, #6a11cb, #2575fc); */
-  background-image: url("https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg");
-  background-size: cover;
+  /* background-image: url("https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662186/banner3_bzntym.jpg");
+  background-size: cover; */
   color: white;
   transform: rotateY(0deg);
 }
@@ -117,13 +117,13 @@
 }
 
 .member-card .member-name {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
 }
 
 .member-card .member-role {
-  font-size: 1rem;
+  font-size: 0.7rem;
   opacity: 0.9;
 }
 
@@ -169,11 +169,11 @@
   }
 
   .member-card .member-name {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
   }
 
   .member-card .member-role {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 
   .member-card-back h3 {

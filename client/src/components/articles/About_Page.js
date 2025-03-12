@@ -68,18 +68,18 @@ const About_Page = () => {
           <TeamSection>
             <TeamMember>
               <img
-                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736774363/WhatsApp_Image_2025-01-10_at_17.55-Photoroom_tafyqg.jpg"
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741716312/IMG-20250311-WA0026_v1stcn.jpg"
                 alt="Team Member"
               />
-              <h4>Oluwatobi Daniel</h4>
+              <h4>Abigail Joseph</h4>
               <p>CEO & Founder</p>
             </TeamMember>
             <TeamMember>
               <img
-                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png"
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736774363/WhatsApp_Image_2025-01-10_at_17.55-Photoroom_tafyqg.jpg"
                 alt="Team Member"
               />
-              <h4>John Smith</h4>
+              <h4>Oluwatobi Daniel</h4>
               <p>Lead Developer</p>
             </TeamMember>
             <TeamMember>
@@ -101,14 +101,14 @@ export default About_Page;
 const TeamSection = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
   margin-top: 40px;
 `;
 
 const TeamMember = styled.div`
   text-align: center;
-  max-width: 200px;
+  max-width: 300px;
   padding: 20px;
   display: flex;
   flex-direction: column;

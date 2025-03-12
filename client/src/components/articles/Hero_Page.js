@@ -89,6 +89,7 @@ const HeroContent = styled.div`
     padding: 13rem 0 0 0;
     max-width: 450px;
   }
+
   @keyframes fadeIn {
     to {
       transform: translateY(0);
