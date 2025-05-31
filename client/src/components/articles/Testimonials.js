@@ -10,16 +10,15 @@ import styled from "styled-components";
 const TestimonialContainer = styled.div`
   text-align: center;
   padding: 40px 10px;
+  max-width: 1200px;
+  margin: 0 auto;
   background: linear-gradient(145deg, #f9f9f9, #ffffff);
-  font-family: "Roboto", sans-serif;
 `;
 
 const SectionHeader = styled.h2`
   font-size: 30px;
   width: 100%;
-  font-variant: small-caps;
   border-bottom: 1px solid rgb(0, 195, 255);
-
   color: #333;
   margin-bottom: 10px;
 `;

@@ -3,17 +3,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (progress < 100) {
-        setProgress(progress + 1);
-      }
-    }, 40);
-    return () => clearInterval(interval);
-  }, [progress]);
-
   return (
     <HeroSection>
       <HeroContent>
@@ -23,9 +12,6 @@ const Hero = () => {
           futuristic tech solutions to streamline your business growth.
         </HeroDescription>
         <CallToAction to="/request_quote">Get A QUOTE</CallToAction>
-        <ProgressBar>
-          <Progress width={progress} />
-        </ProgressBar>
       </HeroContent>
       <TechIllustration />
       <Particles />
@@ -63,8 +49,6 @@ const HeroSection = styled.section`
     }
     100% {
       background: linear-gradient(135deg, #023778, #03647f);
-
-      // background: linear-gradient(135deg, #024ca7, #016784);
     }
   }
 
@@ -113,8 +97,12 @@ const HeroTitle = styled.h1`
   overflow: hidden;
   border-right: 4px solid rgba(255, 255, 255, 0.75);
   width: 0;
-  animation: typing 4s steps(30) forwards; /* Increased duration and steps */
+  animation: typing 5s steps(60) forwards;
   @media (max-width: 768px) {
+    font-size: 3.5rem;
+  }
+
+  @media (max-width: 400px) {
     font-size: 3rem;
   }
   @keyframes typing {
@@ -164,7 +152,7 @@ const CallToAction = styled(Link)`
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
@@ -198,22 +186,6 @@ const CallToAction = styled(Link)`
     font-size: 1rem;
     padding: 12px 25px;
   }
-`;
-
-const ProgressBar = styled.div`
-  width: 100%;
-  height: 8px;
-  background-color: #f1f1f1;
-  border-radius: 50px;
-  margin-top: 30px;
-`;
-
-const Progress = styled.div`
-  height: 100%;
-  width: ${({ width }) => width}%;
-  background: linear-gradient(155deg, #024ca7, #016784);
-  border-radius: 50px;
-  transition: width 0.4s ease;
 `;
 
 const TechIllustration = styled.div`

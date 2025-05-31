@@ -3,24 +3,13 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const About_Page = () => {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (progress < 100) {
-        setProgress((prev) => prev + 1);
-      }
-    }, 40);
-    return () => clearInterval(interval);
-  }, [progress]);
-
   return (
     <HeroSection>
       <Container>
         <TextContent>
           <Title>ABOUT US</Title>
           <Subtitle>
-            We are a team of forward-thinking engineers, designers, and
+            We are a team of forward-thinking developers, designers, and
             strategists dedicated to delivering smart, customized tech
             solutions. At DANOVALAB, we focus on creating high-performance
             software that simplifies complex challenges and accelerates growth
@@ -30,9 +19,6 @@ const About_Page = () => {
             <CTA to="/Services">Explore Services</CTA>
             <SecondaryCTA to="/Contact">Get in Touch</SecondaryCTA>
           </CTAContainer>
-          <ProgressBar>
-            <Progress style={{ width: `${progress}%` }} />
-          </ProgressBar>
         </TextContent>
         <ImageWrapper>
           <HeroImage
@@ -148,7 +134,7 @@ const TeamMember = styled.div`
 const HeroSection = styled.section`
   background: linear-gradient(120deg, #0d1117, #161b22);
   color: #f5f7fa;
-  padding: 80px 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,24 +163,23 @@ const TextContent = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #58a6ff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   @media (max-width: 768px) {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.4;
   margin-bottom: 30px;
+
   @media (max-width: 768px) {
-    // font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 30px;
+    line-height: 1.3;
     text-align: left;
   }
 `;
@@ -239,21 +224,6 @@ const SecondaryCTA = styled(Link)`
   }
 `;
 
-const ProgressBar = styled.div`
-  margin-top: 30px;
-  width: 100%;
-  height: 13px;
-  background: #30363d;
-  border-radius: 5px;
-  overflow: hidden;
-`;
-
-const Progress = styled.div`
-  height: 100%;
-  background: #58a6ff;
-  transition: width 0.4s ease;
-`;
-
 const ImageWrapper = styled.div`
   max-width: 500px;
 
@@ -278,6 +248,10 @@ const Services = styled.div`
   flex-wrap: wrap;
   margin-top: 60px;
   padding: 40px 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px 5px;
+  }
 `;
 
 const ServiceCard = styled.div`

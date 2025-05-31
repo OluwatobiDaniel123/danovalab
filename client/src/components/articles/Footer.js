@@ -1,6 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaLocationArrow,
+  FaMap,
+  FaSearchLocation,
+  FaStreetView,
+  FaPhone,
+  FaClock,
+  FaCalendar,
+  FaVoicemail,
+  FaMailBulk,
+  FaMailchimp,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 const FooterContainer = styled.footer`
   // background: #000;
@@ -58,6 +73,20 @@ const FooterLink = styled.a`
   }
 `;
 
+const FooterLink2 = styled.p`
+  width: 200px;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+  display: block;
+  outline: none;
+  padding: 1px;
+
+  &:hover {
+    color: lightblue;
+  }
+`;
+
 const SocialIcons = styled.div`
   display: flex;
   margin-top: 10px;
@@ -93,7 +122,7 @@ const Footer = () => {
               alt="LogoImg"
             />
           </FooterHeader>
-          <FooterText>Lagos</FooterText>
+          <FooterText>Lagos, Nigeria</FooterText>
           <FooterText>Odonla. Odogunyan, Ikorodu, Lagos</FooterText>
           <FooterText>+234 (0)810 9830 746</FooterText>
         </FooterSection>
@@ -108,45 +137,80 @@ const Footer = () => {
         <FooterSection>
           <FooterHeader>Services</FooterHeader>
           <Link to="request_quote">
-            <FooterLink>Software Development</FooterLink>
+            <FooterLink2>Software Development</FooterLink2>
           </Link>
           <Link to="request_quote">
-            <FooterLink>Front-End Development</FooterLink>
+            <FooterLink2>Front-End Development</FooterLink2>
           </Link>
           <Link to="request_quote">
-            <FooterLink>Back-End Development</FooterLink>
+            <FooterLink2>Back-End Development</FooterLink2>
           </Link>
           <Link to="request_quote">
-            <FooterLink>Web Development</FooterLink>
+            <FooterLink2>Web Development</FooterLink2>
           </Link>
           <Link to="request_quote">
-            <FooterLink>Maintainability</FooterLink>
+            <FooterLink2>Maintainability</FooterLink2>
           </Link>
         </FooterSection>
 
         <FooterSection>
-          <FooterHeader>Inside Danovalab</FooterHeader>
-          <Link to="/About">
-            <FooterLink>About</FooterLink>
-          </Link>
-          <Link to="/Portfolio">
-            <FooterLink>Portfolio</FooterLink>
-          </Link>
-          <Link to="/Contact">
-            <FooterLink>Contact</FooterLink>
-          </Link>
-          <Link to="/Careers">
-            <FooterLink>Careers</FooterLink>
-          </Link>
-          <Link to="/Blogs">
-            <FooterLink>Blogs</FooterLink>
-          </Link>
-        </FooterSection>
-        <FooterSection>
-          <FooterHeader>Legal</FooterHeader>
-          <FooterLink href="#">Terms Of Use</FooterLink>
-          <FooterLink href="#">Privacy Policy</FooterLink>
-          <FooterLink href="#">Cookie Policy</FooterLink>
+          <FooterHeader>Contact Us</FooterHeader>
+          <FooterLink
+            href="#"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              gap: "10px",
+            }}
+          >
+            <FaStreetView />
+            <FooterText style={{ padding: 0, margin: 0 }}>
+              Odonla. Odogunyan, Ikorodu, Lagos
+            </FooterText>
+          </FooterLink>
+          <FooterLink
+            href="#"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              gap: "10px",
+            }}
+          >
+            <FaPhone />
+            <FooterText style={{ padding: 0, margin: 0 }}>
+              +234 (0)810 9830 746
+            </FooterText>
+          </FooterLink>
+          <FooterLink
+            href="#"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              gap: "10px",
+            }}
+          >
+            <FaClock />
+            <FooterText style={{ padding: 0, margin: 0 }}>
+              Mon - Friday. 08 am - 09 pm{" "}
+            </FooterText>
+          </FooterLink>
+          <FooterLink
+            href="#"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              width: "100%",
+              gap: "10px",
+            }}
+          >
+            <FaMailBulk />
+            <FooterText style={{ padding: 0, margin: 0 }}>
+              danieloluwatobi@danovalab.com
+            </FooterText>
+          </FooterLink>
         </FooterSection>
       </FooterContent>
       <SocialIcons>

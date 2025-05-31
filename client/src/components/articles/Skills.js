@@ -16,7 +16,6 @@ const HighlightsSection = styled.section`
 const Title = styled.h1`
   font-size: 30px;
   width: 100%;
-  font-variant: small-caps;
   border-bottom: 1px solid rgb(0, 195, 255);
 
   color: #333;
@@ -26,7 +25,6 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   font-size: 20px;
   width: 100%;
-  font-variant: small-caps;
   color: #666;
   margin-bottom: 40px;
 `;
@@ -48,13 +46,15 @@ const HighlightCard = styled.div`
   padding: 20px;
   width: 300px;
 
-  transition: transform 0.3s;
-
   &:hover {
     transform: translateY(-10px);
+    // background-color: #007bff;
+    transition: 0.4s ease;
   }
+
   @media (max-width: 769px) {
     width: 95%;
+    padding: 10px;
   }
 `;
 

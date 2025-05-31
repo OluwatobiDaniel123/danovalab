@@ -16,7 +16,6 @@ const HighlightsSection = styled.section`
 const Title = styled.h1`
   font-size: 30px;
   width: 100%;
-  font-variant: small-caps;
   border-bottom: 1px solid rgb(0, 195, 255);
   color: #333;
   margin-bottom: 10px;
@@ -25,9 +24,6 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   font-size: 20px;
   width: 100%;
-
-  font-variant: small-caps;
-
   color: #666;
   margin-bottom: 40px;
 `;
@@ -37,6 +33,14 @@ const HighlightsGrid = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media (max-width: 769px) {
+    // width: 35%;
+    // gap: 2px;
+
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr.1fr);
+  }
 `;
 
 const HighlightCard = styled.div`
@@ -47,13 +51,13 @@ const HighlightCard = styled.div`
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 250px;
-
+  width: 280px;
   transition: transform 0.3s;
 
   &:hover {
     transform: translateY(-10px);
   }
+
   @media (max-width: 769px) {
     width: 95%;
   }
@@ -61,14 +65,24 @@ const HighlightCard = styled.div`
 
 const IconWrapper = styled.div`
   font-size: 3rem;
+
   color: #007bff;
   margin-bottom: 15px;
+
+  @media (max-width: 769px) {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
 `;
 
-const Number = styled.h3`
-  font-size: 2rem;
+const Number = styled.h2`
+  font-size: 3rem;
+  font-weight: bold;
   color: #333;
   margin: 10px 0;
+  @media (max-width: 769px) {
+    font-size: 2rem;
+  }
 `;
 
 const Label = styled.p`
@@ -87,7 +101,7 @@ const CompanyHighlights = () => {
             <FaCalendarAlt />
           </IconWrapper>
           <Number>
-            <CountUp end={8} />+
+            <CountUp end={15} />+
           </Number>
           <Label>Years of Expertise</Label>
         </HighlightCard>
@@ -96,7 +110,7 @@ const CompanyHighlights = () => {
             <FaLaptopCode />
           </IconWrapper>
           <Number>
-            <CountUp end={200} />+
+            <CountUp end={140} />+
           </Number>
           <Label>Successful Projects</Label>
         </HighlightCard>
@@ -105,7 +119,7 @@ const CompanyHighlights = () => {
             <FaCode />
           </IconWrapper>
           <Number>
-            <CountUp end={50} />+
+            <CountUp end={48} />+
           </Number>
           <Label>Skilled Developers</Label>
         </HighlightCard>
@@ -114,7 +128,7 @@ const CompanyHighlights = () => {
             <FaGlobe />
           </IconWrapper>
           <Number>
-            <CountUp end={20} />+
+            <CountUp end={102} />+
           </Number>
           <Label>Countries Served</Label>
         </HighlightCard>

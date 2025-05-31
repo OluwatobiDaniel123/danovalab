@@ -12,22 +12,7 @@
   text-decoration: none;
 }
 
-/* @keyframes gradientAnimation {
-  0% {
-    background: linear-gradient(135deg, #135d71, #01326e);
-  }
-  50% {
-    background: linear-gradient(135deg, #491f23, #1289aa);
-  }
-  100% {
-    background: linear-gradient(135deg, #023778, #03647f);
-  }
-} */
-
 ::-webkit-scrollbar {
   display: none;
   color: #92781a;
-}
-body {
-  font-family: "Poppins", sans-serif;
 }

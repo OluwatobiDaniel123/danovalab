@@ -7,11 +7,13 @@ import App from "./App";
 import "./index.css";
 
 import Chatbot from "./components/articles/Chatbox/Chatbot";
+import Whatsapp from "./components/articles/Chatbox/Whatsapp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <App />
+    <Whatsapp />
     <Chatbot />
   </Provider>
 );

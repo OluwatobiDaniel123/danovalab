@@ -26,10 +26,11 @@ const Header = styled.div`
   align-items: center;
   border-bottom: 1px solid #ccc;
   font-weight: 600;
+  padding: 5px;
 
   span {
-    color: blue;
     font-size: 14px;
+    color: #007bff;
   }
 `;
 
@@ -124,6 +125,7 @@ const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 100%;
 `;
 
 const Button = styled.button`
@@ -137,6 +139,13 @@ const Button = styled.button`
   &:hover {
     background-color: #0056b3;
   }
+`;
+
+const LogoImage = styled.img`
+  height: 20px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.5px lightblue;
 `;
 
 const Chatbot = () => {
@@ -194,7 +203,14 @@ const Chatbot = () => {
       </Avatar>
       <ChatContainer isVisible={isVisible}>
         <Header>
-          <span>Chat With Us</span>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <LogoImage
+              src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662183/logo_vuude4.png"
+              loading="lazy"
+              alt="Logo"
+            />
+            <span>Chat Us</span>
+          </div>
           <ClearButton onClick={clearMessages}>
             <FiX />
           </ClearButton>
