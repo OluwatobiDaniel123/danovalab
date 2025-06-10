@@ -1,26 +1,17 @@
-import React from "react";
 import styled from "styled-components";
 import {
   FaFacebook,
   FaTwitter,
   FaLinkedin,
   FaInstagram,
-  FaLocationArrow,
-  FaMap,
-  FaSearchLocation,
   FaStreetView,
   FaPhone,
   FaClock,
-  FaCalendar,
-  FaVoicemail,
   FaMailBulk,
-  FaMailchimp,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const FooterContainer = styled.footer`
-  // background: #000;
   background: linear-gradient(120deg, #0d1117, #161b22);
-
   color: #fff;
   padding: 30px 15px;
   display: flex;
@@ -104,7 +95,7 @@ const SocialIcons = styled.div`
   }
 `;
 const LogoImage = styled.img`
-  height: 60px;
+  height: 50px;
   background: #f9f9f9;
   border-radius: 50%;
   box-shadow: 0 0 0 2px lightblue;
@@ -119,12 +110,19 @@ const Footer = () => {
             <LogoImage
               src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736662183/logo_vuude4.png"
               loading="lazy"
-              alt="LogoImg"
+              alt="Danovalab Logo"
             />
           </FooterHeader>
           <FooterText>Lagos, Nigeria</FooterText>
-          <FooterText>Odonla. Odogunyan, Ikorodu, Lagos</FooterText>
-          <FooterText>+234 (0)810 9830 746</FooterText>
+          <FooterText>Odonla Road. Odogunyan, Ikorodu, Lagos</FooterText>
+          <FooterText>
+            <a
+              href="tel:+19178367151"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              +234 (0)810 9830 746
+            </a>
+          </FooterText>
         </FooterSection>
         <FooterSection>
           <FooterHeader>United States</FooterHeader>
@@ -156,7 +154,9 @@ const Footer = () => {
         <FooterSection>
           <FooterHeader>Contact Us</FooterHeader>
           <FooterLink
-            href="#"
+            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.74982246983!2d3.4779139339393024!3d6.672074093347397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be9403cda5b97%3A0x49c84a59cfa99d31!2sOdogunyan%2C%20Lagos!5e0!3m2!1sen!2sng!4v1739369697809!5m2!1sen!2sng"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -166,11 +166,13 @@ const Footer = () => {
           >
             <FaStreetView />
             <FooterText style={{ padding: 0, margin: 0 }}>
-              Odonla. Odogunyan, Ikorodu, Lagos
+              Odonla Road. Odogunyan, Ikorodu, Lagos
             </FooterText>
           </FooterLink>
           <FooterLink
             href="#"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -180,11 +182,18 @@ const Footer = () => {
           >
             <FaPhone />
             <FooterText style={{ padding: 0, margin: 0 }}>
-              +234 (0)810 9830 746
+              <a
+                href="tel:+19178367151"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                +234 (0)810 9830 746
+              </a>
             </FooterText>
           </FooterLink>
           <FooterLink
             href="#"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -199,6 +208,8 @@ const Footer = () => {
           </FooterLink>
           <FooterLink
             href="#"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -218,6 +229,8 @@ const Footer = () => {
           style={{ width: "auto" }}
           href="https://www.facebook.com"
           aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaFacebook />
         </FooterLink>
@@ -225,6 +238,8 @@ const Footer = () => {
           style={{ width: "auto" }}
           href="https://www.twitter.com"
           aria-label="Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaTwitter />
         </FooterLink>
@@ -232,6 +247,8 @@ const Footer = () => {
           style={{ width: "auto" }}
           href="https://www.linkedin.com"
           aria-label="LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedin />
         </FooterLink>
@@ -239,6 +256,8 @@ const Footer = () => {
           style={{ width: "auto" }}
           href="https://www.instagram.com"
           aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FaInstagram />
         </FooterLink>

@@ -1,4 +1,3 @@
-import React from "react";
 import About_Page from "../articles/About_Page";
 import Hero_Page from "../articles/Hero_Page";
 import Contact from "../articles/Contact";

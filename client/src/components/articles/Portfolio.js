@@ -1,6 +1,9 @@
 import "./Portfolio.css";
 import styled from "styled-components";
-import img from "../../assets/port4.png";
+import img from "../../assets/Port1.png";
+import img1 from "../../assets/Port2.png";
+import img2 from "../../assets/Port3.png";
+import img3 from "../../assets/Port4.png";
 
 const Committee = () => {
   const otherMembers = [
@@ -11,7 +14,7 @@ const Committee = () => {
       contact: "dexter.e@tobagoreads.org",
       link: "https://tobagoreads.com",
       image: img,
-      image2: img,
+      image2: img1,
     },
     {
       name: "Charity Home app",
@@ -19,8 +22,8 @@ const Committee = () => {
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
       link: "https://www.chrisalphawine.com",
-      image: img,
-      image2: img,
+      image: img2,
+      image2: img3,
     },
     {
       name: "Charity Home Webapp",

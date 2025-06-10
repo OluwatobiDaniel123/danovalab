@@ -1,140 +1,165 @@
-import React from "react";
 import styled from "styled-components";
+import { FaCalendarAlt, FaLaptopCode, FaCode, FaGlobe } from "react-icons/fa";
 import CountUp from "react-countup";
-import { FaCode, FaLaptopCode, FaGlobe, FaCalendarAlt } from "react-icons/fa";
 
-const HighlightsSection = styled.section`
-  text-align: center;
-  padding: 50px;
-  background-color: #f9f9f9;
+const Container = styled.div`
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  min-height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
 
   @media (max-width: 769px) {
-    padding: 20px;
+    padding: 0.5rem;
   }
 `;
 
 const Title = styled.h1`
   font-size: 30px;
-  width: 100%;
-  border-bottom: 1px solid rgb(0, 195, 255);
-  color: #333;
-  margin-bottom: 10px;
-`;
+  text-align: center;
 
-const Subtitle = styled.h2`
-  font-size: 20px;
-  width: 100%;
-  color: #666;
-  margin-bottom: 40px;
-`;
-
-const HighlightsGrid = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-
-  @media (max-width: 769px) {
-    // width: 35%;
-    // gap: 2px;
-
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr.1fr);
+  span {
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+    background: #93d201;
+    color: #000;
+    border-radius: 50%;
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+    height: 65px;
+    width: 65px;
   }
 `;
 
-const HighlightCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "exp intl"
+    "brand intl"
+    "team intl";
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+`;
+
+const Card = styled.div`
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 280px;
-  transition: transform 0.3s;
+  color: ${(props) => (props.highlight ? "#000" : "#000")};
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 2px solid #ddd;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  grid-area: ${(props) => props.area};
 
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 2);
+    border-color: #00c6ff;
   }
 
-  @media (max-width: 769px) {
-    width: 95%;
+  span {
+    display: block;
+  }
+
+  svg {
+    display: block;
+    margin: 0 auto 0.5rem;
+    font-size: 2.5rem;
+    color: ${(props) => (props.highlight ? "#000" : "#007bff")};
   }
 `;
-
 const IconWrapper = styled.div`
-  font-size: 3rem;
-
-  color: #007bff;
-  margin-bottom: 15px;
+  background: #004080;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
 
   @media (max-width: 769px) {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-bottom: 0;
   }
 `;
 
-const Number = styled.h2`
+const Number = styled.h1`
   font-size: 3rem;
   font-weight: bold;
   color: #333;
-  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   @media (max-width: 769px) {
     font-size: 2rem;
   }
 `;
 
 const Label = styled.p`
-  font-size: 1rem;
+  font-size: 18px;
   color: #666;
 `;
 
-const CompanyHighlights = () => {
+const WhyChooseUs = () => {
   return (
-    <HighlightsSection>
-      <Title>Our Strengths That Set Us Apart</Title>
-      <Subtitle>The Most Reliable Software Development Team</Subtitle>
-      <HighlightsGrid>
-        <HighlightCard>
+    <Container>
+      <Title>
+        WHY CHOOSE <br /> <span>&rarr;</span>US
+      </Title>
+      <Grid>
+        <Card area="exp" highlight>
           <IconWrapper>
-            <FaCalendarAlt />
+            <FaCalendarAlt style={{ color: "#007bff", fontSize: "25px" }} />
           </IconWrapper>
+
           <Number>
-            <CountUp end={15} />+
+            <CountUp end={11} />
+            <span>+</span>
           </Number>
           <Label>Years of Expertise</Label>
-        </HighlightCard>
-        <HighlightCard>
+        </Card>
+        <Card area="brand">
           <IconWrapper>
-            <FaLaptopCode />
+            <FaLaptopCode style={{ fontSize: "25px" }} />
           </IconWrapper>
+
           <Number>
-            <CountUp end={140} />+
+            <CountUp end={114} /> <span>+</span>
           </Number>
           <Label>Successful Projects</Label>
-        </HighlightCard>
-        <HighlightCard>
+        </Card>
+        <Card
+          area="intl"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
           <IconWrapper>
-            <FaCode />
+            <FaCode style={{ fontSize: "25px" }} />
           </IconWrapper>
+
           <Number>
-            <CountUp end={48} />+
+            <CountUp end={22} /> <span>+</span>
           </Number>
           <Label>Skilled Developers</Label>
-        </HighlightCard>
-        <HighlightCard>
-          <IconWrapper>
-            <FaGlobe />
-          </IconWrapper>
-          <Number>
-            <CountUp end={102} />+
-          </Number>
-          <Label>Countries Served</Label>
-        </HighlightCard>
-      </HighlightsGrid>
-    </HighlightsSection>
+        </Card>
+      </Grid>
+    </Container>
   );
 };
 
-export default CompanyHighlights;
+export default WhyChooseUs;

@@ -187,7 +187,9 @@ const Header = () => {
           )
         )}
         <Link to="/request_quote">
-          <QuoteButton>Get a Quote</QuoteButton>
+          <QuoteButton onClick={() => setShowNav(false)}>
+            Get a Quote
+          </QuoteButton>
         </Link>
       </SideNav>
     </HeaderContainer>

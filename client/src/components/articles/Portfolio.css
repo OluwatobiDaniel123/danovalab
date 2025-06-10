@@ -92,12 +92,11 @@
 
 .member-card-front {
   background: transparent;
-  color: blue;
+
   transform: rotateY(0deg);
 }
 
 .member-card-back {
-  color: blue;
   transform: rotateY(180deg);
 }
 

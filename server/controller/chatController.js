@@ -3,7 +3,6 @@ import Stripe from "stripe";
 import dotenv from "dotenv";
 
 dotenv.config();
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export const sendMessage = async (req, res) => {
   try {
@@ -52,6 +51,7 @@ export const sendMessage = async (req, res) => {
     res.status(500).json({ error: "Error processing message" });
   }
 };
+
 export const getMessages = async (req, res) => {
   try {
     const messages = await Chat.find().sort({ timestamp: 1 });

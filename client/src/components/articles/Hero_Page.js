@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -55,6 +54,7 @@ const HeroSection = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     text-align: center;
+    height: 95vh;
   }
 `;
 

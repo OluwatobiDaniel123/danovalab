@@ -5,9 +5,6 @@ import cors from "cors";
 import route from "./routes/route.js";
 import path from "path";
 import { fileURLToPath } from "url";
-import { connectDB } from "./config/connection.js";
-
-connectDB();
 
 const app = express();
 

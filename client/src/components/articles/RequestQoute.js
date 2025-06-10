@@ -99,37 +99,6 @@ const slideOut = keyframes`
   }
 `;
 
-// const StyledAlert = styled.div`
-//   position: fixed;
-//   top: 20px;
-//   right: 20px;
-//   background-color: ${(props) =>
-//     props.type === "success" ? "#d4edda" : "#f8d7da"};
-//   color: ${(props) => (props.type === "success" ? "#155724" : "#721c24")};
-//   border: 1px solid
-//     ${(props) => (props.type === "success" ? "#c3e6cb" : "#f5c6cb")};
-//   border-radius: 5px;
-//   padding: 0.6rem 0.6rem;
-//   display: flex;
-//   align-items: center;
-//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//   animation: ${(props) => (props.animateOut ? slideOut : slideIn)} 0.5s ease;
-//   z-index: 1000;
-
-//   svg {
-//     margin-right: 10px;
-//     font-size: 1.5rem;
-//   }
-
-//   button {
-//     background: none;
-//     border: none;
-//     color: ${(props) => (props.type === "success" ? "#155724" : "#721c24")};
-//     font-size: 1.9rem;
-//     margin-left: 15px;
-//     cursor: pointer;
-//   }
-// `;
 const StyledAlert = styled.div`
   position: fixed;
   top: 20px;
@@ -197,34 +166,6 @@ const RequestQuote = () => {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-  //   try {
-  //     const result = await emailjs.sendForm(
-  //       "service_qh08omd",
-  //       "template_icla7gq",
-  //       form.current,
-  //       "uDj1nlX9BVEqunnYs"
-  //     );
-  //     console.log(result.text);
-  //     setAlertMessage({
-  //       type: "success",
-  //       message: "Quote sent successfully!",
-  //     });
-  //     form.current.reset();
-  //   } catch (error) {
-  //     console.error(error.text);
-  //     setAlertMessage({ type: "error", message: "Failed to send Quote" });
-  //   } finally {
-  //     setLoading(false);
-  //     setTimeout(() => {
-  //       // setAnimateOut(true);
-  //       setTimeout(() => setAlertMessage(null), 300);
-  //     }, 3000);
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -233,17 +174,17 @@ const RequestQuote = () => {
       fullName: formData.fullName,
       email: formData.email,
       whatsapp: formData.whatsapp,
-      helpWith: formData.helpWith.join(", "), // Convert array to string
+      helpWith: formData.helpWith.join(", "),
       comments: formData.comments,
       budget: formData.budget,
     };
 
     try {
       const result = await emailjs.send(
-        "service_mtbnx3x", // Your EmailJS service ID
-        "template_knnul8n", // Your EmailJS template ID
+        "service_mtbnx3x",
+        "template_knnul8n",
         templateParams,
-        "uDj1nlX9BVEqunnYs" // Your EmailJS public key
+        "uDj1nlX9BVEqunnYs"
       );
       console.log("Success:", result.text);
 
@@ -255,7 +196,7 @@ const RequestQuote = () => {
         helpWith: [],
         comments: "",
         budget: "",
-      }); // Clear form
+      });
     } catch (error) {
       console.error("Error:", error.text);
       setAlertMessage({ type: "error", message: "Failed to send Quote" });

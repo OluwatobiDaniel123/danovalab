@@ -1,9 +1,8 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import emailjs from "emailjs-com";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
-import { FaFacebook, FaTwitter, FaLinkedin, FaMailBulk } from "react-icons/fa";
 
 const ContactSection = styled.section`
   display: flex;
@@ -74,7 +73,6 @@ const ContactForm = styled.form`
 
 const ContactButton = styled.button`
   background: linear-gradient(45deg, #007bff, #00d4ff);
-
   color: white;
   font-weight: bold;
   padding: 10px 15px;

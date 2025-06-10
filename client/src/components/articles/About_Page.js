@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -117,6 +116,7 @@ const TeamMember = styled.div`
     font-size: 18px;
     margin-top: 20px;
     color: #555;
+
     font-weight: 600;
   }
 
