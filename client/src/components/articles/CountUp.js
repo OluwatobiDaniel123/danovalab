@@ -5,12 +5,12 @@ import CountUp from "react-countup";
 const Container = styled.div`
   background-color: #000;
   color: #fff;
-  padding: 2rem;
   min-height: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: sans-serif;
+  padding: 2rem;
 
   @media (max-width: 769px) {
     padding: 0.5rem;
@@ -30,8 +30,8 @@ const Title = styled.h1`
     border-radius: 50%;
     padding: 0.8rem;
     margin-right: 0.5rem;
-    height: 65px;
-    width: 65px;
+    height: 60px;
+    width: 60px;
   }
 `;
 
@@ -76,11 +76,12 @@ const Card = styled.div`
     display: block;
     margin: 0 auto 0.5rem;
     font-size: 2.5rem;
-    color: ${(props) => (props.highlight ? "#000" : "#007bff")};
+    color: ${(props) => (props.highlight ? "#000" : "white")};
   }
 `;
 const IconWrapper = styled.div`
-  background: #004080;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -121,7 +122,7 @@ const WhyChooseUs = () => {
       <Grid>
         <Card area="exp" highlight>
           <IconWrapper>
-            <FaCalendarAlt style={{ color: "#007bff", fontSize: "25px" }} />
+            <FaCalendarAlt style={{ color: "white", fontSize: "25px" }} />
           </IconWrapper>
 
           <Number>

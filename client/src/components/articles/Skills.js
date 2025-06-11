@@ -6,7 +6,6 @@ const HighlightsSection = styled.section`
   text-align: center;
   padding: 50px;
   background-color: #f9f9f9;
-  margin-bottom: 90px;
 
   @media (max-width: 769px) {
     padding: 20px;
