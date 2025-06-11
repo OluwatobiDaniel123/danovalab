@@ -1,56 +1,62 @@
 import "./Portfolio.css";
 import styled from "styled-components";
-import img from "../../assets/Port1.png";
-import img1 from "../../assets/Port2.png";
-import img2 from "../../assets/Port3.png";
-import img3 from "../../assets/Port4.png";
 
 const Committee = () => {
   const otherMembers = [
     {
       name: "E-commerce app",
-      role: "Christalphawine.com",
+      link: "https://www.chrisalphawine.com/",
       contribution: "Educational Programs",
       contact: "dexter.e@tobagoreads.org",
-      link: "https://tobagoreads.com",
-      image: img,
-      image2: img1,
+
+      image:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_091156_rm8e6c.png",
+      image2:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_091228_r2wtuy.png",
     },
     {
       name: "Charity Home app",
-      role: "Tobagoreads.com",
+      link: "https://tobagoreads.com/",
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
-      link: "https://www.chrisalphawine.com",
-      image: img2,
-      image2: img3,
+
+      image:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182858_gwk0b5.png",
+      image2:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183807_ohsfps.png",
     },
     {
-      name: "Charity Home Webapp",
-      role: "Tobagoreads.com",
+      name: "Music Record Label",
+      link: "https://xtiim-records-website.vercel.app/xtiim-artists/registration",
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
-      link: "https://www.chrisalphawine.com",
-      image: img,
-      image2: img,
+
+      image:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_092015_szm0pu.png",
+      image2:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_092035_zyzhwl.png",
     },
     {
-      name: "Charity Home Webapp",
-      role: "Tobagoreads.com",
+      name: "Moving Company Website",
+      link: "https://swifthavenservice.com/",
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
-      link: "https://www.chrisalphawine.com",
-      image: img,
-      image2: img,
+
+      image:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182815_kjuhl3.png",
+      image2:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183851_qxa7f6.png",
     },
     {
-      name: "Charity Home Webapp",
-      role: "Tobagoreads.com",
+      name: "LoveChat app",
+      link: "https://chatapp-client-five.vercel.app/login",
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
-      link: "https://www.chrisalphawine.com",
-      image: img,
-      image2: img,
+
+      image:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663103/Screenshot_2025-06-11_182732_skq2qj.png",
+      image2:
+        "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183949_k2j9zx.png",
     },
   ];
 
@@ -79,12 +85,10 @@ const Committee = () => {
                 <div className="member-card-front">
                   <FrontImage src={`${member.image}`} />
                   <h6 className="member-name">{member.name}</h6>
-                  <p className="member-role">{member.role}</p>
+                  {/* <p className="member-role">{member.role}</p> */}
                 </div>
                 <div className="member-card-back">
                   <BackImage src={`${member.image2}`} />
-                  <h6>Contact</h6>
-                  <p>{member.contribution}</p>
                 </div>
               </a>
             ))}

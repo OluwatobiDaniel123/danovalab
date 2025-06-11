@@ -109,14 +109,12 @@
 }
 
 .member-card .member-name {
-  color: blue;
   font-size: 1.1rem;
   font-weight: bold;
   position: absolute;
 }
 
 .member-card .member-role {
-  color: blue;
   font-size: 0.8rem;
   opacity: 0.9;
   position: absolute;
