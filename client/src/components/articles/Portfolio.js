@@ -27,7 +27,7 @@ const Committee = () => {
     },
     {
       name: "Music Record Label",
-      link: "https://xtiim-records-website.vercel.app/xtiim-artists/registration",
+      link: "https://xtiim-records-website.vercel.app/",
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
 
@@ -49,7 +49,7 @@ const Committee = () => {
     },
     {
       name: "LoveChat app",
-      link: "https://chatapp-client-five.vercel.app/login",
+      link: "https://chatapp-client-five.vercel.app/",
       contribution: "Youth Development",
       contact: "elizabeth.j@tobagoreads.org",
 
@@ -84,8 +84,6 @@ const Committee = () => {
               <a key={index} className="member-card" href={member.link}>
                 <div className="member-card-front">
                   <FrontImage src={`${member.image}`} />
-                  <h6 className="member-name">{member.name}</h6>
-                  {/* <p className="member-role">{member.role}</p> */}
                 </div>
                 <div className="member-card-back">
                   <BackImage src={`${member.image2}`} />
