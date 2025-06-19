@@ -142,7 +142,7 @@ const Button = styled.button`
 `;
 
 const LogoImage = styled.img`
-  height: 20px;
+  height: 30px;
   background: #f9f9f9;
   border-radius: 50%;
   box-shadow: 0 0 0 0.5px lightblue;
@@ -169,7 +169,6 @@ const Chatbot = () => {
     try {
       const response = await axios.post(
         "https://danovalab-server.vercel.app/api/chat",
-
         {
           message: userInput,
         }
