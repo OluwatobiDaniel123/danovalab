@@ -80,7 +80,7 @@ const Card = styled.div`
   }
 `;
 const IconWrapper = styled.div`
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: #2a5298;
 
   border-radius: 50%;
   display: flex;
@@ -96,7 +96,7 @@ const IconWrapper = styled.div`
 `;
 
 const Number = styled.h1`
-  font-size: 3rem;
+  font-size: 13rem;
   font-weight: bold;
   color: #333;
   display: flex;

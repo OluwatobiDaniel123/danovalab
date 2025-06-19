@@ -169,6 +169,7 @@ const Chatbot = () => {
     try {
       const response = await axios.post(
         "https://danovalab-server.vercel.app/api/chat",
+
         {
           message: userInput,
         }
