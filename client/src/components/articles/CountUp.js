@@ -96,7 +96,7 @@ const IconWrapper = styled.div`
 `;
 
 const Number = styled.h1`
-  font-size: 13rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #333;
   display: flex;
