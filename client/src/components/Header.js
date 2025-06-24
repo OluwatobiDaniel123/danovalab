@@ -6,7 +6,6 @@ import { IoClose, IoMenuOutline } from "react-icons/io5";
 const HeaderContainer = styled.div`
   background-color: rgba(0, 0, 0, 0.2);
   padding: 5px;
-
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;

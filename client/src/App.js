@@ -1,4 +1,4 @@
-import Home from "./components/home/Home";
+import Home from "./home/Home";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -6,13 +6,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Footer from "./components/articles/Footer";
-import Contact from "./components/articles/Contact";
-import Header from "./components/articles/Header";
-import ServicePage from "./components/articles/Service";
-import RequestQuote from "./components/articles/RequestQoute";
-import About_Page from "./components/articles/About_Page";
-import Portfolio from "./components/articles/Portfolio";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import Header from "./components/Header";
+import ServicePage from "./components/../pages/Service";
+import RequestQuote from "./pages/RequestQoute";
+import About_Page from "./components/../pages/About_Page";
+import Portfolio from "./components/../pages/Portfolio";
 
 const Layout = () => {
   return (

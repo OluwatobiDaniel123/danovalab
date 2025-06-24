@@ -282,12 +282,12 @@ const DanovalabStats = () => {
           maxWidth: "1200px",
         }}
       >
+        <AnimatedCounter label="Active Clients" target={40} duration={2000} />
         <AnimatedCounter
           label="Projects Delivered"
           target={150}
           duration={2000}
         />
-        <AnimatedCounter label="Active Clients" target={40} duration={2000} />
         <AnimatedCounter label="Years Experience" target={5} duration={2000} />
         <AnimatedCounter label="Team Members" target={12} duration={2000} />
       </div>
