@@ -80,7 +80,7 @@ const Skills = () => {
       <Title>Our Skills</Title>
       <Subtitle>Our team excels in the MERN stack, which include</Subtitle>
       <HighlightsGrid>
-        <HighlightCard>
+        <HighlightCard style={{ borderRadius: "150px 70px 10px" }}>
           <IconWrapper>
             <SiMongodb />
           </IconWrapper>
@@ -91,7 +91,7 @@ const Skills = () => {
             store and retrieve data efficiently with a flexible schema.
           </Label>
         </HighlightCard>
-        <HighlightCard>
+        <HighlightCard style={{ borderRadius: "70px 10px" }}>
           <IconWrapper>
             <FaCode />
           </IconWrapper>
@@ -102,7 +102,7 @@ const Skills = () => {
             frontend applications.
           </Label>
         </HighlightCard>
-        <HighlightCard>
+        <HighlightCard style={{ borderRadius: "80px 150px 70px 10px" }}>
           <IconWrapper>
             <FaReact />
           </IconWrapper>
@@ -113,7 +113,7 @@ const Skills = () => {
             and scalability.
           </Label>
         </HighlightCard>
-        <HighlightCard>
+        <HighlightCard style={{ borderRadius: "100px 100px 10px 10px" }}>
           <IconWrapper>
             <FaNode />
           </IconWrapper>

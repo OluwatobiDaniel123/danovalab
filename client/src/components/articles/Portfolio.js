@@ -64,13 +64,13 @@ const Committee = () => {
     width: 100%;
     height: 100%;
     // object-fit: cover;
-    border-radius: 15px;
+    border-radius: 45px 10px 45px;
   `;
   const BackImage = styled.img`
     width: 100%;
     height: 100%;
     // object-fit: cover;
-    border-radius: 15px;
+    border-radius: 45px 10px 45px;
     position: absolute;
   `;
 

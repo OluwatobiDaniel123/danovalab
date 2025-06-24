@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Hero = () => {
   return (
@@ -28,28 +29,14 @@ const HeroSection = styled.section`
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  animation: gradientAnimation 5s ease infinite;
   color: white;
   padding: 0 20px;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  transition: background 0.5s ease;
+  transition: background 0.5s ease-in-out;
   cursor: pointer;
   box-sizing: border-box;
-
-  @keyframes gradientAnimation {
-    0% {
-      background: linear-gradient(135deg, #135d71, #01326e);
-    }
-    50% {
-      background: linear-gradient(135deg, #491f23, #1289aa);
-    }
-    100% {
-      background: linear-gradient(135deg, #023778, #03647f);
-    }
-  }
 
   @media (max-width: 768px) {
     flex-direction: column;

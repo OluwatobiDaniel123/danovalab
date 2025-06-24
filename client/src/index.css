@@ -11,7 +11,26 @@
 }
 
 body {
-  /* background-color: black; */
+  background: linear-gradient(135deg, #0a2a43, #02172d);
+  animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(135deg, #0a2a43, #02172d);
+  }
+  25% {
+    background: linear-gradient(135deg, #012941, #0b3d64);
+  }
+  50% {
+    background: linear-gradient(135deg, #01324f, #034874);
+  }
+  75% {
+    background: linear-gradient(135deg, #02172d, #0a2a43);
+  }
+  100% {
+    background: linear-gradient(135deg, #0a2a43, #02172d);
+  }
 }
 
 ::-webkit-scrollbar {

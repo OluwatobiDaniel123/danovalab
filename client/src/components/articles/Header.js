@@ -4,13 +4,16 @@ import styled from "styled-components";
 import { IoClose, IoMenuOutline } from "react-icons/io5";
 
 const HeaderContainer = styled.div`
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 5px;
+
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(16px);
 `;
 
 const Box = styled.div`
@@ -23,7 +26,7 @@ const Box = styled.div`
 `;
 
 const LogoImage = styled.img`
-  height: 50px;
+  height: 45px;
   background: #f9f9f9;
   border-radius: 50%;
   box-shadow: 0 0 0 0.5px lightblue;
@@ -47,7 +50,7 @@ const NavItem = styled.li`
 
   a {
     text-decoration: none;
-    color: ${(props) => (props.isActive ? "#007bff" : "#333")};
+    color: ${(props) => (props.isActive ? "#007bff" : "#f9f9f9")};
     font-weight: ${(props) => (props.isActive ? "700" : "600")};
     padding: 8px 15px;
     border-radius: 5px;
@@ -71,7 +74,7 @@ const NavIcon = styled.div`
 
   svg {
     font-size: 40px;
-    color: #333;
+    color: white;
     cursor: pointer;
   }
 `;
@@ -85,7 +88,7 @@ const SideNav = styled.div`
   background-color: #333;
   color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  padding: 13px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -99,7 +102,7 @@ const SideNavItem = styled(Link)`
   border-bottom: ${(props) =>
     props.isActive ? "1px solid rgb(0, 195, 255)" : "#333"};
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px 15px;
   border-radius: 5px;
   transition: all 0.3s ease;

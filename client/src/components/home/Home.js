@@ -5,6 +5,7 @@ import Testimonials from "../articles/Testimonials";
 import CountUp from "../articles/CountUp";
 import Skills from "../articles/Skills";
 import Portfolio from "../articles/Portfolio";
+import Header from "../articles/Header";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <Hero_Page />
       <About_Page />
       <Skills />
-      <CountUp />
+      <CountUp target={5000} duration={3000} />
       <Testimonials />
       <Portfolio />
       <Contact />
