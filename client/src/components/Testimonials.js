@@ -84,7 +84,7 @@ const testimonials = [
       "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741725412/IMG-20250311-WA0037_ffpae3.jpg",
   },
   {
-    name: "Jane Doe",
+    name: "Lima Esther",
     feedback:
       "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
     image:

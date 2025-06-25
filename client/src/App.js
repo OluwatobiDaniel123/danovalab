@@ -11,8 +11,8 @@ import Contact from "./components/Contact";
 import Header from "./components/Header";
 import ServicePage from "./components/../pages/Service";
 import RequestQuote from "./pages/RequestQoute";
-import About_Page from "./components/../pages/About_Page";
-import Portfolio from "./components/../pages/Portfolio";
+import About_Page from "../src/pages/About_Page";
+import Portfolio from "../src/pages/Portfolio";
 
 const Layout = () => {
   return (

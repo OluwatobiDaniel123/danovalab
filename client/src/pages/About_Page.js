@@ -53,19 +53,11 @@ const About_Page = () => {
           <TeamSection>
             <TeamMember>
               <img
-                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741716312/IMG-20250311-WA0026_v1stcn.jpg"
-                alt="Team Member"
-              />
-              <h4>Abigail Joseph</h4>
-              <p>CEO & Founder</p>
-            </TeamMember>
-            <TeamMember>
-              <img
                 src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1736774363/WhatsApp_Image_2025-01-10_at_17.55-Photoroom_tafyqg.jpg"
                 alt="Team Member"
               />
               <h4>Oluwatobi Daniel</h4>
-              <p>Lead Developer</p>
+              <p>CEO & Founder</p>
             </TeamMember>
             <TeamMember>
               <img
@@ -73,6 +65,14 @@ const About_Page = () => {
                 alt="Team Member"
               />
               <h4>Emily Brown</h4>
+              <p>Lead Developer</p>
+            </TeamMember>
+            <TeamMember>
+              <img
+                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png"
+                alt="Team Member"
+              />
+              <h4>Dansu Grace</h4>
               <p>UI/UX Designer</p>
             </TeamMember>
           </TeamSection>
