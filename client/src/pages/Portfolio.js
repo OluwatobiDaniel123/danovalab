@@ -32,7 +32,8 @@ const ModalWrapper = styled.div`
   width: 90%;
   max-width: 800px;
   height: 80%;
-  background: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,13 @@ const CloseButton = styled.button`
   }
 `;
 
-const Modal = ({ link, HandleModal }) => {
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Modal = ({ link, HandleModal, projectName }) => {
   useEffect(() => {
     const handleKey = (e) => {
       if (e.key === "Escape") HandleModal();
@@ -90,7 +97,10 @@ const Modal = ({ link, HandleModal }) => {
       <Overlay onClick={HandleModal} />
       <ModalWrapper>
         <Iframe src={link} title="Project Preview" />
-        <CloseButton onClick={HandleModal}>Close</CloseButton>
+        <Content>
+          <p style={{ color: "white" }}>{projectName}</p>
+          <CloseButton onClick={HandleModal}>Close</CloseButton>
+        </Content>
       </ModalWrapper>
     </>
   );
@@ -99,7 +109,7 @@ const Modal = ({ link, HandleModal }) => {
 const Committee = () => {
   const otherMembers = [
     {
-      name: "E-commerce app",
+      name: "E-commerce App",
       link: "https://www.chrisalphawine.com/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_091156_rm8e6c.png",
@@ -107,7 +117,7 @@ const Committee = () => {
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_091228_r2wtuy.png",
     },
     {
-      name: "Charity Home app",
+      name: "Charity Home App",
       link: "https://tobagoreads.com/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182858_gwk0b5.png",
@@ -116,14 +126,14 @@ const Committee = () => {
     },
     {
       name: "Music Record Label",
-      link: "https://xtiim-records-website.vercel.app/",
+      link: "https://xtiim-records-website.vercel.App/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_092015_szm0pu.png",
       image2:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_092035_zyzhwl.png",
     },
     {
-      name: "Moving Company Website",
+      name: "Logistic Website",
       link: "https://swifthavenservice.com/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182815_kjuhl3.png",
@@ -131,7 +141,7 @@ const Committee = () => {
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183851_qxa7f6.png",
     },
     {
-      name: "LoveChat app",
+      name: "LoveChat App",
       link: "https://chatapp-client-five.vercel.app/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663103/Screenshot_2025-06-11_182732_skq2qj.png",
@@ -162,18 +172,20 @@ const Committee = () => {
 
   const [showModal, setShoModal] = useState(false);
   const [selectedLink, setSelectedLink] = useState(null);
+  const [projectName, setProjectName] = useState(null);
 
   const HandleModal = () => {
     setShoModal((prev) => !prev);
   };
 
-  const handleCardClick = (link) => {
+  const handleCardClick = (link, name) => {
+    setProjectName(name);
     setSelectedLink(link);
     setShoModal(true);
   };
 
   return (
-    <div className="bg">
+    <div>
       <div className="committee-container">
         <div className="other-members-section">
           <h2 className="section-title">Our Portfolio</h2>
@@ -189,7 +201,7 @@ const Committee = () => {
               >
                 <div
                   className="member-card"
-                  onClick={() => handleCardClick(member.link)}
+                  onClick={() => handleCardClick(member.link, member.name)}
                 >
                   <div className="member-card-front">
                     <FrontImage src={member.image} />
@@ -205,7 +217,13 @@ const Committee = () => {
         </div>
       </div>
 
-      {showModal && <Modal link={selectedLink} HandleModal={HandleModal} />}
+      {showModal && (
+        <Modal
+          link={selectedLink}
+          projectName={projectName}
+          HandleModal={HandleModal}
+        />
+      )}
     </div>
   );
 };

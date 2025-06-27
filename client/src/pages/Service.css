@@ -1,7 +1,7 @@
 .duke-family-section {
   margin: 1rem auto;
   padding: 3rem;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  background: linear-gradient(135deg, #02172d, #0a2a43);
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -258,11 +258,11 @@
   }
 
   .member-name {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .member-surname {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 
