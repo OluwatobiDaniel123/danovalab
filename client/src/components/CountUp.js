@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 const Span = styled.span`
   display: inline-flex;
@@ -69,135 +69,31 @@ const AnimatedCounter = ({ label, target = 1000, duration = 2000 }) => {
     };
   }, [target, duration]);
 
-  const AnimationDiv = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(135deg, #02172d, #034874);
-    color: #f2f2f2;
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: default;
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-
-    // @media (max-width: 768px) {
-    //   width: max-content;
-    //   height: max-content;
-    // }
-  `;
-
   return (
-    <AnimationDiv
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        color: "#f2f2f2",
+        background: "linear-gradient(135deg, #02172d, #034874)",
+        textAlign: "center",
+        borderRadius: "10%/50%",
+        transition: "transform 0.3s ease",
+        cursor: "default",
+        width: "100%",
+        height: "100%",
+        flexShrink: 0,
+      }}
       ref={counterRef}
-      style={
-        {
-          // display: "flex",
-          // alignItems: "center",
-          // flexDirection: "column",
-          // justifyContent: "center",
-          // background: "linear-gradient(135deg, #02172d, #034874)",
-          // borderRadius: "16px",
-          // boxShadow: "0 8px 20px rgba(0,0,0,0.4)",
-          // color: "#F2F2F2",
-          // textAlign: "center",
-          // padding: "40px 20px",
-          // transition: "transform 0.3s ease",
-          // cursor: "default",
-          // width: "100%",
-          // height: "100%",
-          // margin: "0 10px",
-          // flexShrink: 0,
-        }
-      }
       onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.01)")}
       onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
     >
       <div style={{ fontSize: "50px", fontWeight: "bold" }}>{count}+</div>
-      <div style={{ fontSize: "18px", marginTop: "10px" }}>{label}</div>
-    </AnimationDiv>
+      <div style={{ fontSize: "16px", marginTop: "3px" }}>{label}</div>
+    </div>
   );
 };
-
-// const DanovalabStats = () => {
-//   return (
-//     <div
-//       style={{
-//         minHeight: "100vh",
-//         background: "linear-gradient(135deg, #02172d, #034874, #0b3d64)",
-//         display: "flex",
-//         flexDirection: "column",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         padding: "20px 10px",
-//       }}
-//     >
-//       <h1
-//         style={{
-//           color: "#F2F2F2",
-//           fontSize: "40px",
-//           marginBottom: "40px",
-//           textAlign: "center",
-//           fontFamily: "'Poppins', sans-serif",
-//         }}
-//       >
-//         WHY CHOOSE <br /> <Span>&rarr;</Span>US{" "}
-//       </h1>
-
-//       <div
-//         style={{
-//           display: "grid",
-//           gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-//           gap: "30px",
-//           width: "100%",
-//           maxWidth: "1200px",
-//         }}
-//       >
-//         <AnimatedCounter
-//           label="Projects Delivered"
-//           target={150}
-//           duration={2000}
-//         />
-//         <AnimatedCounter label="Years Experience" target={5} duration={2000} />
-//         <AnimatedCounter label="Active Clients" target={40} duration={2000} />
-//         <AnimatedCounter label="Team Members" target={12} duration={2000} />
-//       </div>
-//       <div
-//         style={{
-//           display: "none",
-//           width: "100%",
-//           overflowX: "auto",
-//           marginTop: "40px",
-//         }}
-//         className="mobile-scroll"
-//       >
-//         <div
-//           style={{
-//             display: "flex",
-//             padding: "10px",
-//           }}
-//         >
-//           <AnimatedCounter
-//             label="Projects Delivered"
-//             target={150}
-//             duration={2000}
-//           />
-//           <AnimatedCounter label="Active Clients" target={40} duration={2000} />
-//           <AnimatedCounter
-//             label="Years Experience"
-//             target={5}
-//             duration={2000}
-//           />
-//           <AnimatedCounter label="Team Members" target={12} duration={2000} />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DanovalabStats;
 
 const CountUp = () => {
   return (
@@ -228,7 +124,7 @@ const CountUp = () => {
           justifyContent: "center",
           maxWidth: "1200px",
           width: "100%",
-          gap: "8px",
+          gap: "5px",
         }}
       >
         <div
@@ -241,7 +137,7 @@ const CountUp = () => {
         >
           <AnimatedCounter
             label="Years Experience"
-            target={5}
+            target={11}
             duration={2000}
           />
         </div>
@@ -250,7 +146,7 @@ const CountUp = () => {
             color: "white",
             display: "flex",
             flexDirection: "column",
-            gap: "8px",
+            gap: "5px",
           }}
         >
           <Card>

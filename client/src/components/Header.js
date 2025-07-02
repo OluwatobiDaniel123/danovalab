@@ -49,7 +49,7 @@ const NavItem = styled.li`
 
   a {
     text-decoration: none;
-    color: ${(props) => (props.isActive ? "#007bff" : "#f9f9f9")};
+    color: ${(props) => (props.isActive ? " #034874" : "#f9f9f9")};
     font-weight: ${(props) => (props.isActive ? "700" : "600")};
     padding: 8px 15px;
     border-radius: 5px;
@@ -60,7 +60,7 @@ const NavItem = styled.li`
 
     &:hover {
       color: #fff;
-      background-color: #007bff;
+      background-color: #02172d;
       transform: translateY(-2px);
     }
   }
@@ -96,7 +96,8 @@ const SideNav = styled.div`
 `;
 
 const SideNavItem = styled(Link)`
-  color: ${(props) => (props.isActive ? "#007bff" : "white")};
+  color: ${(props) =>
+    props.isActive ? "linear-gradient(135deg, #02172d, #034874)" : "white"};
   font-weight: ${(props) => (props.isActive ? "700" : "500")};
   border-bottom: ${(props) =>
     props.isActive ? "1px solid rgb(0, 195, 255)" : "#333"};
@@ -106,7 +107,7 @@ const SideNavItem = styled(Link)`
   border-radius: 5px;
   transition: all 0.3s ease;
   &:hover {
-    background-color: #007bff;
+    background-color: #02172d;
     color: white;
   }
 `;

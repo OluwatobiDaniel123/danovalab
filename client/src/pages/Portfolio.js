@@ -37,15 +37,16 @@ const ModalWrapper = styled.div`
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  gap: 15px;
-  border-radius: 12px;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10%/50%;
   animation: ${fadeSlide} 0.3s ease;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
   @media (max-width: 600px) {
     height: 75%;
-    padding: 10px;
+    padding: 3px;
   }
 `;
 
@@ -53,7 +54,7 @@ const Iframe = styled.iframe`
   flex: 1;
   border: none;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10%/50%;
 `;
 
 const CloseButton = styled.button`
@@ -73,6 +74,7 @@ const CloseButton = styled.button`
 `;
 
 const Content = styled.div`
+  width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,7 +119,7 @@ const Committee = () => {
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_091228_r2wtuy.png",
     },
     {
-      name: "Charity Home App",
+      name: "Landing Page",
       link: "https://tobagoreads.com/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182858_gwk0b5.png",
@@ -125,7 +127,7 @@ const Committee = () => {
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183807_ohsfps.png",
     },
     {
-      name: "Music Record Label",
+      name: "Landing Page",
       link: "https://xtiim-records-website.vercel.App/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_092015_szm0pu.png",
@@ -133,7 +135,7 @@ const Committee = () => {
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_092035_zyzhwl.png",
     },
     {
-      name: "Logistic Website",
+      name: "Landing Page",
       link: "https://swifthavenservice.com/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182815_kjuhl3.png",
@@ -141,7 +143,7 @@ const Committee = () => {
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183851_qxa7f6.png",
     },
     {
-      name: "LoveChat App",
+      name: "Social-media App",
       link: "https://chatapp-client-five.vercel.app/",
       image:
         "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663103/Screenshot_2025-06-11_182732_skq2qj.png",
@@ -153,12 +155,12 @@ const Committee = () => {
   const FrontImage = styled.img`
     width: 100%;
     height: 100%;
-    border-radius: 45px 10px 45px;
+    border-radius: 10%/50%;
   `;
   const BackImage = styled.img`
     width: 100%;
     height: 100%;
-    border-radius: 45px 10px 45px;
+    border-radius: 10%/50%;
     position: absolute;
   `;
   const P = styled.p`
