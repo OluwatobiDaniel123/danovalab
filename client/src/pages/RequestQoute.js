@@ -181,8 +181,8 @@ const RequestQuote = () => {
 
     try {
       const result = await emailjs.send(
-        "service_mtbnx3x",
-        "template_knnul8n",
+        "request_quote_email",
+        "request_quote_email",
         templateParams,
         "uDj1nlX9BVEqunnYs"
       );

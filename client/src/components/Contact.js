@@ -170,8 +170,8 @@ const Contact = () => {
 
     try {
       const result = await emailjs.sendForm(
-        "service_qh08omd",
-        "template_icla7gq",
+        "contact_email",
+        "contact_email",
         form.current,
         "uDj1nlX9BVEqunnYs"
       );
