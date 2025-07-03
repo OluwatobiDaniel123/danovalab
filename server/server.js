@@ -9,7 +9,7 @@ import mongoose from "mongoose";
 
 const app = express();
 
-const allowedOrigins = "https://danovalab.com";
+const allowedOrigins = ["https://danovalab.com"];
 
 app.use(
   cors({
