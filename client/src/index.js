@@ -7,9 +7,9 @@ import Whatsapp from "../src/components/Chatbox/Whatsapp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <div>
-    <App />
-    <Whatsapp />
-    <Chatbot />
-  </div>
+    <div>
+        <App />
+        <Whatsapp />
+        <Chatbot />
+    </div>
 );
