@@ -59,8 +59,8 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
         );
         const currentRef = counterRef.current;
 
-        if (counterRef) {
-            observer.observe(counterRef);
+        if (counterRef.current) {
+            observer.observe(counterRef.current);
         }
 
         return () => {
