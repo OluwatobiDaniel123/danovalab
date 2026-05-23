@@ -1,4 +1,5 @@
-import {useState, useEffect, useRef} from "react";
+// import {useState, useEffect, useRef} from "react";
+import {useState, useEffect, useRef, useCallback} from "react";
 import styled from "styled-components";
 const Span = styled.span`
     display: inline-flex;
@@ -30,13 +31,32 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
     const counterRef = useRef();
     const animationRef = useRef();
 
-    const startAnimation = () => {
+    // const startAnimation = () => {
+    //     const startTime = performance.now();
+
+    //     const animate = (currentTime) => {
+    //         const elapsed = currentTime - startTime;
+    //         const progress = Math.min(elapsed / duration, 1);
+    //         const currentCount = Math.floor(progress * target);
+    //         setCount(currentCount);
+
+    //         if (progress < 1) {
+    //             animationRef.current = requestAnimationFrame(animate);
+    //         }
+    //     };
+
+    //     cancelAnimationFrame(animationRef.current);
+    //     requestAnimationFrame(animate);
+    // };
+
+    const startAnimation = useCallback(() => {
         const startTime = performance.now();
 
         const animate = (currentTime) => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const currentCount = Math.floor(progress * target);
+
             setCount(currentCount);
 
             if (progress < 1) {
@@ -45,8 +65,33 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
         };
 
         cancelAnimationFrame(animationRef.current);
-        requestAnimationFrame(animate);
-    };
+        animationRef.current = requestAnimationFrame(animate);
+    }, [target, duration]);
+
+    // useEffect(() => {
+    //     const currentRef = counterRef.current;
+
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             if (entry.isIntersecting) {
+    //                 startAnimation();
+    //             }
+    //         },
+    //         {threshold: 0.6}
+    //     );
+
+    //     if (currentRef) {
+    //         observer.observe(currentRef);
+    //     }
+
+    //     return () => {
+    //         if (currentRef) {
+    //             observer.unobserve(currentRef);
+    //         }
+    //         observer.disconnect();
+    //         cancelAnimationFrame(animationRef.current);
+    //     };
+    // }, [target, duration]);
 
     useEffect(() => {
         const currentRef = counterRef.current;
@@ -68,10 +113,11 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
             if (currentRef) {
                 observer.unobserve(currentRef);
             }
+
             observer.disconnect();
             cancelAnimationFrame(animationRef.current);
         };
-    }, [target, duration]);
+    }, [startAnimation]);
 
     return (
         <div
