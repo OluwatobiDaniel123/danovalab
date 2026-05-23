@@ -57,13 +57,13 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
             },
             {threshold: 0.6}
         );
-        const currentRef = counterRef.current;
 
         if (counterRef.current) {
             observer.observe(counterRef.current);
         }
 
         return () => {
+            const currentRef = counterRef.current;
             if (counterRef) {
                 observer.unobserve(counterRef);
             }
