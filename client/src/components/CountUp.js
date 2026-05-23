@@ -49,6 +49,8 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
     };
 
     useEffect(() => {
+        const currentRef = counterRef.current;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -58,18 +60,18 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
             {threshold: 0.6}
         );
 
-        if (counterRef.current) {
-            observer.observe(counterRef.current);
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            const currentRef = counterRef.current;
-            if (counterRef) {
-                observer.unobserve(counterRef);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
+            observer.disconnect();
             cancelAnimationFrame(animationRef.current);
         };
-    }, [target, duration, startAnimation]);
+    }, [target, duration]);
 
     return (
         <div
