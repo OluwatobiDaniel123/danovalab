@@ -1,14 +1,5 @@
 import styled from "styled-components";
-import {
-    FaFacebook,
-    FaTwitter,
-    FaLinkedin,
-    FaInstagram,
-    FaStreetView,
-    FaPhone,
-    FaClock,
-    FaMailBulk,
-} from "react-icons/fa";
+import {FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPhone, FaClock, FaMailBulk} from "react-icons/fa";
 import {Link} from "react-router-dom";
 const FooterContainer = styled.footer`
     background: linear-gradient(120deg, #0d1117, #161b22);

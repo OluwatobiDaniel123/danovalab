@@ -68,7 +68,7 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
             }
             cancelAnimationFrame(animationRef.current);
         };
-    }, [target, duration]);
+    }, [target, duration, startAnimation]);
 
     return (
         <div
