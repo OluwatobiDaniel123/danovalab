@@ -177,7 +177,7 @@ const Footer = () => {
                         <FaPhone />
                         <FooterText style={{padding: 0, margin: 0}}>
                             <a href="tel:+19178367151" style={{color: "inherit", textDecoration: "none"}}>
-                                +234 (0)810 9830 746
+                                +234 810 9830 746
                             </a>
                         </FooterText>
                     </FooterLink>
