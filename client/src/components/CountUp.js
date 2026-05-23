@@ -63,12 +63,13 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
         }
 
         return () => {
-            if (counterRef.current) {
-                observer.unobserve(counterRef.current);
+            const currentRef = counterRef.current;
+            if (counterRef) {
+                observer.unobserve(counterRef);
             }
-            cancelAnimationFrame(animationRef.current);
+            cancelAnimationFrame(animationRef);
         };
-    }, [target, duration, startAnimation]);
+    }, [target, duration]);
 
     return (
         <div
