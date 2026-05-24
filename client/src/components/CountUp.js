@@ -31,24 +31,6 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
     const counterRef = useRef();
     const animationRef = useRef();
 
-    // const startAnimation = () => {
-    //     const startTime = performance.now();
-
-    //     const animate = (currentTime) => {
-    //         const elapsed = currentTime - startTime;
-    //         const progress = Math.min(elapsed / duration, 1);
-    //         const currentCount = Math.floor(progress * target);
-    //         setCount(currentCount);
-
-    //         if (progress < 1) {
-    //             animationRef.current = requestAnimationFrame(animate);
-    //         }
-    //     };
-
-    //     cancelAnimationFrame(animationRef.current);
-    //     requestAnimationFrame(animate);
-    // };
-
     const startAnimation = useCallback(() => {
         const startTime = performance.now();
 
@@ -67,31 +49,6 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
         cancelAnimationFrame(animationRef.current);
         animationRef.current = requestAnimationFrame(animate);
     }, [target, duration]);
-
-    // useEffect(() => {
-    //     const currentRef = counterRef.current;
-
-    //     const observer = new IntersectionObserver(
-    //         ([entry]) => {
-    //             if (entry.isIntersecting) {
-    //                 startAnimation();
-    //             }
-    //         },
-    //         {threshold: 0.6}
-    //     );
-
-    //     if (currentRef) {
-    //         observer.observe(currentRef);
-    //     }
-
-    //     return () => {
-    //         if (currentRef) {
-    //             observer.unobserve(currentRef);
-    //         }
-    //         observer.disconnect();
-    //         cancelAnimationFrame(animationRef.current);
-    //     };
-    // }, [target, duration]);
 
     useEffect(() => {
         const currentRef = counterRef.current;
@@ -126,9 +83,9 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
                 flexDirection: "column",
                 justifyContent: "center",
                 color: "#f2f2f2",
-                background: "linear-gradient(135deg, #02172d, #034874)",
+                background: "linear-gradient(15deg, #02172d)",
                 textAlign: "center",
-                borderRadius: "10%/50%",
+                borderRadius: "5%/10%",
                 transition: "transform 0.3s ease",
                 cursor: "default",
                 width: "100%",
@@ -144,12 +101,6 @@ const AnimatedCounter = ({label, target = 1000, duration = 2000}) => {
         </div>
     );
 };
-
-const stats = [
-    {number: "50+", label: "Projects Completed"},
-    {number: "5+", label: "Years Experience"},
-    {number: "30+", label: "Happy Clients"},
-];
 
 const CountUp = () => {
     return (
@@ -208,15 +159,6 @@ const CountUp = () => {
                         <AnimatedCounter label="Projects Delivered" target={50} duration={2000} />
                     </Card>
                 </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-8 mt-12">
-                {stats.map((stat) => (
-                    <div key={stat.label}>
-                        <p className="font-display font-bold text-3xl md:text-4xl text-gradient">{stat.number}</p>
-                        <p className="text-muted-foreground text-sm mt-1">{stat.label}</p>
-                    </div>
-                ))}
             </div>
         </div>
     );

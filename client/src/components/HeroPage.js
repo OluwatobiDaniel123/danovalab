@@ -99,8 +99,8 @@ const HeroTitle = styled.h1`
 
     &:hover {
         transform: scale(1.05);
-        // color: #ff4b5c;
-        color: #58a6ff;
+
+        color: #8ccafa;
     }
 `;
 
@@ -117,8 +117,8 @@ const HeroDescription = styled.p`
 
     &:hover {
         transform: scale(1.03);
-        // color: #ff4b5c;
-        color: #58a6ff;
+
+        color: #8ccafa;
     }
 
     @media (max-width: 768px) {

@@ -149,11 +149,11 @@ const StyledAlert = styled.div`
 const Map = styled.iframe`
     border-radius: 5px;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
 
     @media (max-width: 768px) {
         border-radius: 0;
-        height: 450px;
+        height: 400px;
     }
 `;
 
