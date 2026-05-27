@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {FaCode, FaReact, FaNode} from "react-icons/fa";
-import {SiMongodb} from "react-icons/si";
+
 import {FaUsers, FaRocket, FaChartLine, FaHeadset} from "react-icons/fa";
 
 const HighlightsSection = styled.section`

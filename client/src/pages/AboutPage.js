@@ -253,29 +253,29 @@ const Services = styled.div`
     }
 `;
 
-const ServiceCard = styled.div`
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+// const ServiceCard = styled.div`
+//     background: #161b22;
+//     border: 1px solid #30363d;
+//     border-radius: 10px;
+//     padding: 20px;
+//     width: 300px;
+//     text-align: center;
+//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+//     transition: transform 0.3s ease;
 
-    @media (max-width: 768px) {
-        width: auto;
-    }
+//     @media (max-width: 768px) {
+//         width: auto;
+//     }
 
-    &:hover {
-        transform: translateY(-10px);
-    }
-`;
+//     &:hover {
+//         transform: translateY(-10px);
+//     }
+// `;
 
-const Icon = styled.div`
-    font-size: 3rem;
-    margin-bottom: 10px;
-`;
+// const Icon = styled.div`
+//     font-size: 3rem;
+//     margin-bottom: 10px;
+// `;
 
 const CardTitle = styled.h3`
     font-size: 1.5rem;
@@ -283,8 +283,8 @@ const CardTitle = styled.h3`
     color: #58a6ff;
 `;
 
-const CardDescription = styled.p`
-    font-size: 1rem;
-    color: #c9d1d9;
-    line-height: 1.6;
-`;
+// const CardDescription = styled.p`
+//     font-size: 1rem;
+//     color: #c9d1d9;
+//     line-height: 1.6;
+// `;
