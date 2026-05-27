@@ -113,17 +113,17 @@ const CountUp = () => {
                 padding: "10px 5px",
             }}
         >
-            <h1
+            <h2
                 style={{
                     color: "#F2F2F2",
-                    fontSize: "30px",
+                    fontSize: "25px",
                     marginBottom: "10px",
                     textAlign: "center",
                     fontFamily: "'Poppins', sans-serif",
                 }}
             >
                 WHY CHOOSE <br /> <Span>&rarr;</Span>US{" "}
-            </h1>
+            </h2>
             <div
                 style={{
                     display: "flex",

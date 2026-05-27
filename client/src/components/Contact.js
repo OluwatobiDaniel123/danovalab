@@ -40,7 +40,7 @@ const ContactForm = styled.form`
     border: 1.5px solid rgb(0, 195, 255);
 
     h2 {
-        font-size: 30px;
+        font-size: 25px;
         color: black;
         border-bottom: 2px solid rgb(0, 195, 255);
         margin-bottom: 1rem;
@@ -162,6 +162,7 @@ const Contact = () => {
     const [loading, setLoading] = useState(false);
     const [alertMessage, setAlertMessage] = useState(null);
     const [animateOut] = useState(false);
+
     const sendEmail = async (e) => {
         e.preventDefault();
         setLoading(true);
