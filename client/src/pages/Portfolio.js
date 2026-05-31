@@ -1,7 +1,10 @@
 import {useEffect, useState} from "react";
 import "./Portfolio.css";
 import styled, {keyframes} from "styled-components";
-
+import image from "../assets/IvyHotel.png";
+import image1 from "../assets/xtiim.png";
+import image2 from "../assets/hustle.png";
+import image3 from "../assets/tobago.png";
 const fadeSlide = keyframes`
   0% {
     opacity: 0;
@@ -111,34 +114,29 @@ const Modal = ({link, HandleModal, projectName}) => {
 const Committee = () => {
     const otherMembers = [
         {
-            name: "E-commerce App",
+            name: "Hotel Booking Platform (Room Reservation System)",
             link: "https://www.chrisalphawine.com/",
-            image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_091156_rm8e6c.png",
-            image2: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_091228_r2wtuy.png",
+            image: image,
         },
         {
-            name: "Landing Page",
+            name: "TobagoReads Literacy Initiative Platform",
             link: "https://tobagoread.com",
-            image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-11_182858_gwk0b5.png",
-            image2: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183807_ohsfps.png",
+            image: image3,
         },
         {
-            name: "Landing Page",
+            name: "Xtiim Music Official Website",
             link: "https://www.xtiimmusic.com",
-            image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663104/Screenshot_2025-06-04_092015_szm0pu.png",
-            image2: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663648/Screenshot_2025-06-04_092035_zyzhwl.png",
+            image: image1,
         },
         {
-            name: "Job Application App",
+            name: "Full-Stack Artisan Service Marketplace Platform",
             link: "https://hustle-hub-chi.vercel.app/",
-            image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1779537539/Screenshot_2026-05-23_075208_zac1rn.png",
-            image2: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1779537535/Screenshot_2026-05-23_075555_nxtaga.png",
+            image: image2,
         },
         {
-            name: "Social-media App",
+            name: "ChatFlow – Real-Time Messaging Platform",
             link: "https://chatapp-client-five.vercel.app/",
             image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663103/Screenshot_2025-06-11_182732_skq2qj.png",
-            image2: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663650/Screenshot_2025-06-11_183949_k2j9zx.png",
         },
     ];
 
@@ -147,18 +145,14 @@ const Committee = () => {
         height: 100%;
         border-radius: 10%/20%;
     `;
-    const BackImage = styled.img`
-        width: 100%;
-        height: 100%;
-        border-radius: 10%/20%;
-        position: absolute;
-    `;
+
     const P = styled.p`
         color: white;
         margin-left: 8px;
 
         @media (max-width: 768px) {
-            font-size: 14px;
+            font-size: 12px;
+            font-weight: bold;
         }
     `;
 
@@ -192,12 +186,7 @@ const Committee = () => {
                                 }}
                             >
                                 <div className="member-card" onClick={() => handleCardClick(member.link, member.name)}>
-                                    <div className="member-card-front">
-                                        <FrontImage src={member.image} />
-                                    </div>
-                                    <div className="member-card-back">
-                                        <BackImage src={member.image2} />
-                                    </div>
+                                    <FrontImage src={member.image} />
                                 </div>
                                 <P>{member.name}</P>
                             </div>

@@ -24,7 +24,9 @@ const Form = styled.form`
 const Title = styled.h2`
     text-align: center;
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 25px;
+    font-weight: bold;
+
     color: #333;
     border-bottom: 2px solid rgb(0, 195, 255);
 `;

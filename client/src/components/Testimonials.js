@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const TestimonialContainer = styled.div`
     text-align: center;
-    padding: 40px 10px;
+    padding: 10px 5px;
     max-width: 1200px;
     border-radius: 8px;
     margin: 0 auto;
@@ -16,6 +16,7 @@ const TestimonialContainer = styled.div`
 `;
 
 const SectionHeader = styled.h2`
+    font-weight: bold;
     font-size: 25px;
     width: 100%;
     border-bottom: 1px solid rgb(0, 195, 255);

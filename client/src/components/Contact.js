@@ -41,6 +41,7 @@ const ContactForm = styled.form`
 
     h2 {
         font-size: 25px;
+        font-weight: bold;
         color: black;
         border-bottom: 2px solid rgb(0, 195, 255);
         margin-bottom: 1rem;
@@ -224,7 +225,7 @@ const Contact = () => {
             </ContactContainer>
 
             <Map
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.74982246983!2d3.4779139339393024!3d6.672074093347397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be9403cda5b97%3A0x49c84a59cfa99d31!2sOdogunyan%2C%20Lagos!5e0!3m2!1sen!2sng!4v1739369697809!5m2!1sen!2sng"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31708.98318283936!2d3.379205!3d6.524379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c6a6b0f8f5f%3A0x8c3f7c9f3a0a0f00!2sLagos!5e0!3m2!1sen!2sng!4v0000000000000"
                 allowFullScreen
                 loading="eager"
                 referrerPolicy="no-referrer-when-downgrade"

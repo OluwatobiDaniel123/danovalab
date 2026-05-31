@@ -117,6 +117,7 @@ const CountUp = () => {
                 style={{
                     color: "#F2F2F2",
                     fontSize: "25px",
+                    fontWeight: "bold",
                     marginBottom: "10px",
                     textAlign: "center",
                     fontFamily: "'Poppins', sans-serif",
