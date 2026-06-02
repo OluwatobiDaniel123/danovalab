@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import {useState} from "react";
 import styled, {keyframes} from "styled-components";
 import {DotLottieReact} from "@lottiefiles/dotlottie-react";
 import {FaCheckCircle, FaTimesCircle} from "react-icons/fa";

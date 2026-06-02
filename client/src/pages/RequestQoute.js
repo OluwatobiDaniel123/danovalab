@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import styled, {keyframes} from "styled-components";
-import emailjs from "emailjs-com";
+
 import {FaCheckCircle, FaTimesCircle} from "react-icons/fa";
 import axios from "axios";
 import {BASE_URL} from "../BASE_URL";
