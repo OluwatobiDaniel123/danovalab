@@ -1,8 +1,9 @@
 import {useRef, useState} from "react";
 import styled, {keyframes} from "styled-components";
-import emailjs from "emailjs-com";
 import {DotLottieReact} from "@lottiefiles/dotlottie-react";
 import {FaCheckCircle, FaTimesCircle} from "react-icons/fa";
+import {BASE_URL} from "../BASE_URL";
+import axios from "axios";
 
 const ContactSection = styled.section`
     display: flex;
@@ -159,24 +160,42 @@ const Map = styled.iframe`
 `;
 
 const Contact = () => {
-    const form = useRef();
     const [loading, setLoading] = useState(false);
     const [alertMessage, setAlertMessage] = useState(null);
     const [animateOut] = useState(false);
 
+    const [inputValue, setInputValue] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const HandleChange = (e) => {
+        setInputValue({
+            ...inputValue,
+            [e.target.name]: e.target.value,
+        });
+    };
+
     const sendEmail = async (e) => {
         e.preventDefault();
-        setLoading(true);
+        console.log(inputValue);
 
         try {
-            const result = await emailjs.sendForm("contact_email", "contact_email", form.current, "uDj1nlX9BVEqunnYs");
-            console.log(result.text);
+            setLoading(true);
+            const result = await axios.post(`${BASE_URL}/send-contact-mail`, inputValue);
+            console.log(result);
 
             setAlertMessage({
                 type: "success",
                 message: "Message sent successfully!",
             });
-            form.current.reset();
+
+            setInputValue({
+                name: "",
+                email: "",
+                message: "",
+            });
         } catch (error) {
             console.error(error.text);
             setLoading(false);
@@ -205,11 +224,32 @@ const Contact = () => {
                     }}
                 />
 
-                <ContactForm ref={form} onSubmit={sendEmail}>
+                <ContactForm onSubmit={sendEmail}>
                     <h2>Contact Us</h2>
-                    <input type="text" name="name" placeholder="Your Full Name" required />
-                    <input type="email" name="email" placeholder="Your Email" required />
-                    <textarea rows="7" name="message" placeholder="Your Message" required />
+                    <input
+                        type="text"
+                        value={inputValue.name}
+                        onChange={HandleChange}
+                        name="name"
+                        placeholder="Your Full Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        value={inputValue.email}
+                        onChange={HandleChange}
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                    />
+                    <textarea
+                        rows="7"
+                        value={inputValue.message}
+                        onChange={HandleChange}
+                        name="message"
+                        placeholder="Your Message"
+                        required
+                    />
 
                     <ContactButton type="submit" disabled={loading}>
                         {loading ? "Sending..." : "Send Message"}

@@ -5,6 +5,8 @@ import image from "../assets/IvyHotel.png";
 import image1 from "../assets/xtiim.png";
 import image2 from "../assets/hustle.png";
 import image3 from "../assets/tobago.png";
+import image4 from "../assets/chat.png";
+
 const fadeSlide = keyframes`
   0% {
     opacity: 0;
@@ -136,7 +138,7 @@ const Committee = () => {
         {
             name: "ChatFlow – Real-Time Messaging Platform",
             link: "https://chatapp-client-five.vercel.app/",
-            image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1749663103/Screenshot_2025-06-11_182732_skq2qj.png",
+            image: image4,
         },
     ];
 

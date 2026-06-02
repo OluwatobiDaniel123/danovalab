@@ -86,7 +86,7 @@ const SocialIcons = styled.div`
     }
 `;
 const LogoImage = styled.img`
-    height: 50px;
+    height: 40px;
     background: #f9f9f9;
     border-radius: 50%;
     box-shadow: 0 0 0 2px lightblue;

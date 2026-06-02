@@ -2,6 +2,8 @@ import React, {useRef, useState} from "react";
 import styled, {keyframes} from "styled-components";
 import emailjs from "emailjs-com";
 import {FaCheckCircle, FaTimesCircle} from "react-icons/fa";
+import axios from "axios";
+import {BASE_URL} from "../BASE_URL";
 
 const Container = styled.div`
     padding: 40px;
@@ -172,19 +174,14 @@ const RequestQuote = () => {
             fullName: formData.fullName,
             email: formData.email,
             whatsapp: formData.whatsapp,
-            helpWith: formData.helpWith.join(", "),
+            helpWith: formData.helpWith,
             comments: formData.comments,
             budget: formData.budget,
         };
-
         try {
-            const result = await emailjs.send(
-                "request_quote_email",
-                "request_quote_email",
-                templateParams,
-                "uDj1nlX9BVEqunnYs"
-            );
-            console.log("Success:", result.text);
+            const result = await axios.post(`${BASE_URL}/send-quote-mail`, templateParams);
+
+            console.log("Success:", result);
 
             setAlertMessage({type: "success", message: "Quote sent successfully!"});
             setFormData({
@@ -251,6 +248,7 @@ const RequestQuote = () => {
                         <CheckboxLabel key={item}>
                             <input
                                 type="checkbox"
+                                name="helpWith"
                                 value={item}
                                 checked={formData.helpWith.includes(item)}
                                 onChange={handleChange}
