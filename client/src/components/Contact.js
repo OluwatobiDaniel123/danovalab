@@ -197,7 +197,7 @@ const Contact = () => {
                 message: "",
             });
         } catch (error) {
-            console.error(error.text);
+            console.log(error.response?.data);
             setLoading(false);
             setAlertMessage({type: "error", message: "Failed to send message"});
         } finally {
