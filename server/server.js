@@ -9,17 +9,21 @@ import mongoose from "mongoose";
 
 const app = express();
 
-const allowedOrigins = ["https://danovalab.com"];
-
+const allowedOrigins = ["https://danovalab.com", "https://www.danovalab.com"];
 app.use(
     cors({
         origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
+            if (!origin) return callback(null, true);
+
+            if (allowedOrigins.includes(origin)) {
                 callback(null, true);
             } else {
+                console.log("Blocked CORS origin:", origin);
                 callback(new Error("Not allowed by CORS"));
             }
         },
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        credentials: true,
     })
 );
 
