@@ -6,6 +6,7 @@ import image1 from "../assets/xtiim.png";
 import image2 from "../assets/hustle.png";
 import image3 from "../assets/tobago.png";
 import image4 from "../assets/chat.png";
+import image5 from "../assets/event.png";
 
 const fadeSlide = keyframes`
   0% {
@@ -83,6 +84,7 @@ const Content = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 `;
 
 const Modal = ({link, HandleModal, projectName}) => {
@@ -105,7 +107,7 @@ const Modal = ({link, HandleModal, projectName}) => {
             <ModalWrapper>
                 <Iframe src={link} title="Project Preview" />
                 <Content>
-                    <p style={{color: "white"}}>{projectName}</p>
+                    <p style={{color: "white", fontSize: "13px"}}>{projectName}</p>
                     <CloseButton onClick={HandleModal}>Close</CloseButton>
                 </Content>
             </ModalWrapper>
@@ -139,6 +141,11 @@ const Committee = () => {
             name: "ChatFlow – Real-Time Messaging Platform",
             link: "https://chatapp-client-five.vercel.app/",
             image: image4,
+        },
+        {
+            name: "Fisis Kreation – Catering & Event Management",
+            link: "https://event-cantering.vercel.app/",
+            image: image5,
         },
     ];
 
