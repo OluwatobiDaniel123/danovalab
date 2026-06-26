@@ -52,7 +52,7 @@ export const sendContactMail = async (req, res) => {
 
         res.status(200).json({message: "Your message has been sent successfully!"});
     } catch (error) {
-        console.error("❌ Contact form error:");
+        console.error("Contact form error:");
         console.error(error);
         console.error(error.message);
         console.error(error.stack);

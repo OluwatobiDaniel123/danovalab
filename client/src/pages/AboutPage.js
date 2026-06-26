@@ -56,6 +56,7 @@ const About_Page = () => {
 };
 
 export default About_Page;
+
 const TeamSection = styled.div`
     display: flex;
     justify-content: center;
