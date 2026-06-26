@@ -5,6 +5,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import styled from "styled-components";
+import image1 from "../../src/assets/testimonals_images/img_1.jpg";
+import image2 from "../../src/assets/testimonals_images/img_2.jpg";
+import image3 from "../../src/assets/testimonals_images/img_3.jpg";
+import image4 from "../../src/assets/testimonals_images/img_4.jpg";
 
 const TestimonialContainer = styled.div`
     text-align: center;
@@ -68,12 +72,12 @@ const testimonials = [
         name: "Jane Doe",
         feedback:
             "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
-        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
+        image: image1,
     },
     {
         name: "John Smith",
         feedback: "The team at DANOVALAB delivered a top-notch product that transformed our business.",
-        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
+        image: image2,
     },
     {
         name: "Helianne Duke",
@@ -84,13 +88,13 @@ const testimonials = [
         name: "Lima Esther",
         feedback:
             "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
-        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
+        image: image3,
     },
     {
         name: "Jane Doe",
         feedback:
             "DANOVALAB exceeded our expectations! Their attention to detail and professionalism were outstanding.",
-        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png",
+        image: image4,
     },
 ];
 
@@ -121,7 +125,7 @@ const TestimonialPage = () => {
                                     alignItems: "center",
                                 }}
                             >
-                                <img src={testimonial.image} alt={testimonial.name} />
+                                <img src={testimonial.image} alt={testimonial.name} style={{}} />
                                 <h3>{testimonial.name}</h3>
                                 <p>{testimonial.feedback}</p>
                             </div>
