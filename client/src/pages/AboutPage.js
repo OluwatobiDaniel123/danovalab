@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 import image from "../assets/image-14.jpg";
 import image_1 from "../assets/image-15.png";
+import image_2 from "../assets/Emily.png";
 
 const About_Page = () => {
     return (
@@ -31,20 +32,17 @@ const About_Page = () => {
                     <CardTitle>Meet Our Team</CardTitle>
                     <TeamSection>
                         <TeamMember>
-                            <img src={image_1} alt="Team Member" />
+                            <img src={image_1} alt="Team Member" loading="lazy" />
                             <h4>Oluwatobi Daniel</h4>
                             <p>CEO & Founder</p>
                         </TeamMember>
                         <TeamMember>
-                            <img
-                                src="https://res.cloudinary.com/dbcygr0pi/image/upload/v1741418057/Screenshot_2025-03-08_081014_nvnzth.png"
-                                alt="Team Member"
-                            />
+                            <img src={image_2} alt="Team Member" loading="lazy" />
                             <h4>Emily Brown</h4>
                             <p>Lead Developer</p>
                         </TeamMember>
                         <TeamMember>
-                            <img src={image} alt="Team Member" />
+                            <img src={image} alt="Team Member" loading="lazy" />
                             <h4>Dansu Grace</h4>
                             <p>UI/UX Designer</p>
                         </TeamMember>

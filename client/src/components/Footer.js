@@ -138,22 +138,7 @@ const Footer = () => {
 
                 <FooterSection>
                     <FooterHeader>Contact Us</FooterHeader>
-                    {/* <FooterLink
-            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63404.74982246983!2d3.4779139339393024!3d6.672074093347397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103be9403cda5b97%3A0x49c84a59cfa99d31!2sOdogunyan%2C%20Lagos!5e0!3m2!1sen!2sng!4v1739369697809!5m2!1sen!2sng"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              width: "100%",
-              gap: "10px",
-            }}
-          >
-            <FaStreetView />
-            <FooterText style={{ padding: 0, margin: 0 }}>
-              Odonla Road. Odogunyan, Ikorodu, Lagos
-            </FooterText>
-          </FooterLink> */}
+
                     <FooterLink
                         href="#"
                         target="_blank"
@@ -167,7 +152,7 @@ const Footer = () => {
                     >
                         <FaPhone />
                         <FooterText style={{padding: 0, margin: 0}}>
-                            <a href="tel:+19178367151" style={{color: "inherit", textDecoration: "none"}}>
+                            <a href="tel:+2348109830746" style={{color: "inherit", textDecoration: "none"}}>
                                 +234 810 9830 746
                             </a>
                         </FooterText>
@@ -187,9 +172,7 @@ const Footer = () => {
                         <FooterText style={{padding: 0, margin: 0}}>Mon - Friday. 08 am - 09 pm </FooterText>
                     </FooterLink>
                     <FooterLink
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="mailto:danieloluwatobi@danovalab.com?subject=Project%20Inquiry&body=Hello%20DanovaLab,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience.%0A%0AName:%20%0ACompany:%20%0APhone:%20%0AProject%20Details:%20%0A%0AThank%20you."
                         style={{
                             display: "flex",
                             alignItems: "center",
@@ -205,7 +188,7 @@ const Footer = () => {
             <SocialIcons>
                 <FooterLink
                     style={{width: "auto"}}
-                    href="https://www.facebook.com"
+                    href="https://web.facebook.com/profile.php?id=100094368079149"
                     aria-label="Facebook"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -223,7 +206,7 @@ const Footer = () => {
                 </FooterLink>
                 <FooterLink
                     style={{width: "auto"}}
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/oluwatobi-daniel-069623310/"
                     aria-label="LinkedIn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -232,7 +215,7 @@ const Footer = () => {
                 </FooterLink>
                 <FooterLink
                     style={{width: "auto"}}
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/danovalab1/"
                     aria-label="Instagram"
                     target="_blank"
                     rel="noopener noreferrer"
