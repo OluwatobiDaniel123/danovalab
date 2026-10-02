@@ -78,13 +78,13 @@ export function Services() {
                     <div className="mt-12 grid gap-5 lg:grid-cols-2">
                         {solutions.map((s, i) => (
                             <Reveal key={s.slug} delay={(i % 2) * 0.08}>
-                                <div className="group h-full rounded-3xl border border-ink-200 bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-glow">
+                                <div className="group h-full rounded-3xl border border-ink-200 bg-white p-6 shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-glow">
                                     <div className="flex items-start gap-5">
-                                        <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-600 transition-transform duration-300 group-hover:scale-110">
+                                        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-600 transition-transform duration-300 group-hover:scale-110">
                                             <Icon name={s.icon} className="h-6 w-6" />
                                         </span>
                                         <div>
-                                            <h3 className="font-display text-xl font-bold text-ink-900">{s.title}</h3>
+                                            <h3 className="font-display text-lg font-bold text-ink-900">{s.title}</h3>
                                             <p className="mt-2 text-sm leading-relaxed text-muted-600">
                                                 {s.description}
                                             </p>
@@ -130,7 +130,7 @@ export function Services() {
                                 transition={{duration: 0.6, delay: i * 0.05}}
                                 className="relative grid gap-5 sm:grid-cols-[56px_1fr] sm:gap-8"
                             >
-                                <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-brand-300 bg-white text-brand-600 shadow-glow">
+                                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-2xl border border-brand-300 bg-white text-brand-600 shadow-glow">
                                     <Icon name={step.icon} className="h-6 w-6" />
                                 </div>
                                 <div className="rounded-3xl border border-ink-200 bg-white p-6 shadow-card lg:p-8">
@@ -138,7 +138,7 @@ export function Services() {
                                         <span className="font-display text-2xl font-bold text-ink-200">
                                             {step.number}
                                         </span>
-                                        <h2 className="font-display text-xl font-bold text-ink-900">{step.title}</h2>
+                                        <h2 className="font-display text-lg font-bold text-ink-900">{step.title}</h2>
                                     </div>
                                     <p className="mt-4 text-base leading-relaxed text-muted-600 text-pretty">
                                         {step.description}
@@ -162,7 +162,7 @@ export function Services() {
             </section>
 
             {/* Why DanovaLab */}
-            <section className="relative overflow-hidden border-y border-ink-200 bg-ink-100 py-20 lg:py-28">
+            {/* <section className="relative overflow-hidden border-y border-ink-200 bg-ink-100 py-20 lg:py-28">
                 <div className="container-page relative">
                     <SectionHeader eyebrow="Why DanovaLab" title="A process built on partnership." />
                     <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -181,7 +181,7 @@ export function Services() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <CtaBand />
         </>

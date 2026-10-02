@@ -22,7 +22,7 @@ export function CtaBand({
 }: CtaBandProps) {
     const reduce = useReducedMotion();
     return (
-        <section className="container-page">
+        <section className="container-page pb-4">
             <motion.div
                 initial={reduce ? false : {opacity: 0, y: 20}}
                 whileInView={reduce ? undefined : {opacity: 1, y: 0}}
@@ -84,7 +84,7 @@ export function CtaBand({
                         whileInView={reduce ? undefined : {opacity: 1, y: 0}}
                         viewport={{once: true}}
                         transition={{duration: 0.5}}
-                        className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-1.5 py-2.5 text-xs font-semibold tracking-wide text-brand-700"
+                        className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-2 py-1 text-xs font-semibold tracking-wide text-brand-700"
                     >
                         <span className="relative flex h-2 w-2">
                             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-60" />
@@ -93,7 +93,7 @@ export function CtaBand({
                         LET'S BUILD SOMETHING
                     </motion.div>
 
-                    <h2 className="text-display-md font-bold tracking-tight text-ink-950 text-balance">{title}</h2>
+                    <h2 className="text-display-md font-bold tracking-tight text-ink-950">{title}</h2>
 
                     <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-600 text-pretty sm:text-lg">
                         {description}
@@ -111,7 +111,7 @@ export function CtaBand({
                     </div>
 
                     {/* Trust / capability line */}
-                    <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-500">
+                    <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-muted-500">
                         <span>Strategy</span>
                         <span className="h-1 w-1 rounded-full bg-brand-400" />
                         <span>Design</span>

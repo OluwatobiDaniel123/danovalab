@@ -273,7 +273,7 @@ export function HeroVisual() {
             ================================================= */}
                         <motion.div
                             {...float(0)}
-                            className="absolute left-3 top-[47%] z-30 hidden -translate-y-1/2 rounded-xl border border-ink-200 bg-white/95 px-3 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
+                            className="absolute left-3 top-[47%] z-30 -translate-y-1/2 rounded-xl border border-ink-200 bg-white/95 px-3 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
                         >
                             <div className="flex items-center gap-2.5">
                                 <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-brand-50 text-brand-600">
@@ -300,7 +300,7 @@ export function HeroVisual() {
             ================================================= */}
                         <motion.div
                             {...float(1)}
-                            className="absolute right-3 top-[47%] z-30 hidden -translate-y-1/2 rounded-xl border border-ink-200 bg-white/95 px-3 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
+                            className="absolute right-3 top-[47%] z-30 -translate-y-1/2 rounded-xl border border-ink-200 bg-white/95 px-3 py-2.5 shadow-[0_12px_30px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
                         >
                             <div className="flex items-center gap-2.5">
                                 <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-accent-50 text-accent-600">
@@ -329,7 +329,7 @@ export function HeroVisual() {
             ================================================= */}
                         <motion.div
                             {...float(0.5)}
-                            className="absolute right-[9%] top-[19%] z-30 hidden rounded-xl border border-ink-200 bg-white/95 px-3 py-2 shadow-[0_12px_30px_rgba(15,23,42,0.08)] backdrop-blur-md sm:block"
+                            className="absolute right-[9%] top-[19%] z-30 rounded-xl border border-ink-200 bg-white/95 px-3 py-2 shadow-[0_12px_30px_rgba(15,23,42,0.08)] backdrop-blur-md sm:block"
                         >
                             <div className="flex items-center gap-2">
                                 <span className="font-mono text-[9px] text-brand-600">{"</>"}</span>
@@ -418,7 +418,7 @@ export function HeroVisual() {
                     initial={reduce ? false : {opacity: 0, y: 12}}
                     animate={{opacity: 1, y: 0}}
                     transition={{delay: 0.8, duration: 0.6}}
-                    className="absolute -bottom-5 -left-4 hidden rounded-xl border border-ink-200 bg-white/95 px-3.5 py-3 shadow-[0_14px_35px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
+                    className="absolute -bottom-5 -left-4 rounded-xl border border-ink-200 bg-white/95 px-3.5 py-3 shadow-[0_14px_35px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
                 >
                     <div className="flex items-center gap-2.5">
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink-900 text-white">
@@ -439,7 +439,7 @@ export function HeroVisual() {
                     initial={reduce ? false : {opacity: 0, y: 12}}
                     animate={{opacity: 1, y: 0}}
                     transition={{delay: 0.95, duration: 0.6}}
-                    className="absolute -bottom-5 -right-4 hidden rounded-xl border border-ink-200 bg-white/95 px-3.5 py-3 shadow-[0_14px_35px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
+                    className="absolute -bottom-5 -right-4 rounded-xl border border-ink-200 bg-white/95 px-3.5 py-3 shadow-[0_14px_35px_rgba(15,23,42,0.10)] backdrop-blur-md sm:block"
                 >
                     <div className="flex items-center gap-2.5">
                         <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-accent-50 text-accent-600">

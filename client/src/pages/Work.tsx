@@ -16,7 +16,7 @@ function ProjectImage({project, className = ""}: {project: Project; className?: 
                 aria-hidden
             />
             <div className="absolute inset-0 bg-grid opacity-20" aria-hidden />
-            <div className="relative flex h-full min-h-[200px] items-center justify-center p-6">
+            <div className="relative flex h-full min-h-full items-center justify-center">
                 <div className="w-full max-w-sm rounded-xl border border-ink-200 bg-white p-4 shadow-card">
                     <div className="flex items-center gap-1.5 border-b border-ink-200 pb-2.5">
                         <span className="h-2 w-2 rounded-full bg-red-400/60" />
@@ -81,7 +81,7 @@ export function Work() {
                         <button
                             key={ind}
                             onClick={() => setFilter(ind)}
-                            className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                            className={`rounded-full border px-4 py-0.7 text-sm font-medium transition-all duration-200 ${
                                 filter === ind
                                     ? "border-brand-300 bg-brand-50 text-brand-700"
                                     : "border-ink-200 text-muted-600 hover:border-ink-300 hover:text-ink-900"
@@ -92,28 +92,28 @@ export function Work() {
                     ))}
                 </div>
 
-                <div className="mt-10 grid gap-5 lg:grid-cols-2">
+                <div className="mt-10 grid gap-5 lg:grid-cols-3">
                     {filtered.map((p, i) => (
                         <Reveal key={p.slug} delay={(i % 2) * 0.06}>
                             <Link
                                 to={`/work/${p.slug}`}
                                 className="group block overflow-hidden rounded-3xl border border-ink-200 bg-white shadow-card transition-all duration-500 hover:-translate-y-1 hover:border-brand-300 hover:shadow-glow"
                             >
-                                <ProjectImage project={p} className="h-60" />
-                                <div className="p-6">
+                                <ProjectImage project={p} className="h-full" />
+                                <div className="p-4">
                                     <div className="flex items-center gap-3 text-xs">
-                                        <span className="rounded-full bg-brand-50 px-2.5 py-1 font-semibold text-brand-600">
+                                        <span className="rounded-full bg-brand-50 px-2.5 py-0.5 font-bold text-brand-600">
                                             {p.industry}
                                         </span>
                                         <span className="text-muted-500">{p.client}</span>
                                     </div>
-                                    <h3 className="mt-4 font-display text-xl font-bold text-ink-900">{p.title}</h3>
+                                    <h3 className="mt-4 font-display text-lg font-bold text-ink-900">{p.title}</h3>
                                     <p className="mt-2 text-sm leading-relaxed text-muted-600">{p.summary}</p>
                                     <div className="mt-5 flex flex-wrap gap-2">
                                         {p.stack.slice(0, 4).map((t) => (
                                             <span
                                                 key={t}
-                                                className="rounded-md border border-ink-200 px-2 py-1 font-mono text-[11px] text-muted-600"
+                                                className="rounded-md border border-ink-200 px-2 py-0.5 font-bold font-mono text-[11px] text-muted-600"
                                             >
                                                 {t}
                                             </span>

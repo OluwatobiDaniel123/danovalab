@@ -23,7 +23,7 @@ const socials: {label: string; icon: IconName; href: string}[] = [
     {label: "LinkedIn", icon: "linkedin", href: "www.linkedin.com/in/oluwatobi-daniel-069623310"},
     {label: "GitHub", icon: "github", href: "https://github.com/OluwatobiDaniel123"},
     {label: "Instagram", icon: "instagram", href: "https://www.instagram.com/danovalab1/"},
-    {label: "X", icon: "x", href: "https://www.linkedin.com/in/oluwatobi-daniel-069623310/"},
+    {label: "X", icon: "x", href: "https://x.com/danovalab"},
 ];
 
 export function Footer() {
@@ -35,29 +35,15 @@ export function Footer() {
                 aria-hidden
             />
 
-            <div className="container-page relative py-16 lg:py-20">
-                <div className="grid gap-12 lg:grid-cols-12">
+            <div className="container-page relative py-6 lg:py-20">
+                <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-4">
                         <Link to="/" className="flex items-center gap-2.5">
-                            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700">
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    className="h-5 w-5 text-white"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2.2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M6 18V6l6 8V6" />
-                                    <path d="M16 6v12" />
-                                </svg>
-                            </span>
                             <span className="font-display text-lg font-bold text-ink-900">
                                 Danova<span className="text-brand-600">Lab</span>
                             </span>
                         </Link>
-                        <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted-600">
+                        <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-600">
                             Technology solutions for businesses ready to build, improve, and grow.
                         </p>
                         <div className="mt-6 flex gap-3">
@@ -68,7 +54,7 @@ export function Footer() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     aria-label={s.label}
-                                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-ink-200 bg-white text-muted-500 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-600 hover:shadow-card"
+                                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-ink-200 bg-white text-muted-800 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300 hover:text-brand-600 hover:shadow-card"
                                 >
                                     <Icon name={s.icon} className="h-5 w-5" />
                                 </a>
@@ -139,7 +125,7 @@ export function Footer() {
                     </div>
                 </div>
 
-                <div className="mt-14 flex flex-col gap-4 border-t border-ink-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
+                <div className="mt-7 flex flex-col gap-4 border-t border-ink-200 pt-8 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-sm text-muted-500">© 2026 DanovaLab. All rights reserved.</p>
                     <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-500">
                         <Link to="/privacy" className="transition-colors hover:text-ink-900">
