@@ -1,4 +1,3 @@
-import {hustle} from "@/assesst/hustle.png";
 import type {
     Service,
     Solution,
@@ -266,6 +265,7 @@ export const projects: Project[] = [
         title: "School Management Portal",
         client: "School Management Portal",
         industry: "Education",
+        image: "https://example.com/hotel-image.jpg",
         summary:
             "A web-based school management project for organizing school information and administrative workflows.",
         services: ["Web Application", "Dashboard Development", "API Integration"],
@@ -288,6 +288,7 @@ export const projects: Project[] = [
         title: "HTT Academy Website",
         client: "HTT Academy",
         industry: "Sports & Education",
+        image: "https://example.com/hotel-image.jpg",
         summary:
             "Development and maintenance of the academy website, including responsive pages, programme information, and registration-related improvements.",
         services: ["Website Development", "UI Implementation", "Production Maintenance"],
@@ -314,6 +315,7 @@ export const projects: Project[] = [
         title: "HTT Academy Registration & CRM Integration",
         client: "HTT Academy",
         industry: "Sports & Education",
+        image: "https://example.com/hotel-image.jpg",
         summary:
             "A player registration workflow connected to HubSpot CRM through a lightweight Cloudflare Worker integration.",
         services: ["Workflow Development", "CRM Integration", "API Integration"],
@@ -339,6 +341,7 @@ export const projects: Project[] = [
         slug: "fairshare-fintech",
         title: "FairShare Fintech Application",
         client: "FairShare",
+        image: "https://example.com/hotel-image.jpg",
         industry: "Financial Technology",
         summary: "A fintech application project focused on a digital financial product experience.",
         services: ["Web Application", "Frontend Development", "API Integration"],
@@ -365,6 +368,7 @@ export const projects: Project[] = [
         title: "Elevate Bradford Events Website",
         client: "Elevate Bradford",
         industry: "Events",
+        image: "https://example.com/hotel-image.jpg",
         summary:
             "An events website for presenting event information and giving visitors a clear path to explore event details and booking options.",
         services: ["Website Development", "Frontend Development", "Interactive UI"],
@@ -386,6 +390,7 @@ export const projects: Project[] = [
         slug: "artisan-hub",
         title: "ArtisanHub Service Marketplace",
         client: "ArtisanHub",
+        image: "https://example.com/hotel-image.jpg",
         industry: "Services Marketplace",
         summary:
             "A marketplace application with account authentication, real-time chat, file uploads, and payment-related API workflows.",
@@ -419,6 +424,7 @@ export const projects: Project[] = [
         title: "Tobago Reads International Website",
         client: "Tobago Reads International",
         industry: "Charity & Nonprofit",
+        image: "https://example.com/hotel-image.jpg",
         summary:
             "A website for a charity organization to communicate its mission and make its work easier to discover online.",
         services: ["Website Development", "Responsive Design", "Content Presentation"],
@@ -445,6 +451,7 @@ export const projects: Project[] = [
         title: "Support Cycle Web Application",
         client: "Support Cycle",
         industry: "Web Application",
+        image: "https://example.com/hotel-image.jpg",
         summary: "A MERN-stack application built to support a focused digital service workflow.",
         services: ["Web Application", "Frontend Development", "Backend Development"],
         stack: ["MongoDB", "Express", "React", "Node.js", "JavaScript", "REST APIs"],
