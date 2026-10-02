@@ -1,3 +1,4 @@
+import {xtiim} from "@/assesst/xtiim.png";
 import type {
     Service,
     Solution,
@@ -10,10 +11,10 @@ import type {
     IconName,
 } from "./types";
 
-import xtiim from "../assesst/xtiim.png";
-import IvyHotel from "../assesst/IvyHotel.png";
-import hustle from "../assesst/hustle.png";
-import chat from "../assesst/chat.png";
+import xtiim from "../assets/xtiim.png";
+import IvyHotel from "../assets/IvyHotel.png";
+import hustle from "../assets/hustle.png";
+import chat from "../assets/chat.png";
 
 export const services: Service[] = [
     {
