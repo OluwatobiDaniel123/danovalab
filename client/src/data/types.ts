@@ -6,6 +6,7 @@ export type IconName =
     | "ecommerce"
     | "custom"
     | "api"
+    | "globe"
     | "support"
     | "business"
     | "education"

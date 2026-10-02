@@ -1,4 +1,8 @@
-import {xtiim} from "@/assesst/xtiim.png";
+import xtiim from "../assets/xtiim.png";
+import IvyHotel from "../assets/IvyHotel.png";
+import hustle from "../assets/hustle.png";
+import chat from "../assets/chat.png";
+
 import type {
     Service,
     Solution,
@@ -10,11 +14,6 @@ import type {
     TechGroup,
     IconName,
 } from "./types";
-
-import xtiim from "../assets/xtiim.png";
-import IvyHotel from "../assets/IvyHotel.png";
-import hustle from "../assets/hustle.png";
-import chat from "../assets/chat.png";
 
 export const services: Service[] = [
     {
