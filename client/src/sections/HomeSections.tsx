@@ -118,25 +118,25 @@ function ServicesPreview() {
         {
             t: "Web Development",
             d: "Corporate websites, landing pages and business websites.",
-            icon: "globe",
+            icon: "web",
             image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
         },
         {
             t: "Business Applications",
             d: "Custom platforms built around business operations.",
-            icon: "layers",
+            icon: "app",
             image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
         },
         {
             t: "Admin & CRM Systems",
             d: "Dashboards, customer management and internal tools.",
-            icon: "dashboard",
+            icon: "software",
             image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
         },
         {
             t: "E-Commerce Solutions",
             d: "Online stores, product management and payment integration.",
-            icon: "shopping",
+            icon: "ecommerce",
             image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1200&q=80",
         },
     ] as const;

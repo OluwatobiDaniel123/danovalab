@@ -1,8 +1,3 @@
-import xtiim from "../assets/xtiim.png";
-import IvyHotel from "../assets/IvyHotel.png";
-import hustle from "../assets/hustle.png";
-import chat from "../assets/chat.png";
-
 import type {
     Service,
     Solution,
@@ -161,7 +156,7 @@ export const projects: Project[] = [
         slug: "hustle-hub-job-platform",
         title: "Hustle-Hub Job Platform",
         client: "Hustle-Hub",
-        image: hustle,
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1790904197/hustle_srewpg.png",
         industry: "Jobs & Recruitment",
         summary:
             "A job-platform application designed to connect people with work opportunities through a dedicated web experience.",
@@ -189,7 +184,7 @@ export const projects: Project[] = [
         slug: "hotel-web-admin-portal",
         title: "Hotel Website & Admin Portal",
         client: "Hotel",
-        image: IvyHotel,
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1790904203/IvyHotel_sezjrt.png",
 
         industry: "Hospitality",
         summary:
@@ -219,7 +214,7 @@ export const projects: Project[] = [
         slug: "xtiim-music-website",
         title: "XTiiM Music Website",
         client: "XTiiM",
-        image: xtiim,
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1790904320/xtiim_roouqh.png",
 
         industry: "Music & Entertainment",
         summary: "A responsive website for a music brand to present its releases, media, events, and online presence.",
@@ -242,7 +237,7 @@ export const projects: Project[] = [
         slug: "chatflow-messaging-app",
         title: "ChatFlow Real-Time Messaging App",
         client: "ChatFlow",
-        image: chat,
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1790904182/chat_zmhlic.png",
 
         industry: "Communication",
         summary: "A real-time messaging application with conversation management and online/offline presence features.",
