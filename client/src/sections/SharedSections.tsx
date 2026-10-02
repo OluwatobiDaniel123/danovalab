@@ -40,7 +40,7 @@ function ProjectImage({project, className = ""}: {project: Project; className?: 
     return (
         <div className={`relative overflow-hidden ${className}`}>
             {project.image ? (
-                <div className="relative h-full min-h-full w-full">
+                <div className="relative h-44 min-h-44 w-full">
                     <img src={project.image} alt={project.title} className="h-full min-h-full w-full object-cover" />
 
                     <div
