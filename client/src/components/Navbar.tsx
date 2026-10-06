@@ -4,7 +4,6 @@ import {AnimatePresence, motion} from "framer-motion";
 import {Icon} from "./Icon";
 import {ButtonLink} from "./Button";
 import {useReducedMotion} from "../hooks/useReducedMotion";
-import logo from "../../public/danovalablogo.png";
 
 const nav = [
     {label: "Home", to: "/"},
@@ -18,7 +17,7 @@ function Logo() {
     return (
         <Link to="/" className="flex items-center gap-2.5 group" aria-label="DanovaLab home">
             <img
-                src={logo}
+                src="/danovalablogo.png"
                 alt="DANOVALAB"
                 className="h-7 w-auto transition-transform duration-300 group-hover:scale-105"
             />
