@@ -4,7 +4,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import {Icon} from "./Icon";
 import {ButtonLink} from "./Button";
 import {useReducedMotion} from "../hooks/useReducedMotion";
-import logo from "../assets/logos/danovalab-logo.png";
+import logo from "../assets/logos/danovalabLogo.png";
 
 const nav = [
     {label: "Home", to: "/"},
