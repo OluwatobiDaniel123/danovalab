@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import {Icon} from "./Icon";
 import type {IconName} from "../data/types";
+import logo from "../assets/danovalab-logo/logos/danovalab-logo.png";
 
 const services = [
     {label: "Web Development", to: "/services"},
@@ -38,10 +39,12 @@ export function Footer() {
             <div className="container-page relative py-6 lg:py-20">
                 <div className="grid gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-4">
-                        <Link to="/" className="flex items-center gap-2.5">
-                            <span className="font-display text-lg font-bold text-ink-900">
-                                Danova<span className="text-brand-600">Lab</span>
-                            </span>
+                        <Link to="/" className="flex items-center gap-2.5 group" aria-label="DanovaLab home">
+                            <img
+                                src={logo}
+                                alt="DANOVALAB"
+                                className="h-7 w-auto transition-transform duration-300 group-hover:scale-105"
+                            />
                         </Link>
                         <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-600">
                             Technology solutions for businesses ready to build, improve, and grow.
@@ -62,7 +65,7 @@ export function Footer() {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-2">
+                    <div className="lg:col-span-2 max-[768px]:hidden">
                         <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-500">Navigation</h3>
                         <ul className="mt-5 space-y-3">
                             {nav.map((n) => (
@@ -78,7 +81,7 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    <div className="lg:col-span-3">
+                    <div className="lg:col-span-3 max-[768px]:hidden">
                         <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-500">Services</h3>
                         <ul className="mt-5 space-y-3">
                             {services.map((s) => (

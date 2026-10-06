@@ -95,12 +95,12 @@ export function CtaBand({
 
                     <h2 className="text-display-md font-bold tracking-tight text-ink-950">{title}</h2>
 
-                    <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-600 text-pretty sm:text-lg">
+                    <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-muted-600 text-pretty sm:text-lg">
                         {description}
                     </p>
 
                     {/* CTA buttons */}
-                    <div className="mt-9 flex items-center justify-center gap-3 ">
+                    <div className="mt-6 flex items-center justify-center gap-3 ">
                         <ButtonLink to={primaryTo} size="sm" iconRight="arrow">
                             {primaryLabel}
                         </ButtonLink>
@@ -111,7 +111,7 @@ export function CtaBand({
                     </div>
 
                     {/* Trust / capability line */}
-                    <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-muted-500">
+                    <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-muted-500">
                         <span>Strategy</span>
                         <span className="h-1 w-1 rounded-full bg-brand-400" />
                         <span>Design</span>

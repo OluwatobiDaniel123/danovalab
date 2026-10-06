@@ -4,20 +4,23 @@ import {AnimatePresence, motion} from "framer-motion";
 import {Icon} from "./Icon";
 import {ButtonLink} from "./Button";
 import {useReducedMotion} from "../hooks/useReducedMotion";
-
+import logo from "../assets/danovalab-logo/logos/danovalab-logo.png";
 const nav = [
     {label: "Home", to: "/"},
     {label: "Services", to: "/services"},
     {label: "Work", to: "/work"},
     {label: "Contact", to: "/contact"},
+    {label: "Insight", to: "/insights"},
 ];
 
 function Logo() {
     return (
         <Link to="/" className="flex items-center gap-2.5 group" aria-label="DanovaLab home">
-            <span className="font-display text-lg font-bold tracking-tight text-ink-900">
-                Danova<span className="text-brand-600">Lab</span>
-            </span>
+            <img
+                src={logo}
+                alt="DANOVALAB"
+                className="h-7 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
         </Link>
     );
 }

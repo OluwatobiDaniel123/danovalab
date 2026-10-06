@@ -124,7 +124,7 @@ export function Contact() {
                             Have a Project in Mind? Let's Build It.
                         </h1>
 
-                        <p className="mt-7 max-w-2xl text-base leading-relaxed text-muted-600 text-pretty">
+                        <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-600 text-pretty">
                             Tell us what you're trying to build, improve, or solve. We'll help turn the idea into a
                             practical digital solution.
                         </p>
@@ -136,12 +136,12 @@ export function Contact() {
                 <div className="grid gap-8 lg:grid-cols-12">
                     <div className="lg:col-span-5">
                         <Reveal>
-                            <div className="space-y-4">
+                            <div className="space-y-2">
                                 <a
                                     href="mailto:danieloluwatobi@danovalab.com?subject=Project%20Inquiry&body=Hello%20DanovaLab,%0A%0AI%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20get%20back%20to%20me%20at%20your%20earliest%20convenience.%0A%0AName:%20%0ACompany:%20%0APhone:%20%0AProject%20Details:%20%0A%0AThank%20you."
-                                    className="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300"
+                                    className="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-3 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-300"
                                 >
-                                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+                                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
                                         <Icon name="mail" className="h-5 w-5" />
                                     </span>
 
@@ -162,7 +162,7 @@ export function Contact() {
                                     rel="noopener noreferrer"
                                     className="group flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-300"
                                 >
-                                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent-50 text-accent-600">
+                                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-green-50 text-accent-600">
                                         <Icon name="whatsapp" className="h-5 w-5" />
                                     </span>
 
@@ -176,7 +176,7 @@ export function Contact() {
                                 </a>
 
                                 <div className="flex items-center gap-4 rounded-2xl border border-ink-200 bg-white p-5 shadow-card">
-                                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-ink-100 text-ink-600">
+                                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-ink-100 text-ink-600">
                                         <Icon name="location" className="h-5 w-5" />
                                     </span>
 

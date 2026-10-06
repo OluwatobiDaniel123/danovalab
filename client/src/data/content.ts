@@ -15,6 +15,7 @@ export const services: Service[] = [
         slug: "web-development",
         icon: "web",
         title: "Web Development",
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1791287981/plann-3uKEDMU5J7k-unsplash_r61gcg.jpg",
         short: "Professional corporate websites, marketing sites, landing pages, and high-performance web experiences.",
         description:
             "We build fast, accessible, and search-optimized websites that represent businesses with clarity and convert visitors into customers.",
@@ -29,6 +30,7 @@ export const services: Service[] = [
         slug: "web-applications",
         icon: "app",
         title: "Web Applications",
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1791287985/new-data-services-Ar-iTL4QKl4-unsplash_rgdquo.jpg",
         short: "Custom web applications designed around specific business workflows and operational requirements.",
         description:
             "From dashboards to operational platforms, we engineer web applications that streamline complex workflows and scale with your business.",
@@ -38,6 +40,7 @@ export const services: Service[] = [
         slug: "business-software",
         icon: "software",
         title: "Business Software",
+        image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
         short: "Internal systems, management platforms, CRM-style apps, and business automation tools.",
         description:
             "We replace spreadsheets and manual processes with tailored business software that gives teams control over operations and data.",
@@ -47,6 +50,7 @@ export const services: Service[] = [
         slug: "ui-ux-design",
         icon: "design",
         title: "UI/UX Design",
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1791287975/faiz-rhm-nOY38cJyZaA-unsplash_slh12f.jpg",
         short: "Modern user interfaces and intuitive digital experiences focused on usability and conversion.",
         description:
             "We design interfaces grounded in research and usability — clear hierarchy, accessible patterns, and conversion-focused layouts.",
@@ -56,6 +60,7 @@ export const services: Service[] = [
         slug: "ecommerce",
         icon: "ecommerce",
         title: "E-Commerce",
+        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
         short: "Scalable online stores and commerce platforms with secure payment and order management workflows.",
         description:
             "We build commerce experiences that handle catalog, checkout, payments, and fulfillment — engineered for reliability and growth.",
@@ -65,6 +70,7 @@ export const services: Service[] = [
         slug: "custom-software",
         icon: "custom",
         title: "Custom Software",
+        image: "https://res.cloudinary.com/dbcygr0pi/image/upload/v1791288258/daniel-korpai-pKRNxEguRgM-unsplash_yxu7tm.jpg",
         short: "Purpose-built software solutions for businesses with unique technical requirements.",
         description:
             "When off-the-shelf tools don't fit, we design and build custom software shaped precisely around your operations and constraints.",
@@ -74,6 +80,7 @@ export const services: Service[] = [
         slug: "api-integration",
         icon: "api",
         title: "API & System Integration",
+        image: "https://wds.webdirector.net/corporateinteractive/stores/_corporate_interactive/images/build_integration.png",
         short: "Connect business systems, payment gateways, databases, communication platforms, and third-party services.",
         description:
             "We integrate the tools your business depends on — payments, messaging, data sources, and internal systems — into one coherent flow.",
@@ -83,6 +90,7 @@ export const services: Service[] = [
         slug: "maintenance-support",
         icon: "support",
         title: "Maintenance & Support",
+        image: "https://srse-git-github-zero2hero.netlify.app/images/ag-pr-sub-review-approve.png",
         short: "Ongoing improvements, monitoring, bug fixes, security updates, and technical support.",
         description:
             "We partner after launch — monitoring performance, shipping improvements, patching security, and supporting your team.",
