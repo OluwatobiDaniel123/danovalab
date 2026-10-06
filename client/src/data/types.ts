@@ -42,6 +42,7 @@ export interface Service {
     icon: IconName;
     title: string;
     short: string;
+    image: string;
     description: string;
     features: string[];
 }

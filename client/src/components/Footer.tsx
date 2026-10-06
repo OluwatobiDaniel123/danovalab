@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import {Icon} from "./Icon";
 import type {IconName} from "../data/types";
-import logo from "../assets/danovalab-logo/logos/danovalab-logo.png";
+import logo from "../assets/logos/danovalab-logo.png";
 
 const services = [
     {label: "Web Development", to: "/services"},
