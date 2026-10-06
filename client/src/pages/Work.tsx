@@ -64,7 +64,8 @@ export function Work() {
                             <span className="h-px w-6 bg-current opacity-60" />
                             Selected Work
                         </span>
-                        <h1 className="mt-6 max-w-4xl text-display-lg font-bold text-ink-900 text-balance">
+
+                        <h1 className="mt-6 max-w-4xl text-display-md font-bold text-ink-900 text-balance">
                             Products built to solve real problems.
                         </h1>
                         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted-600 text-pretty">
